@@ -1,0 +1,19 @@
+Práctica
+A continuación, encontrarás una serie de frases que están mal conectadas. Tu tarea es reestructurarlas usando conectores que aporten coherencia y claridad al texto. Puedes usar diferentes tipos de conectores (aditivos, adversativos, consecutivos, etc.) según creas conveniente.
+Ejemplo
+He cumplido con todas las condiciones de compra ustedes no han entregado el producto conforme a lo acordado.
+He cumplido con todas las condiciones de compra, pero ustedes no han entregado el producto conforme a lo acordado.
+
+   1. Efectué el pago el lunes ustedes no han confirmado la recepción.
+   2. Me gustaría cambiar el producto el tamaño que recibí no es el correcto.
+   3. La calidad del servicio ha sido excelente algunas áreas pueden mejorar.
+   4. El paquete llegó tarde la información de seguimiento no estaba actualizada.
+   5. Ya he enviado varios correos aún no he recibido ninguna respuesta.
+   6. Quiero cancelar mi suscripción ya he recibido todas las entregas.
+   7. Me ofrecieron un descuento no era aplicable a los productos rebajados.
+   8. Pagué con mi tarjeta de crédito no he visto el cargo en mi cuenta.
+   9. Hemos tenido un buen resultado debemos analizar los puntos a mejorar.
+   10. Me encanta el producto no estoy satisfecho con la atención al cliente.
+
+
+

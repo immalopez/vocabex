@@ -1,0 +1,42 @@
+Práctica
+Completa la siguiente tabla. En la primera columna tienes expresiones genéricas; en la segunda columna, expresiones más precisas e idiomáticas para expresar las ideas de la primera columna. En la tercera columna, debes proponer un ejemplo de uso adecuado de la expresión más precisa.
+
+
+Expresión genérica
+	Expresión precisa
+	
+Ejemplo de uso
+	no comer
+	saltarse la comida
+	Ayer estaba tan ocupada que me salté la comida.
+	no dormir
+	
+
+	
+
+	no trabajar
+	
+
+	
+
+	no hablar
+	
+
+	
+
+	no acabar
+	
+
+	
+
+	no asistir
+	
+
+	
+
+	
+
+
+
+
+

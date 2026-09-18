@@ -1,0 +1,22 @@
+{
+  "run_id": "20260913T065136Z_b7193eb1",
+  "artifact_id": "rq1_influence_checks",
+  "path": "diagnostics/rq1_influence_checks.rds",
+  "sha256": "47418d074412a2dc546a29d0d7fd12d2c8ae1b3d28ddc777c0af4f226109cde3",
+  "source_models": [
+    "rq1_recognition",
+    "rq1_correction"
+  ],
+  "settings": {
+    "coefficient": "dose_WP_sc",
+    "item_sample_size": 100,
+    "seed": 1,
+    "workers": 8,
+    "cache_key": "871b1ab3602660228ba7345cb9ce078d54c57ce707e18b1f3f64182572a827fe",
+    "cache": {
+      "reused": true,
+      "source": "20260913T060850Z_a7e1690c"
+    }
+  },
+  "created_at": "2026-09-13 06:51:50 UTC"
+}

@@ -1,0 +1,38 @@
+"rater_1_category","collocational control","collocational control, conceptual organization","collocational control, meaning and sense elaboration","collocational control, pragmatic appropriateness","collocational control, productive use of targets","conceptual organization","conceptual organization, contextual retrieval","conceptual organization, meaning and sense elaboration","conceptual organization, paraphrastic flexibility","conceptual organization, productive use of targets","contextual retieval","contextual retireval, conceptual organization","contextual retrieval","contextual retrieval, conceptual organization","contextual retrieval, meaning and sense elaboration","contextual retrieval, paraphrastic flexibility","contextual retrieval, productive use of targets","meaning and sense elaboration","meaning and sense elaboration, collocational control","meaning and sense elaboration, conceptual organization","meaning and sense elaboration, conceptual organization, contextual retrieval","meaning and sense elaboration, contextual retrieval","meaning and sense elaboration, contextual retrieval, productive use of targets","meaning and sense elaboration, paraphrastic flexibility","meaning and sense elaboration, paraphrastic flexibility, productive use of targets","meaning and sense elaboration, productive use of targets","paraphrastic flexibility","paraphrastic flexibility, meaning and sense elaboration","paraphrastic flexibility, meaning and sense elaboration, productive use of targets","paraphrastic flexibility, productive use of targets","pragmatic appropriateness","pragmatic appropriateness, contextual retrieval","pragmatic appropriateness, meaning and sense elaboration","pragmatic appropriateness, paraphrastic flexibility","productive use of targets","productive use of targets, meaning and sense elaboration","productive use of targets, paraphrastic flexibility"
+"collocational control",51,1,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"collocational control, conceptual organization",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"collocational control, meaning and sense elaboration",0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"collocational control, pragmatic appropriateness",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"collocational control, productive use of targets",0,0,0,0,14,0,0,0,0,1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"conceptual organization",4,0,0,0,0,109,0,0,0,2,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+"conceptual organization, contextual retrieval",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"conceptual organization, meaning and sense elaboration",0,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"conceptual organization, paraphrastic flexibility",0,0,0,0,0,0,0,0,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"conceptual organization, productive use of targets",0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"contextual retieval",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"contextual retireval, conceptual organization",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"contextual retrieval",0,0,0,0,0,4,0,0,0,0,0,1,195,2,1,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"contextual retrieval, conceptual organization",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"contextual retrieval, meaning and sense elaboration",0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"contextual retrieval, paraphrastic flexibility",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"contextual retrieval, productive use of targets",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"meaning and sense elaboration",0,0,0,0,0,1,0,1,0,0,0,0,1,0,2,0,0,115,0,1,0,0,1,0,0,2,1,0,0,0,0,0,0,0,0,1,0
+"meaning and sense elaboration, collocational control",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"meaning and sense elaboration, conceptual organization",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"meaning and sense elaboration, conceptual organization, contextual retrieval",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"meaning and sense elaboration, contextual retrieval",0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"meaning and sense elaboration, contextual retrieval, productive use of targets",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"meaning and sense elaboration, paraphrastic flexibility",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+"meaning and sense elaboration, paraphrastic flexibility, productive use of targets",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"meaning and sense elaboration, productive use of targets",0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,6,0,0,0,0,0,1,0,122,0,0,2,0,0,0,1,0,1,0,0
+"paraphrastic flexibility",0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,3,0,0,0,0,0,0,1,0,0,105,2,0,0,0,0,0,1,3,0,0
+"paraphrastic flexibility, meaning and sense elaboration",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"paraphrastic flexibility, meaning and sense elaboration, productive use of targets",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,0,0,0,6,0
+"paraphrastic flexibility, productive use of targets",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,24,0,0,0,0,0,0,0
+"pragmatic appropriateness",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,7,0,0,0,0,0,0
+"pragmatic appropriateness, contextual retrieval",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"pragmatic appropriateness, meaning and sense elaboration",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,3,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0
+"pragmatic appropriateness, paraphrastic flexibility",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+"productive use of targets",0,0,0,0,0,0,0,0,0,2,1,0,14,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,1,0,0,224,2,0
+"productive use of targets, meaning and sense elaboration",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0
+"productive use of targets, paraphrastic flexibility",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6

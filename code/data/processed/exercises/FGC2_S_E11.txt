@@ -1,0 +1,19 @@
+Práctica
+      1. Lee cada oración y decide si debes completar los espacios en blanco con “quien” o “que”.
+      2. Después, infiere una regla general para elegir una u otra opción en español y compárala con el inglés y el finlandés.
+
+
+      * El autor _________ escribió la novela ganó varios premios.
+      * El autor, _________ escribió la novela, ganó varios premios.
+      * El libro _________ leí el mes pasado me impactó profundamente.
+      * Los turistas, _________ visitaron la ciudad, quedaron encantados con su belleza.
+      * Tengo un amigo _________ puede hablar cinco idiomas.
+      * El coche, _________ está aparcado fuera, es de mi hermano.
+      * La profesora, _________ nos dio la clase de historia, es muy sabia.
+      * La película, _________ vimos ayer, fue bastante aburrida.
+      * Mi hermano, _________ trabaja en el extranjero, viene a visitarnos pronto.
+      * Las personas _________ viven al lado son muy amables.
+
+
+
+

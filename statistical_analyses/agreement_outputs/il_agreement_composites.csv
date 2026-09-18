@@ -1,0 +1,2 @@
+"construct","rater_1","rater_2","n_components","n_items_total","n_complete_pairs","n_missing_pairs","icc_absolute_single","icc_low","icc_high","mean_difference_rater_2_minus_1","sd_difference","bland_altman_low","bland_altman_high","status"
+"LIL","original","rater_2",6,1275,1275,0,0.84611521599347,0.82653597057326,0.862697910841222,-0.133333333333333,0.74827553361177,-1.5999533792124,1.33328671254574,"ok"

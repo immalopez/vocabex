@@ -1,0 +1,12 @@
+Práctica
+Completa estos pares de palabras y observa cómo cambian las palabras que contienen la secuencia "ct" en inglés cuando se traducen al español. ¿Ves un patrón? ¿Es aplicable a todas las palabras? ¿Por qué crees que esto es así?
+            1. Respected ➔ Respe____ado
+            2. Distinct ➔ Distin____o
+            3. Adjunct ➔ Adjun____o
+            4. Perfect ➔ Perfe____o
+            5. Correct ➔ Corre____o
+            6. Connected ➔ Cone____ado
+            7. Contract ➔ Contra____o
+            8. Construct ➔ Constru____o
+
+

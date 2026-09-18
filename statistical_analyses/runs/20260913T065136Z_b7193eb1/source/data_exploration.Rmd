@@ -1,0 +1,529 @@
+---
+title: "Personalized vocabulary exercises for lexical error correction in L2 Spanish"
+author: "Inmaculada López-Solà"
+date: "2025-05-01"
+output: html_document
+---
+
+Dear reader, thank you for your interest in our work. Let us guide you through this data analysis.
+
+**Libraries needed** (_if you have not already, remember to install them via_ `install.packages()` _first_):
+
+```{r libraries, include=TRUE, echo=TRUE, message=FALSE}
+
+library(tidyverse)
+library(stringr)
+library(compositions)
+library(psych)
+library(ggpattern)
+library(tidytext)
+library(ggsankey)
+library(colorspace)
+library(treemapify)
+library(lme4)
+
+source("R/run_registry.R")
+if (run_is_active()) {
+  knitr::opts_chunk$set(fig.path = file.path(run_dir(TRUE), "figures", "exploration-"))
+  cat("Analysis run ID:", run_id(TRUE), "\n")
+}
+
+```
+
+## Data exploration
+
+```{r data.exploration, include=TRUE, echo=TRUE, message=TRUE, fig.width = 12, fig.height = 6}
+
+df <- read_csv(run_input("data_for_analysis_pca.csv"))
+
+df1 <- df %>%
+  mutate(
+    level = factor(level) %>%
+      forcats::fct_relevel("Beginner", "Intermediate", "Advanced", "Superior", "Heritage"),
+    gain_imm = correction_imm - recognition_imm,
+    gain_del = correction_del - recognition_del,
+    retain_gain = overall_score_del - overall_score_imm,
+    gain_per_min = retain_gain / pmax(time_invested, 1),
+    spaced = spaced_retrievals > 0,
+    multi = multiple_retrievals > 0
+  )
+
+# ---- Exercise taxonomy volume: formats × types ----
+
+df_long <- df1 %>%
+  mutate(across(c(exercise_format, exercise_type), str_squish)) %>%
+  separate_rows(exercise_format, sep = ",\\s*") %>%
+  separate_rows(exercise_type,  sep = ",\\s*") %>%
+  drop_na(exercise_format, exercise_type)
+
+df_ct <- df_long %>% count(exercise_format, exercise_type)
+
+p_heat <- ggplot(df_ct, aes(exercise_format, exercise_type, fill = n)) +
+  geom_tile() +
+  scale_fill_viridis_c() +
+  labs(x = "Exercise format", y = "Exercise goal", fill = "Count") +
+  theme_minimal(base_size = 11) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+p_heat
+
+
+# ---- Error inventory: errors × level ----
+
+lvl_order <- c("Beginner","Intermediate","Advanced","Superior","Heritage")
+
+df_prop <- df1 %>%
+  count(level, error_type) %>%
+  group_by(level) %>% mutate(prop = n / sum(n)) %>% ungroup() %>%
+  mutate(level = factor(level, levels = lvl_order))
+
+ggplot(df_prop, aes(x = level, y = prop, fill = error_type)) +
+  geom_col(color = "white", linewidth = 0.2) +  # <- changed
+  coord_flip(expand = FALSE, clip = "off") +
+  scale_y_continuous(labels = scales::percent, expand = c(0,0)) +
+  scale_fill_brewer(palette = "Set3") +
+  labs(x = "Proficiency level", y = "", fill = "Error type") +
+  theme_minimal(base_size = 12) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    legend.position = "bottom",
+    legend.box = "vertical",
+    legend.margin = margin(4,4,4,4),
+    plot.margin = margin(5.5, 20, 20, 5.5)
+  ) +
+  guides(fill = guide_legend(nrow = 2, byrow = TRUE))
+
+# ---- Involvement load indices per exercise type ----
+
+type_lvls <- c(
+  "productive use of targets","meaning and sense elaboration","contextual retrieval",
+  "paraphrastic flexibility","conceptual organization","pragmatic appropriateness",
+  "collocational control"
+)
+il_cols <- names(df1) |> stringr::str_subset("^il_") |> setdiff("il_22")
+
+df_il0 <- df1 %>%
+  pivot_longer(all_of(il_cols), names_to = "il", values_to = "score") %>%
+  mutate(il = il |> stringr::str_remove("^il_") |> stringr::str_replace_all("_"," ") |> stringr::str_to_sentence()) %>%
+  drop_na(score) %>%
+  group_by(il) %>%
+  mutate(score_z = as.numeric(scale(score))) %>%
+  ungroup() %>%
+  select(id, il, score_z)
+
+df_ex <- df1 %>%
+  select(id, exercise_type) %>%
+  tidyr::separate_rows(exercise_type, sep = ",\\s*") %>%
+  mutate(exercise_type = factor(stringr::str_squish(exercise_type), levels = type_lvls)) %>%
+  group_by(id) %>%
+  mutate(w = 1/n()) %>%
+  ungroup() %>%
+  drop_na(exercise_type)
+
+df_heat <- df_ex %>%
+  inner_join(df_il0, by = "id", relationship = "many-to-many") %>%  # intended expansion
+  group_by(exercise_type, il) %>%
+  summarise(
+    mean_z = weighted.mean(score_z, w, na.rm = TRUE),
+    n_ex   = sum(w),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    il = forcats::fct_reorder(il, mean_z, .fun = mean, .desc = TRUE),
+    exercise_type = forcats::fct_reorder(exercise_type, mean_z, .fun = mean, .desc = TRUE)
+  )
+
+ggplot(df_heat, aes(exercise_type, il, fill = mean_z)) +
+  geom_tile() +
+  geom_text(aes(label = scales::number(n_ex, accuracy = 1)), size = 3, vjust = 1.2) +
+  scale_fill_gradient2(name = "Mean (z)", limits = c(-2, 2), oob = scales::squish) +
+  labs(x = "Exercise type", y = "Involvement load index", subtitle = "Numbers are effective exercise counts (n_ex)") +
+  theme_minimal(12) +
+  theme(axis.text.x = element_text(angle = 90, vjust = .5, hjust = 1))
+
+# ---- Retention plot ----
+
+# Points above the dashed 45ª line: improvement/retention gain; points below: decay.
+# retain_gain = overall_score_del - overall_score_imm
+# Slope < 1: regression to the mean; high scorers drop more than low scorers gain
+# Positive intercept: general uplift
+
+df1 %>%
+  ggplot(aes(overall_score_imm, overall_score_del, color = level)) +
+  geom_abline(linetype=2) + geom_point(alpha=.5) +
+  geom_smooth(method="lm", se=FALSE)
+
+ggplot(df1, aes(overall_score_imm, overall_score_del)) +
+  geom_abline(lty=2) + geom_point(alpha=.5) + geom_smooth(method="lm", se=FALSE) +
+  facet_wrap(~ error_type)
+
+# ---- Per-participant "spaghetti": within-person change ---
+
+df1 %>%
+  select(participant_ID, overall_score_imm, overall_score_del) %>%
+  pivot_longer(-participant_ID,
+               names_to = "phase",
+               names_pattern = "overall_score_(.*)",
+               values_to = "score") %>%
+  mutate(phase = factor(phase, levels = c("imm","del"))) %>%
+  ggplot(aes(phase, score, group = participant_ID)) +
+  geom_line(alpha = .2) +
+  stat_summary(aes(group = 1), fun = median, geom = "line", linewidth = 1.2)
+
+# ---- Distribution of retention: by level and error_type ----
+
+cts <- df1 %>% count(error_type, level)
+dense  <- cts %>% filter(n >= 3)
+sparse <- cts %>% filter(n <  3)
+
+ggplot() +
+  geom_violin(
+    data = df1 %>% semi_join(dense, by=c("error_type","level")),
+    aes(level, retain_gain), trim = FALSE
+  ) +
+  geom_boxplot(
+    data = df1 %>% semi_join(dense, by=c("error_type","level")),
+    aes(level, retain_gain), width=.15, outlier.shape=NA
+  ) +
+  geom_point(
+    data = df1 %>% semi_join(sparse, by=c("error_type","level")),
+    aes(level, retain_gain),
+    position = position_jitter(width=.15), alpha=.6
+  ) +
+  stat_summary(
+    data = df1 %>% semi_join(sparse, by=c("error_type","level")),
+    aes(level, retain_gain),
+    fun = median, geom = "crossbar", width = .5, fatten = 0.5
+  ) +
+  facet_wrap(~error_type, drop = FALSE) +
+  scale_x_discrete(drop = FALSE)
+
+# --- Outcome vs CEFR mix (2D bin/hex) ---
+
+df1 %>%
+  mutate(hi_C = (`Freq C1`+`Freq C2`), lo_A = (`Freq A1`+`Freq A2`)) %>%
+  ggplot(aes(hi_C, overall_score_del)) + geom_bin2d() + labs(x="C1+C2 freq")
+
+# --- LexDiv_PC1 vs outcomes (by phase) ---
+
+df_lex3 <- df1 %>%
+  select(LexDiv_PC1_ex, LexDiv_PC1_imm, LexDiv_PC1_del,
+         exercise_score, overall_score_imm, overall_score_del) %>%
+  pivot_longer(starts_with("LexDiv_PC1_"),
+               names_to = "phase",
+               names_pattern = "LexDiv_PC1_(.*)",
+               values_to = "pc1") %>%
+  mutate(
+    phase   = factor(phase, levels = c("ex","imm","del")),
+    outcome = dplyr::case_when(
+      phase == "ex"  ~ exercise_score,
+      phase == "imm" ~ overall_score_imm,
+      phase == "del" ~ overall_score_del
+    )
+  )
+
+ggplot(df_lex3, aes(pc1, outcome)) +
+  geom_point(alpha = .5) +
+  geom_smooth(se = FALSE, method = "lm") +
+  facet_wrap(~ phase, nrow = 1) +
+  labs(x = "LexDiv PC1", y = "Score")
+
+# --- Correlation dotplot (lex div metrics vs outcomes) ---
+
+lex_cols <- c("msttr","mattr","ttr","rttr","cttr","mtld","hdd","Herdan","Summer","Dugast","Maas")
+df1 %>%
+  summarise(across(all_of(lex_cols), ~cor(.x, overall_score_del, use="pairwise"))) %>%
+  pivot_longer(everything(), names_to="metric", values_to="r") %>%
+  ggplot(aes(r, fct_reorder(metric, r))) + geom_point() + geom_vline(xintercept=0, linetype=2)
+
+# --- POS PC1 vs retention ---
+
+df1 %>%
+  ggplot(aes(POS_PC1_ex, retain_gain, color=level)) +
+  geom_point(alpha=.5) + geom_smooth(se=FALSE)
+
+# --- Tree height vs outcomes ---
+
+df1 %>%
+  ggplot(aes(tree_avg_h, overall_score_del, color=level)) +
+  geom_point(alpha=.5) + geom_smooth(se=FALSE)
+
+# --- Error type × design interactions ---
+
+df1 %>%
+  separate_rows(exercise_format, sep=",\\s*") %>%
+  group_by(error_type, exercise_format) %>%
+  summarise(d = mean(retain_gain, na.rm=TRUE), n=dplyr::n(), .groups="drop") %>%
+  filter(n>=15) %>%
+  ggplot(aes(d, fct_reorder(exercise_format, d))) +
+  geom_point() + facet_wrap(~error_type, scales="free_y") + labs(x="Mean retention gain")
+
+# --- Strategy/process moderators ---
+
+mods <- c("search","l1_comparison","l2_comparison","interference")
+df1 %>%
+  pivot_longer(all_of(mods), names_to="mod", values_to="val") %>%
+  ggplot(aes(factor(val), retain_gain)) + geom_boxplot() + facet_wrap(~mod, scales="free_y")
+
+# --- Immediate recognition/correction mechanics (confusion tiles) ---
+
+plt <- df1 %>%
+  count(recognition_imm, correction_imm) %>%
+  tidyr::complete(recognition_imm = 0:1, correction_imm = 0:1, fill = list(n=0)) %>%
+  group_by(recognition_imm) %>%
+  mutate(p_row = n / sum(n)) %>% ungroup()
+
+ggplot(plt, aes(factor(recognition_imm), factor(correction_imm), fill = p_row)) +
+  geom_tile() +
+  geom_text(aes(label = scales::percent(p_row, accuracy = 1))) +
+  scale_fill_viridis_c(labels = scales::percent, name = "% within recognition") +
+  labs(x = "Recognized (imm)", y = "Corrected (imm)") +
+  theme_minimal()
+
+# --- Participant heterogeneity ---
+
+p_part <- df1 %>%
+  group_by(participant_ID) %>%
+  summarise(
+    m_imm = median(overall_score_imm, na.rm = TRUE),
+    m_del = median(overall_score_del, na.rm = TRUE),
+    level = dplyr::first(level),
+    .groups = "drop"
+  )
+
+ggplot(p_part, aes(m_imm, m_del, color = level)) +
+  geom_point(alpha = .8, size = 2.2) +
+  geom_abline(linetype = 2) +
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  coord_equal() +
+  labs(x = "Median immediate", y = "Median delayed", color = "Level")
+
+# ---- Sankey diagram ----
+
+df_snk <- df1 %>%
+  mutate(
+    rec_imm0 = as.integer(recognition_imm  > 0),
+    cor_imm0 = as.integer(correction_imm   > 0),
+    rec_del0 = as.integer(recognition_del  > 0),
+    cor_del0 = as.integer(correction_del   > 0),
+
+    rec_imm = pmax(rec_imm0, cor_imm0),
+    cor_imm = as.integer(cor_imm0 & rec_imm),
+    rec_del = pmax(rec_del0, cor_del0),
+    cor_del = as.integer(cor_del0 & rec_del),
+
+    imm_state = case_when(
+      rec_imm==0 ~ "no immediate recognition",
+      rec_imm==1 & cor_imm==0 ~ "immediate recognition",
+      TRUE ~ "immediate recognition\nand correction"
+    ),
+    del_state = case_when(
+      rec_del==0 ~ "no delayed recognition",
+      rec_del==1 & cor_del==0 ~ "delayed recognition",
+      TRUE ~ "delayed recognition\nand correction"
+    ),
+    id_row = row_number()
+  ) %>%
+  separate_rows(exercise_type, sep = ",\\s*") %>%
+  separate_rows(exercise_format, sep = ",\\s*") %>%
+  mutate(across(c(exercise_type, exercise_format), str_squish)) %>%
+  group_by(id_row) %>%
+  mutate(n_type = n_distinct(exercise_type),
+         n_fmt  = n_distinct(exercise_format)) %>%
+  ungroup() %>%
+  mutate(weight = 1 / pmax(n_type * n_fmt, 1)) %>%
+  drop_na(error_type, exercise_type, exercise_format, imm_state, del_state)
+
+flows5 <- df_snk %>%
+  count(error_type, exercise_type, exercise_format, imm_state, del_state,
+        wt = weight, name = "freq") %>%
+  filter(freq > 0)
+
+df_long <- flows5 %>%
+  mutate(across(c(error_type, exercise_type, exercise_format, imm_state, del_state), as.character)) %>%
+  make_long(error_type, exercise_type, exercise_format, imm_state, del_state, value = freq)
+
+nodes <- sort(unique(df_long$node))
+pal <- colorspace::qualitative_hcl(length(nodes), palette = "Dark 3")
+names(pal) <- nodes
+
+ggplot(df_long,
+  aes(x = x, next_x = next_x, node = node, next_node = next_node, value = value,
+      fill = factor(node))
+) +
+  geom_sankey(flow.alpha = .7, node.color = "white") +
+  geom_sankey_label(aes(label = ifelse(x == "error_type", stringr::str_to_lower(node, locale = "es"), node)), size = 3, color = "white") +
+  scale_fill_manual(values = pal, guide = "none") +
+  scale_x_discrete(
+    limits = c("error_type","exercise_type","exercise_format","imm_state","del_state"),
+    labels = c(
+      error_type = "Error type",
+      exercise_type = "Exercise goal",
+      exercise_format = "Exercise format",
+      imm_state = "Immediate outcome",
+      del_state = "Delayed outcome"
+    ),
+    expand = c(.05, .05)
+  ) +
+  coord_cartesian(clip = "off") +
+  theme_sankey(base_size = 12) +
+  theme(plot.margin = margin(5.5, 30, 5.5, 5.5)) +
+  labs(x = NULL, y = NULL)
+
+
+# ---- Word cloud of exercise opinions ----
+
+belief_map_exact <- c(
+  "a little unclear" = "confusing",
+  "already acquired" = "too easy",
+  "boring" = "boring",
+  "boring but useful" = "boring",
+  "challenging and very useful" = "challenging but useful",
+  "common mistake" = "frequent error",
+  "complex rules" = "too difficult",
+  "confusing" = "confusing",
+  "confusing rules" = "confusing",
+  "creative, useful" = "useful",
+  "did not know how to solve the exercise" = "more guidance needed",
+  "did not know what to do" = "more guidance needed",
+  "did not see the point" = "irrelevant",
+  "did not understand the exercise" = "confusing",
+  "did not understand the purpose" = "confusing",
+  "difficult" = "too difficult",
+  "difficult rules" = "too difficult",
+  "difficult, not useful" = "irrelevant",
+  "does not make sense" = "confusing",
+  "easy" = "too easy",
+  "effective" = "useful",
+  "enjoyable" = "interesting",
+  "essential" = "useful",
+  "excellent for Chinese students" = "useful L1-L2 contrasts",
+  "focused" = "relevant",
+  "forgot about doing it" = "could not solve it",
+  "frequent mistake" = "frequent error",
+  "good drill" = "useful revision",
+  "good practice" = "useful revision",
+  "had to look for additional information" = "new vocabulary",
+  "had to look up too much vocabulary" = "more guidance needed",
+  "helpful even for my L1" = "useful L1-L2 contrasts",
+  "insightful" = "interesting",
+  "interesting" = "interesting",
+  "interesting but long" = "too difficult",
+  "interlinguistic comparations are very useful" = "useful L1-L2 contrasts",
+  "interlinguistic comparisons are very useful" = "useful L1-L2 contrasts",
+  "irrelevant" = "irrelevant",
+  "it focused more on critical thinking than linguistic skills" = "irrelevant",
+  "it made me think" = "interesting",
+  "it raised my error awareness" = "raises error awareness",
+  "justifying is difficult" = "too difficult",
+  "lack of context" = "more guidance needed",
+  "lack of depth" = "more practice needed",
+  "lack of explanation" = "more guidance needed",
+  "lack of guidance" = "more guidance needed",
+  "lack of solution" = "more guidance needed",
+  "learnt a lot" = "new vocabulary",
+  "made me think" = "interesting",
+  "more stylistic than essential" = "irrelevant",
+  "need more practice" = "more practice needed",
+  "new vocabulary" = "new vocabulary",
+  "nice explanation" = "useful",
+  "no explanation" = "more guidance needed",
+  "no explicit rule" = "more guidance needed",
+  "not a frequent error" = "irrelevant",
+  "not a frequent mistake" = "irrelevant",
+  "not a relevant mistake" = "irrelevant",
+  "not directly related to my errors" = "irrelevant",
+  "not entirely clear" = "confusing",
+  "not helpful" = "irrelevant",
+  "not relevant" = "irrelevant",
+  "not useful" = "irrelevant",
+  "not very useful" = "irrelevant",
+  "only useful to learn new vocabulary" = "new vocabulary",
+  "personalized" = "relevant",
+  "promotes idiomaticity" = "raises error awareness",
+  "raised my error awareness" = "raises error awareness",
+  "relevant" = "relevant",
+  "relevant and reflective" = "relevant",
+  "relevant and useful definitions" = "relevant",
+  "repetitive" = "boring",
+  "solution already given" = "too easy",
+  "the solution is missing" = "more guidance needed",
+  "too difficult" = "too difficult",
+  "too easy" = "too easy",
+  "too long" = "boring",
+  "too much information" = "too difficult",
+  "too specific" = "irrelevant",
+  "too subtle" = "too difficult",
+  "unclear" = "confusing",
+  "useful" = "useful",
+  "useful but complex" = "challenging but useful",
+  "useful but easy" = "too easy",
+  "useful but not a frequent error" = "irrelevant",
+  "useful but not enough practice" = "more practice needed",
+  "useful example" = "useful",
+  "useful examples" = "useful",
+  "useful explanation" = "useful",
+  "useful for accuracy" = "useful revision",
+  "useful for revision" = "useful revision",
+  "useful revision" = "useful revision",
+  "useful rules" = "useful",
+  "useful to avoid confusion" = "useful revision",
+  "useful, but already done" = "too easy",
+  "useful, explicit rule" = "useful",
+  "varied vocabulary" = "new vocabulary",
+  "very clear" = "useful",
+  "very difficult" = "too difficult",
+  "very interesting" = "interesting",
+  "very useful" = "useful",
+  "very useful rules" = "useful",
+  "weird sentences" = "confusing"
+)
+
+df1 <- df %>%
+  mutate(
+    recoded_belief = recode(belief, !!!belief_map_exact, .default = belief),
+    recoded_belief = str_squish(recoded_belief)
+  )
+
+bel_counts <- df1 %>%
+  filter(!is.na(recoded_belief), str_squish(recoded_belief) != "") %>%
+  mutate(recoded_belief = stringr::str_squish(recoded_belief)) %>%
+  count(recoded_belief, sort = TRUE)
+
+topN <- 17
+bel_top <- bel_counts %>% slice_max(n, n = topN, with_ties = FALSE)
+
+pal_top <- qualitative_hcl(n = nrow(bel_top), palette = "Pastel 1", l = 45, c = 80)
+names(pal_top) <- bel_top$recoded_belief
+
+is_dark <- function(hex) {
+  rgb <- col2rgb(hex)/255
+  # WCAG-ish luminance
+  lum <- 0.2126*rgb[1,] + 0.7152*rgb[2,] + 0.0722*rgb[3,]
+  lum < 0.5
+}
+
+bel_top2 <- bel_top %>%
+  mutate(
+    fill_col = pal_top[recoded_belief],
+    label    = stringr::str_wrap(recoded_belief, 24),
+    lbl_col  = ifelse(is_dark(fill_col), "white", "black")
+  )
+
+ggplot(bel_top2,
+       aes(area = n, fill = fill_col, label = label)) +
+  geom_treemap(color = "white") +
+  geom_treemap_text(
+    aes(colour = lbl_col),
+    place = "centre", reflow = TRUE, grow = TRUE,
+    lineheight = 0.95, min.size = 6,
+    padding.x = unit(2, "mm"), padding.y = unit(2, "mm")
+  ) +
+  scale_fill_identity(guide = "none") +
+  scale_colour_identity() +
+  theme_void() +
+  labs(
+    title = "Treemap of student opinions on exercises\n"
+  )
+
+```

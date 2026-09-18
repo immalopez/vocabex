@@ -1,0 +1,28 @@
+Práctica
+Este ejercicio se centra en la práctica de verbos que comúnmente pueden ser mal traducidos del inglés al español debido a las diferencias estructurales entre ambos idiomas. Lee las frases que se presentan a continuación. Tu tarea es corregir la traducción incorrecta al español para que refleje la estructura adecuada del verbo en este idioma.
+Ejemplo
+Inglés: “They enjoy playing soccer”.
+Traducción incorrecta: “Disfrutan jugar fútbol”.
+Corrección: “Disfrutan de jugar al fútbol”.
+
+
+         * Inglés: "My sister, who is already 18, still plays with dolls."
+         * Traducción incorrecta: "Mi hermana, que ya es 18, sigue jugando con muñecas."
+         * Corrección: _______________________
+         * Inglés: "We tried to call you."
+         * Traducción incorrecta: "Intentamos de llamarte."
+         * Corrección: _______________________
+         * Inglés: "I can’t afford to buy a new car."
+         * Traducción incorrecta: "No puedo permitirme a comprar un coche nuevo."
+         * Corrección: _______________________
+         * Inglés: "I stopped smoking."
+         * Traducción incorrecta: "Paré fumar."
+         * Corrección: _______________________
+         * Inglés: "She forgot to close the door."
+         * Traducción incorrecta: "Olvidó de cerrar la puerta."
+         * Corrección: _______________________
+         * Inglés: "We moved back a couple of years later."
+         * Traducción incorrecta: "Mudamos atrás un par de años después."
+         * Corrección: _______________________
+
+

@@ -1,0 +1,39 @@
+Práctica
+1. Une los componentes de la Columna 1 con los de la Columna 2 para formar palabras compuestas. Escribe la palabra resultante en la Columna 3 (puede haber más de una opción correcta) y reflexiona sobre cómo se puede deducir el significado de estas palabras a partir de la combinación de sus componentes.
+2. Usa cada palabra resultante para escribir una oración.
+
+
+Componente 1
+	Componente 2
+	Palabra compuesta resultante
+	aero
+	visión
+	
+
+	foto
+	móvil
+	
+
+	tele
+	caídas
+	
+
+	para
+	ondas
+	
+
+	auto
+	juego
+	
+
+	video
+	copia
+	
+
+	micro
+	línea
+	aerolínea
+	
+
+
+

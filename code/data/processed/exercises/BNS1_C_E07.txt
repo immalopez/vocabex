@@ -1,0 +1,14 @@
+Práctica
+Lee cada frase y decide si debes usar “el” o “lo” para completarla correctamente. Recuerda que “lo” se usa para referirse a ideas, cualidades abstractas o hechos no especificados, mientras que “el” se usa con sustantivos masculinos concretos.
+
+
+   * En _____ peor caso, tendremos que mudarnos a otro piso.
+   * _____ importante es que comprendas la regla.
+   * No podemos ignorar _____ obvio de la situación.
+   * _____ bueno de este método es su simplicidad.
+   * ¿Ves a esos dos chicos de ahí? _____ alto es mi novio.
+   * Estoy buscando _____ esencial de su argumento.
+   * En este caso, _____ único que podemos hacer es esperar.
+   * _____ difícil de esta tarea es empezar.
+
+

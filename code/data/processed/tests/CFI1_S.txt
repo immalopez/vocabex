@@ -1,0 +1,324 @@
+﻿Trabajo con los errores cometidos
+
+
+Ejercicio 1
+En español, debemos seguir ciertas reglas cuando escribimos las fechas. Estas son las más importantes:
+* Los días de la semana y los meses en español se escriben con minúscula. Ejemplo: lunes, septiembre, marzo, junio.
+* Utilizamos la preposición de entre el día, el mes y el año. Ejemplo: martes, 11 de septiembre de 2001.
+* Día + mes + año como marcador temporal: Se utiliza el antes del número del día. Ejemplo: Nací el 11 de septiembre de 2001.
+* Cuando mencionamos solo el mes o el año, usamos en. Ejemplos: Nací en septiembre. Nací en 2001.
+Práctica
+1. Cada una de las siguientes frases tiene un error en la escritura de las fechas. Encuentra el error y corrígelo.
+2. Escribe las siguientes fechas usando el formato correcto: el cumpleaños de un ser querido, la fecha de hoy, una fecha importante en la historia de tu país y la fecha en que comenzaste a aprender español.
+
+
+* Nací en 10 de Abril de 2001.
+* La reunión es el 15 de Julio.
+* Comenzamos las clases en 7 de Septiembre 2019.
+* Fui a París en Junio de 2022.
+* Mi hermana nació el Mayo.
+
+
+
+
+Ejercicio 2
+
+
+El orden de los adjetivos en español es más complejo de lo que parece a simple vista. Si bien el adjetivo suele colocarse después del sustantivo que modifica, hay muchas excepciones:
+* Orden General en Español: Sustantivo + Adjetivo.
+* Excepciones: Adjetivos numerales y ordinales (un, seis, primer, segundo, tercer, etc.), expresiones fijas (p. ej., “buen día”), cambios de significado en función del orden (p. ej., “viejo amigo” vs. “amigo viejo”).
+Ejemplos
+* Casa grande. (Y no “grande casa”, como sería en inglés.)
+* Primer lugar. (Los adjetivos numerales y ordinales preceden al sustantivo y, además, algunos deben apocoparse: p. ej., uno → un, primero → primer, tercero → tercer.)
+* Los trabajadores estudiantes aprobaron el examen. (Todos eran trabajadores y todos aprobaron.)
+* Los estudiantes trabajadores aprobaron el examen (Solo los trabajadores lo aprobaron; el resto, no.)
+Práctica
+Coloca los elementos de las frases en el orden correcto.
+
+
+1. meses / primeros / los / son.
+2. azul / cielo / el / es.
+3. tienen / segundo / piso / un / ellos.
+4. pequeño / un / tiene / perro / mi hermano.
+5. cuarta / tiene / ella / una / opción.
+6. libros / antiguos / algunos / tiene / ella.
+7. es / libro / su / quinto / este.
+8. capítulo / séptimo / el / es / interesante.
+9. nuevo / tiene / coche / un / ella.
+10. en / año / Universidad / de / Ioánina / un / estudió / durante / la.
+
+
+
+
+Ejercicio 3
+El género de las palabras en español puede ser un poco complejo al principio, especialmente para estudiantes de español como lengua extranjera (ELE), dado que no siempre sigue reglas estrictamente lógicas y puede diferir bastante de otros idiomas. Sin embargo, hay algunas reglas generales que pueden ayudar a los estudiantes a determinar el género de la mayoría de las palabras.
+Reglas generales:
+* Masculino: Las palabras que terminan en -o generalmente son masculinas (el libro, el niño).
+* Femenino: Las palabras que terminan en -a usualmente son femeninas (la mesa, la tecnología).
+* Excepciones a la regla de la -a: Las palabras que terminan en -ma, -pa, y -ta a menudo son masculinas cuando derivan del griego (el problema, el tema).
+* Palabras que terminan en -e o consonante: Pueden ser de cualquier género. Es necesario aprender el género específico de cada palabra (el detalle, masculino; la mente, femenino).
+* Palabras que terminan en -ión y en -dad: Son casi siempre femeninas (la investigación, la sección, la vanidad).
+* Palabras que cambian de género con el artículo y tienen diferentes significados: el cometa (cuerpo celeste) vs. la cometa (juguete).
+
+
+Práctica
+Escribe el artículo correcto (el/la) para las siguientes palabras, basándote en las reglas generales sobre el género de las palabras en español.
+
+
+1. ___ año
+2. ___ análisis
+3. ___ radio
+4. ___ implicación
+5. ___ ciudad
+6. ___ mapa
+7. ___ noche
+8. ___ día
+9. ___ flor
+10. ___ árbol
+
+
+Ejercicio 4
+Práctica
+A continuación, encontrarás pares de oraciones en las que el uso del pronombre es obligatorio. Tu tarea es comparar las oraciones en cada par y discutir por qué la versión sin pronombre es incorrecta o incompleta.
+
+
+1. A. "Mudamos a la calle Albertus."
+B. "Nos mudamos a la calle Albertus."
+Reflexión: ¿Por qué es incorrecta la primera oración sin el pronombre "nos"? ¿Quién muda qué?
+
+
+2. A. "Cambié a una nueva escuela."
+B. "Me cambié a una nueva escuela."
+Reflexión: ¿Por qué es incorrecta la primera oración sin el pronombre "me"? ¿Quién cambia qué?
+
+
+3. A. "Voy de la fiesta temprano."
+B. "Me voy de la fiesta temprano."
+Reflexión: ¿Por qué es necesario el uso de "me" en la segunda oración? ¿Desde dónde y hacia dónde se desplaza el sujeto?
+ 
+4. A. "Siento en la silla para trabajar."
+B. "Me siento en la silla para trabajar."
+Reflexión: ¿Por qué la primera oración no es correcta? ¿Quién sienta a quién?
+
+
+Ejercicio 5
+Práctica
+Completa las siguientes frases con combinaciones de expresiones temporales usando la estructura correcta. Fíjate bien en el orden de las palabras.
+Ejemplos
+(dos años / nacer / hermano) → Dos años después de que mi hermano naciera.
+(semana / empezar / clases) → Una semana antes de que empezaran las clases.
+
+
+* __________ (tres meses / terminar / curso) decidí irme de vacaciones.
+➔ ______________________________________________________
+* Mi hermana se mudó a España __________ (un año / casar / nosotros).
+➔ ______________________________________________________
+* __________ (seis meses / graduar / mi primo) organizamos una gran fiesta.
+➔ ______________________________________________________
+* __________ (dos días / empezar / el verano) se fue de viaje.
+➔ ______________________________________________________
+* __________ (cuatro años / terminar / la universidad) me mudé a otro país.
+➔ ______________________________________________________
+
+
+
+
+Ejercicio 6
+Práctica
+A continuación, tienes un texto escrito en presente que incluye demostrativos y adverbios de lugar. Tu tarea es reescribirlo en pasado, adaptando los demostrativos y adverbios según corresponda. Fíjate en cómo cambian "aquí" y "ahí", "este" y "ese", cuando hablamos del pasado.
+Ejemplo
+Ahora estamos aquí en el museo y este cuadro es el más famoso.
+➔ El año pasado estábamos ahí en el museo y ese cuadro era el más famoso.
+
+
+Hoy estoy en la universidad. Este lugar me parece enorme, así que me siento un poco perdido. Mi amiga me dijo que aquí, cerca de la cafetería, hay una biblioteca. Este semestre voy a estudiar mucho y pasaré mucho tiempo en esta biblioteca. Además, esta tarde tengo mi primera clase de matemáticas. Después, espero ver a esta amiga para que me muestre el edificio donde está la clase de química.
+
+
+Ejercicio 7
+Práctica
+   1. Selecciona la preposición o preposiciones que complete(n) correctamente cada frase.
+   2. Piensa en cómo cada preposición cambia el significado de la frase y justifica cuál es la que mejor se ajusta al contexto.
+
+
+   * Todos nosotros estamos de acuerdo (ø / en / sobre) que es necesario tomar medidas urgentes.
+   * El proyecto se enfoca (sobre / en / a) la innovación tecnológica para mejorar la eficiencia energética.
+   * Escogí (a / en / de) mudarme (a / en / de) Japón después de que me hicieran una buenísima propuesta laboral.
+   * Estoy muy interesado (sobre / en / por) aprender más sobre este tema.
+   * ¿Ya has empezado (en / de / a) el nuevo trabajo? ¿Te gusta?
+   * Aunque hay algunas desventajas (de / en / por) ser demasiado cauteloso, también hay beneficios.
+   * Es importante asegurarse (ø / de / por) que todas las puertas estén cerradas antes de salir de casa.
+   * He estudiado (ø / en / a) en esta institución toda la vida.
+
+
+
+Ejercicio 8
+Práctica
+   1. Completa la tabla con la forma correcta en masculino o femenino según corresponda. Recuerda que no todos los cambios de género son regulares: algunos tienen nombres completamente diferentes.
+   2. Responde a las preguntas:
+
+      * ¿Tiene en español la palabra “perra” la misma connotación negativa que en inglés? ¿La hembra de qué animal suele utilizarse como insulto en español?
+      * ¿Por qué el femenino de “caballo” no es “caballa”? ¿Qué es una “caballa”?
+
+Macho
+	Hembra
+	el perro
+	la perra
+	el gato
+	
+
+	el caballo
+	
+
+	el león
+	
+
+	el toro
+	
+
+	el lobo
+	
+
+	el tigre
+	
+
+	el elefante
+	
+
+	el zorro
+	
+
+	
+
+	la oveja
+	
+
+Ejercicio 9
+Práctica
+A continuación, encontrarás oraciones que pueden ser poco idiomáticas por utilizar números cardinales (7, 3, etc.) en lugar del adjetivo ordinal correspondiente. Corrige las oraciones cuando sea necesario para que se adecúen al español.
+Ejemplos
+         * Conocí a María durante el grado 7. ➔ Conocí a María durante el séptimo grado.
+         * Estoy en el año 3 de mis estudios de doctorado. ➔ Estoy en el tercer año de mis estudios de doctorado.
+
+
+         1. María está en grado 6.
+➔ ______________________________________________________
+         2. Llegamos al piso 5 del hotel.
+➔ ______________________________________________________
+         3. Su cumpleaños es el día 15 de junio.
+➔ ______________________________________________________
+         4. El museo está en la calle 2 de la ciudad.
+➔ ______________________________________________________
+         5. Juan acabó la carrera en la posición 8.
+➔ ______________________________________________________
+
+
+Ejercicio 10
+Práctica
+Lee el texto y completa los huecos con los conectores adecuados de la lista proporcionada. Ten en cuenta que no pueden repetirse los conectores y los hay que sobrarán.
+
+
+además ✴ sin embargo ✴ por otro lado ✴ pues ✴ aunque ✴
+así pues ✴ dado que ✴ ahora bien ✴ según ✴ así que
+
+
+La revolución tecnológica ha transformado nuestra sociedad. ________ la opinión del experto, ha cambiado la forma en que trabajamos, ya que muchas tareas que antes requerían presencia física ahora se pueden realizar de forma remota. ________, este avance no ha sido positivo para todos; algunos sectores han experimentado una disminución en la demanda de mano de obra. ________, la tecnología ha mejorado la eficiencia y la productividad en diversas industrias. ________, el impacto de la tecnología en nuestra vida diaria es innegable, ________ seguirá siendo un tema central en el futuro previsible.
+
+
+
+
+Ejercicio 11
+
+
+“Ser” o “estar” en la voz pasiva
+            * Ser + participio pasado: Se utiliza para formar la voz pasiva cuando el enfoque está en la acción que recibe el sujeto. Se usa para indicar qué o quién realiza la acción, especialmente si se incluye un complemento agente (p. ej. “por María”).
+            * Estar + participio pasado: Sirve para indicar el estado o la condición resultante de la acción, sin enfocarse necesariamente en quién la realiza.
+Ejemplos
+            * Los cursos están (grabados) en línea (Enfoque en el resultado de la acción, que ya está terminada: los cursos ya se han impartido, se han grabado y están disponibles en línea.)
+            * Los cursos son (impartidos) en línea (Enfoque en el desarrollo de la acción, que se entiende que todavía está ocurriendo: periódicamente los estudiantes tienen que conectarse para asistir a sus cursos.)
+Práctica
+Para cada situación, decide si es más adecuado utilizar “ser” o “estar” en la voz pasiva y formula la oración correspondiente.
+
+
+            1. Un libro escrito por Gabriel García Márquez.
+            2. Una puerta que permanece abierta después de que alguien la haya abierto.
+            3. Un puente construido con madera.
+            4. Una cena que Eva se encuentra preparando ahora mismo.
+            5. Una persona desaparecida.
+
+
+Ejercicio 12
+En español, cuando el objeto directo es una persona o un ser animado, usamos la preposición "a" para introducirlo.
+Ejemplo
+Correcto: Ayer conocí a mi profesora.
+Incorrecto: Ayer conocí mi profesora.
+Práctica
+Elige la opción correcta para completar cada oración, teniendo en cuenta si es necesario usar la preposición "a" o no.
+            1. Vi (a / Ø) los niños jugando en el parque.
+            2. Ella buscó (a / Ø) su perro por todas partes.
+            3. Visitamos (a / Ø) nuestros amigos en el hospital.
+            4. Necesito encontrar (a / Ø) un buen restaurante.
+            5. Llamaron (a / Ø) la policía para denunciar el robo.
+
+
+Ejercicio 13
+Práctica
+Completa estos pares de palabras y observa cómo cambian las palabras que contienen la secuencia "ct" en inglés cuando se traducen al español. ¿Ves un patrón? ¿Es aplicable a todas las palabras? ¿Por qué crees que esto es así?
+            1. Respected ➔ Respe____ado
+            2. Distinct ➔ Distin____o
+            3. Adjunct ➔ Adjun____o
+            4. Perfect ➔ Perfe____o
+            5. Correct ➔ Corre____o
+            6. Connected ➔ Cone____ado
+            7. Contract ➔ Contra____o
+            8. Construct ➔ Constru____o
+
+
+Ejercicio 14
+Práctica
+            1. Lee el texto siguiente y subraya todos los términos relacionados con el mundo empresarial que puedas identificar en él.
+            2. Traduce estos términos al inglés y observa las similitudes y las diferencias.
+
+
+En los últimos años, las empresas han tenido que adaptarse rápidamente a los avances tecnológicos y a la digitalización. Muchas compañías han optado por invertir en innovación y en el crecimiento de sus negocios en línea. Las empresas emergentes han aprovechado estas oportunidades para crecer y competir con las multinacionales. Por otro lado, la sostenibilidad y la responsabilidad social corporativa (RSC) son ahora prioridades para muchas corporaciones. Estas buscan no solo maximizar sus beneficios, sino también contribuir al bienestar social y cuidar del medio ambiente. Los líderes empresariales saben que la digitalización y el uso de la tecnología son esenciales para mantenerse competitivos en un mercado globalizado.
+
+
+
+
+Ejercicio 15
+Práctica
+Lee cada par de oraciones y reflexiona sobre cómo el uso de “por” vs. “para” cambia el significado. Luego, explica en tus propias palabras qué indica cada preposición en el contexto dado.
+
+
+            1. A. "Compré esto por ti."
+B. "Compre esto para ti."
+Reflexión: ¿Qué sugiere cada preposición sobre la motivación tras la compra del regalo y su destinatario?
+
+
+            2. A. "Viajé por todo el país."
+B. "Viajé para conocer la cultura del país."
+Reflexión: ¿Cómo se diferencia el propósito del viaje en cada frase?
+
+
+            3. A. "Este regalo es por tu cumpleaños."
+B. "Este regalo es para ti."
+Reflexión: ¿Cómo cambia el significado en términos de motivo y destinatario?
+ 
+            4. A. "Trabajé por ocho horas ayer."
+B. "Trabajé para terminar el proyecto ayer."
+Reflexión: ¿Qué aspecto del trabajo destacan “por” y “para” respectivamente?
+
+
+            5. A. "Lo hice por ti."
+B. "Lo hice para sorprenderte."
+Reflexión: ¿Cómo afecta la preposición al motivo y al resultado esperado de la acción?
+
+
+
+Identificación y corrección de errores similares
+Este fragmento incluye algunos errores similares a los que has cometido en tu biografía. ¿Serías capaz de identificarlos y, en caso de ser necesario, corregirlos?
+Nací el 14 de marzo 2003 en Providence y mudé con mi familia a otra ciudad en agosto del mismo año. Durante mis años primeras de vida, todo era muy difícil para mí, y me costó mucho adaptarme a mi escuela. Sin embargo, después de tres años que mi hermana naciera, ella también empezó a ir a esta escuela y gracias a eso me empecé a sentir más acompañada y segura. Por eso, estoy muy unida a ella. Luego, cuando llegó la hora de estudiar la secundaria, cambié de escuela a un lugar más cercano a mi casa. Empecé al instituto y logré hacer muchos amigos aquí. En el grado 9 me di cuenta de que quería aprender más sobre emperezas y trabajar a una de las más respectadas del país. Pues, aunque durante un tiempo todas mis clases estaban en línea y eso me desmotivaba, estudié muchísimo y me gradué con muy buenas notas. Como premio, mis padres adoptaron un gato por mí llamado Matilda. Es muy bonito y lo quiero mucho. Ahora estoy contenta de empezar mi próxima etapa en la universidad, donde continuaré aprendiendo y conociendo gente maravillosa.
+
+
+Valoración de los ejercicios
+            1. Valora, del 1 al 4 (donde 1 es “nada útil” y 4 es “muy útil”), la utilidad de cada uno de los 15 ejercicios que has resuelto para la posterior identificación y corrección de errores similares a los que has cometido en tu biografía.
+            2. Justifica brevemente (con una o dos frases) el porqué de cada puntuación.

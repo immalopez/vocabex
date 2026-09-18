@@ -1,0 +1,17 @@
+Práctica
+Relaciona cada nivel de estudio en el sistema educativo francés con su(s) equivalente(s) en el sistema educativo español.
+               1. École primaire
+               2. Collège
+               3. Lycée
+               4. BAC
+               5. Licence
+               6. Master
+               1. Bachillerato
+               2. Educación primaria
+               3. ESO
+               4. Maestría
+               5. Grado
+               6. Licenciatura
+
+
+

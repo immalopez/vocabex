@@ -1,0 +1,18 @@
+Práctica
+Lee cada oración y elimina el pronombre posesivo cuando sea redundante. Escribe la versión corregida de la oración y explica por qué el posesivo en muchos casos no es necesario en español.
+Ejemplo
+Teníamos que estar atentos para que no nos robaran nuestras maletas.
+Teníamos que estar atentos para que no nos robaran las maletas.
+
+
+                                          1. Cuando iba al instituto, cada día me quitaban mi bocadillo en el recreo.
+                                          2. Me olvidé mi abrigo en el restaurante.
+                                          3. Se les cayó su comida mientras caminaban.
+                                          4. Me duelen mis piernas después de correr tanto.
+                                          5. No podía encontrar mi libro en mi mochila.
+                                          6. Nos contaron tu secreto.
+                                          7. Mi compañero de piso se me ha comido mi cena.
+
+
+
+

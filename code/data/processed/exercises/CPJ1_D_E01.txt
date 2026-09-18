@@ -1,0 +1,28 @@
+Práctica
+Este ejercicio se centra en la práctica de traducciones literales mandarín-español que son inadecuadas debido a las diferencias estructurales entre ambos idiomas. Lee las frases que se presentan a continuación. Tu tarea es corregir la traducción incorrecta al español para que resulte más idiomática.
+Ejemplo
+Mandarín: “我想培养与他人交流的能力。”
+Traducción incorrecta: “Quiero cultivar mi poder de comunicarme con los demás”.
+Corrección: “Quiero mejorar mi capacidad de comunicarme con los demás”.
+
+
+* Mandarín: "我觉得看到你很高兴。"
+   * Traducción incorrecta: "Me pienso muy feliz de verte".
+   * Corrección: _______________________
+* Mandarín: "我在2022年夏天学会了开车。"
+   * Traducción incorrecta: "Supe conducir en verano de 2022."
+   * Corrección: _______________________
+* Mandarín: " 那家餐厅有很多人。我们找不到座位。"
+   * Traducción incorrecta: "Este restaurante tiene muchas personas: no encontramos asiento."
+   * Corrección: _______________________
+* Mandarín: "你喜欢喝茶酒吗？我听说在西班牙很流行。"
+   * Traducción incorrecta: "¿Tú gusta beber licor de té? He oído que es bastante popular en España."
+   * Corrección: _______________________
+* Mandarín: "给他们更多时间完成项目。"
+   * Traducción incorrecta: "Da a ellos más tiempo para terminar el proyecto."
+   * Corrección: _______________________
+* Mandarín: " 西班牙菜咸味很重，但是很好吃。"
+   * Traducción incorrecta: "La comida española tiene un salado sabor muy fuerte, pero es deliciosa."
+   * Corrección: _______________________
+
+

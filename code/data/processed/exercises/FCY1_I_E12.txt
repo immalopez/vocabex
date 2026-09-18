@@ -1,0 +1,16 @@
+Práctica
+Lee las frases en estilo directo y pásalas al estilo indirecto, utilizando verbos como “argumentar”, “afirmar”, etc. (no repitas ninguno). Trata de mantener el significado original mientras ajustas la estructura de la frase para que refleje un reporte o resumen de lo dicho.
+
+
+1. “La inteligencia artificial transformará el mundo”, dice Pellicer.
+2. “El cambio climático es el mayor desafío de nuestro tiempo”, dice Martínez.
+3. “Los videojuegos pueden mejorar las habilidades cognitivas”, dice López.
+4. “La educación en línea facilitará el acceso al conocimiento”, dice Torres.
+5. “La exploración espacial contribuirá al avance de la tecnología”, dice González.
+6. “Los libros digitales nunca reemplazarán por completo a los impresos”, dice Sánchez.
+7. “La globalización afecta tanto positiva como negativamente a las economías locales”, dice Hernández.
+8. “La juventud de hoy está más preparada para los desafíos globales”, dice Rodríguez.
+
+
+
+

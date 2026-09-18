@@ -1,0 +1,48 @@
+Práctica
+Selecciona un elemento de cada columna para formar una frase completa. Asegúrate de que el uso de “ser” o “estar” sea el adecuado según el contexto de la frase que formes. Escribe una oración por fila. 
+Ejemplo
+Hoy, el clima está agradable.
+
+
+
+
+Columna 1
+	Columna 2
+	Columna 3
+	Columna 4
+	hoy
+	el clima
+	es
+	agradable
+	la fiesta
+	en la playa
+	está
+	aburrida
+	el concierto
+	Ana
+	es
+	emocionante
+	este libro
+	mi casa
+	está
+	interesante
+	el coche
+	siempre
+	es
+	en el centro
+	mi abuelo
+	la sopa
+	está
+	antiguo
+	el pastel
+	el profesor
+	es
+	delicioso
+	la película
+	muy
+	es
+	larga
+	
+
+
+

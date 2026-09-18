@@ -1,0 +1,18 @@
+Práctica
+Traduce las siguientes disciplinas profesionales al español, prestando especial atención a aquellas que en inglés terminan en “-ics” y cómo se transforman al traducirlas (no siempre será de la misma forma).
+Ejemplo
+Medical Ethics → Ética médica (no “éticos” ni “éticas”, que son adjetivos)
+1. Physics:
+2. Chemistry:
+3. Genetics:
+4. Economics:
+5. Mathematics:
+6. Politics:
+7. Linguistics:
+8. Robotics:
+9. Statistics:
+10. Fine Arts:
+
+
+
+

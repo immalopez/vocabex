@@ -1,0 +1,16 @@
+Práctica
+            1. Lee cada frase y determina si el uso del comparativo o intensificador es adecuado al contexto.
+            2. Si el comparativo es inapropiado, corrige la frase para que sea clara y pertinente.
+            3. Explica brevemente tu corrección, señalando si es necesario un comparativo o simplemente un adjetivo de intensidad.
+
+
+            * Me di cuenta a tiempo de que me querían estafar y les di información errónea a propósito para evitar mayores perjuicios.
+            * La empresa implementó medidas preventivas para evitar mayores pérdidas en el futuro.
+            * Los resultados de las pruebas competenciales indican que los estudiantes necesitan recursos adicionales para comprender el tema a un nivel más profundo.
+            * El comité tomó medidas urgentes para evitar mayores problemas en el proyecto.
+            * Se establecieron controles estrictos para evitar mayores complicaciones en la logística.
+            * Tras un análisis exhaustivo, el equipo concluyó que tenía que alcanzar niveles de productividad más altos este trimestre.
+
+
+
+

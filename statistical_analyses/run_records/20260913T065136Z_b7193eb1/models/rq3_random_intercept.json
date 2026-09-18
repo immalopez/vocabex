@@ -1,0 +1,28 @@
+{
+  "run_id": "20260913T065136Z_b7193eb1",
+  "model_id": "rq3_random_intercept",
+  "created_at": "2026-09-13 07:17:30 UTC",
+  "fit_path": "fits/rq3_random_intercept.rds",
+  "fit_sha256": "5f091333a9cbd768f8e93e8ecb0cf557abd55034913a08048a294c06780fbf8d",
+  "data_sha256": "adbc13a5c18a4588a6268f1dc92181903d364d0d4a695d7d0f1088edf3ce870b",
+  "specification_sha256": "ddbc544a93190a0e795a96434384a43b05c2fb31e11648a7c18d211dafc000c1",
+  "formula": "correction ~ time + prof_level + L1_group + le_il_z + ti_il_z + time_invested_sc + le_external_source_c + (1 | id) + (1 | participant_ID) + time:prof_level + time:L1_group + time:le_il_z + time:ti_il_z + time:time_invested_sc + time:le_external_source_c",
+  "family": {
+    "family": "binomial",
+    "link": "logit"
+  },
+  "priors": null,
+  "seed": null,
+  "settings": {
+    "optimizer": "bobyqa",
+    "maxfun": 200000
+  },
+  "contrasts": ["contr.sum", "contr.poly"],
+  "cache_key": "562b5bea387e49efc035c0543105fa2f2cfbbd02103c48e83ea02162ac1c9449",
+  "cache_source": "20260913T060850Z_a7e1690c",
+  "observations": 2550,
+  "groups": {
+    "id": 1275,
+    "participant_ID": 85
+  }
+}

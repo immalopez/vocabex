@@ -1,0 +1,10 @@
+{
+  "run_id": "20260913T065136Z_b7193eb1",
+  "data_id": "rq2_primary",
+  "created_at": "2026-09-13 06:51:51 UTC",
+  "data_path": "inputs/model_data/rq2_primary.rds",
+  "file_sha256": "d10f6a5d15966c2b1b552beb63623ddfc496d239b1386fc5735a761bd2e7f2a1",
+  "object_sha256": "fdbf1a2a0a156fe5914d385f142be8d2e1bf661a5a8f3a91856ef2eb50b9ab4c",
+  "observations": 2550,
+  "columns": 93
+}

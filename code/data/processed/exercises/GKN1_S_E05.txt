@@ -1,0 +1,47 @@
+Práctica
+En la siguiente parrilla, encontrarás palabras en las columnas 1 y 2 que debes combinar para formar una expresión idiomáticamente correcta en la columna 3. No todas las combinaciones requieren una preposición. Completa cada fila correctamente.
+
+
+baile
+	competición
+	competición de baile
+	viaje
+	autobús
+	
+
+	fútbol
+	partido
+	
+
+	ciencia ficción
+	película
+	
+
+	historia
+	libro
+	
+
+	música
+	festival
+	
+
+	café
+	taza
+	
+
+	zapatos
+	par
+	
+
+	cocina
+	libro
+	
+
+	oriental
+	baile
+	
+
+	
+
+
+

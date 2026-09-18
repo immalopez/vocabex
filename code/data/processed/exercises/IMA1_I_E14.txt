@@ -1,0 +1,36 @@
+Práctica
+Completa la tabla siguiente, transformando los roles y profesiones del masculino al femenino cuando sea necesario. Algunas profesiones son invariables en cuanto al género, pero recuerda que el artículo siempre varía.
+
+
+
+
+Masculino
+	Femenino
+	el autor
+	
+
+	el juez
+	
+
+	el médico
+	
+
+	el dentista
+	
+
+	el modelo
+	
+
+	el técnico
+	
+
+	el artista
+	
+
+	el ingeniero
+	
+
+	
+
+
+

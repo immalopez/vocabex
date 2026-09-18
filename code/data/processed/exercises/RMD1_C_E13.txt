@@ -1,0 +1,13 @@
+Práctica
+Lee el texto y completa los huecos con los conectores adecuados de la lista proporcionada. Ten en cuenta que no pueden repetirse los conectores y los hay que sobrarán.
+
+
+a causa de ✴ sin embargo ✴ además ✴ en cambio ✴ aunque ✴
+dado que ✴ en consecuencia ✴ por lo tanto ✴ de modo que ✴ asimismo
+
+
+La contaminación ambiental es un problema grave en las ciudades modernas. ________, muchas personas están expuestas a niveles altos de polución sin siquiera darse cuenta, ________ las industrias y los vehículos son responsables de gran parte de esta contaminación. ________, las políticas ambientales se han vuelto una prioridad en algunos gobiernos. ________, no todos los países cuentan con los mismos recursos para implementar cambios significativos. ________ el uso excesivo de combustibles fósiles, los niveles de dióxido de carbono han aumentado drásticamente en los últimos años, ________ la salud pública se ha visto afectada negativamente.
+
+
+
+

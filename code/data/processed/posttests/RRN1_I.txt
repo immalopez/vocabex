@@ -1,0 +1,30 @@
+﻿Trabajo con los errores cometidos
+
+
+Identificación y corrección de errores similares 2, sin ayudas
+Este fragmento incluye algunos errores similares a los que has cometido a lo largo del curso. ¿Serías capaz de identificarlos y, en caso de ser necesario, corregirlos?
+Tomando en cuenta sobre los avances en inteligencia artificial, es importante de tener en cuenta de que los complejos de cada situación afectan a sus resultados. El autor menciona como, incluso con un presupuesto limitado, su plan de investigación basado en el aprendizaje automático es mas economico que otras opciones, pues lo uso varias veces de forma exitosa. En cuanto a su articulo, ha escrito la metodología, pero no destaca la importancia que debemos garantizar la reproducibilidad de los experimentos. Por otro lado, no analiza ni trata de usar los alternativas ni se subraya el conocimiento científica detrás de un idea innovadora. El formato en obtener los datos es confuso, probablemente porque la mayoría de la gente nunca piensan en cómo organizar la información. Para entender su punto directo, se necesita más claridad. Los modelos que introduce dependen de grandes cantidades de datos para su formación, y por eso dice que debemos mover fuera la idea del "gold standard". Podemos concluir que los investigadores solo pegan a las normas que saben, sin considerar la flexibilidad necesaria para que se fueran aceptables. Las resultas muestran que la calificación que habrían ganado los participantes no solo refuerza la hipótesis para soportar la validez del estudio, sino también genera nuevas preguntas.
+
+
+Información adicional sobre la resolución de los ejercicios
+1. ¿Has resuelto todos los ejercicios? En caso afirmativo, ¿por qué lo has hecho? En caso negativo, ¿por qué no lo has hecho?
+
+
+2. ¿Cómo has resuelto los ejercicios? ¿Completamente solo/a o utilizando ayudas como diccionarios y/o efectuando búsquedas en Internet? (No tiene nada de malo haber buscado información adicional; de hecho, es algo muy positivo porque fomenta la autonomía y potencia el aprendizaje).
+
+
+3. ¿Cuánto tiempo dirías que has invertido en resolver los ejercicios?
+
+
+
+
+
+
+   4. Del 1 al 4 (donde 1 equivale a “nada” y 4 a “muchísimo”), ¿cuánto crees que estos ejercicios te han ayudado a ser más consciente de tus errores?
+
+
+
+
+
+
+   5. Del 1 al 4 (donde 1 equivale a “muy mala” y 4 a “muy buena”), ¿cómo de positiva ha sido para ti la experiencia con estos ejercicios? ¿Por qué?

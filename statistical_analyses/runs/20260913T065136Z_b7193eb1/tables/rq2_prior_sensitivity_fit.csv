@@ -1,0 +1,3 @@
+model,loo_method,looic,looic_se,p_loo,pareto_k_initially_over_0_7,exact_refits,unresolved_pareto_k_over_0_7,max_initial_pareto_k,participant_intercept_sd,item_intercept_sd,error_type_intercept_sd
+glmm_informed,Moment-matched PSIS-LOO with exact refits for k > 0.7,2977.940163170903,48.71215209455789,549.5238977088426,8,8,0,0.8817643628725393,1.11699900007,1.665328508375,0.31457473547023074
+generic_weak,Moment-matched PSIS-LOO with exact refits for k > 0.7,2981.723506365906,49.19001069204242,555.0290512801375,11,11,0,0.8122413437054861,1.1410110447675,1.66889836595,0.327503717358785

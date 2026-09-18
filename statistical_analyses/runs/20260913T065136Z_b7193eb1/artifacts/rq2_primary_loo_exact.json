@@ -1,0 +1,19 @@
+{
+  "run_id": "20260913T065136Z_b7193eb1",
+  "artifact_id": "rq2_primary_loo_exact",
+  "path": "diagnostics/rq2_primary_loo_exact.rds",
+  "sha256": "5fb1d9e2613e027ba51568181a92ab513a09acb5690e4de7a1e167480e502fb8",
+  "source_models": [
+    "rq2_primary"
+  ],
+  "settings": {
+    "k_threshold": 0.7,
+    "seed": 202505,
+    "backend": "cmdstanr",
+    "cores": 4,
+    "future_globals_gib": 2,
+    "cache_key": "978a1ea15fcaaf418d73e8f28fd24b10e152f590d2ad41401864d5bcf851de46",
+    "cache_source": "20260913T065136Z_b7193eb1"
+  },
+  "created_at": "2026-09-13 07:19:40 UTC"
+}

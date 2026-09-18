@@ -1,0 +1,48 @@
+Práctica
+A continuación, tienes una tabla en la que debes reemplazar el circunloquio de la columna del medio con la expresión más precisa en la última columna.
+
+
+Sustantivo
+	Circunloquio
+	Expresión precisa
+	cosas
+	para limpiar
+	productos de limpieza
+	cosas
+	de comer
+	
+
+	zonas
+	que tienen actividad sísmica
+	
+
+	alimentos
+	que aportan nutrientes
+	
+
+	productos
+	que se usan para la higiene
+	
+
+	países
+	que comparten frontera
+	
+
+	normas
+	que rigen la conducta
+	
+
+	eventos
+	que causan un trauma
+	
+
+	
+
+
+
+
+
+
+
+
+

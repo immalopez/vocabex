@@ -1,0 +1,18 @@
+Práctica
+Relaciona cada nivel de estudio en el sistema educativo inglés con su(s) equivalente(s) en el sistema educativo español.
+
+
+   1. GCSEs
+   2. A-Levels
+   3. Bachelor’s degree
+   4. Master’s degree
+   5. PhD
+
+
+   1. Grado
+   2. Máster
+   3. Doctorado
+   4. ESO
+   5. Bachillerato
+
+

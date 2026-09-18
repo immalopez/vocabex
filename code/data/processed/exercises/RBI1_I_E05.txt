@@ -1,0 +1,35 @@
+Práctica
+1. Relaciona cada verbo con la definición que mejor describa su uso en el contexto de una base de datos escribiendo el número del verbo junto a la letra de la definición correspondiente.
+2. Responde la pregunta de contexto seleccionando el verbo que creas que mejor completa la oración y explica brevemente por qué elegiste ese verbo.
+
+
+Verbos:
+* i. Buscar en
+* ii. Consultar en
+* iii. Extraer de
+* iv. Verificar
+* v. Manejar
+
+
+Definiciones:
+A. Acción de comprobar la integridad, seguridad o consistencia de los datos dentro de la base, asegurándose de que estos sean correctos y estén actualizados.
+
+
+B. Acción de acceder a la base de datos para recuperar información específica o datos basándose en ciertos criterios o consultas.
+
+
+C. Acción de obtener un conjunto de datos específicos de la base para su uso o análisis fuera de ella, a menudo con el objetivo de realizar una tarea específica o un análisis más detallado.
+
+
+D. Acción de realizar una búsqueda dentro de la base de datos con el objetivo de localizar información o registros específicos, empleando para ello palabras clave o criterios específicos.
+
+
+E. Acción de controlar o gestionar la base de datos en su totalidad, incluyendo la organización de los datos, la actualización de la información y la garantía de su accesibilidad para los usuarios.
+
+
+Pregunta de contexto:
+¿Qué verbo iría mejor en la oración "Los bilingües son más lentos hablando porque tienen que _______ dos bases de datos en sus cerebros"? Considera el significado de cada verbo en el contexto de procesamiento de la información en el cerebro humano.
+
+
+
+

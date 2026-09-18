@@ -1,0 +1,12 @@
+Práctica
+Lee el texto y completa los huecos con los conectores adecuados de la lista proporcionada. Ten en cuenta que no pueden repetirse los conectores y que sobrará uno.
+
+
+por otro lado ✴ en su defecto ✴ por lo tanto ✴
+a pesar de ✴ debido a ✴ sin embargo ✴ pero
+
+
+He estado esperando la entrega de las zapatillas que compré hace dos semanas. Todavía no he recibido ninguna notificación del envío; (1) ________, el cargo ya aparece en mi cuenta bancaria. He intentado contactar con el servicio de atención al cliente varias veces, (2) ________ no he recibido ninguna respuesta clara sobre cuándo llegará el paquete. (3) ________ que entiendo que pueden surgir retrasos (4) ________ la situación actual, me gustaría que me confirmaran una fecha de entrega. (5) ________, si no es posible cumplir con la entrega en el tiempo establecido, espero que me devuelvan el dinero de la compra o, (6) ________, recibir las zapatillas que ya he pagado.
+
+
+

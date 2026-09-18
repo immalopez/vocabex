@@ -1,0 +1,40 @@
+Práctica
+A continuación, tienes una tabla en la que debes reemplazar el circunloquio de la columna del medio con un adjetivo o expresión más precisos en la última columna.
+
+
+Sustantivo
+	Circunloquio
+	Expresión precisa
+	carta
+	de verificación
+	autorización
+	cosas
+	para limpiar
+	
+
+	cosas
+	de comer
+	
+
+	zonas
+	que tienen actividad sísmica
+	
+
+	alimentos
+	que aportan nutrientes
+	
+
+	comentarios
+	que ofenden
+	
+
+	países
+	que comparten frontera
+	
+
+	eventos
+	que causan un trauma
+	
+
+	
+

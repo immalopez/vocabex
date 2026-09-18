@@ -1,0 +1,56 @@
+Práctica
+Selecciona un elemento de cada columna para formar una frase completa (puedes añadir elementos propios para que la oración funcione). Asegúrate de que el uso de “ser” o “estar” sea el adecuado según el contexto de la frase que formes. Escribe una oración por fila. 
+Ejemplos
+Después de tantas horas de clase, estábamos todos muy cansados.
+Esta celebración es muy especial para Ana.
+
+
+
+
+Columna 1
+	Columna 2
+	Columna 3
+	Columna 4
+	Juan
+	el clima
+	es
+	agradable
+	la fiesta
+	todos
+	está
+	cansados
+	el concierto
+	Ana
+	es
+	emocionante
+	este libro
+	mi casa
+	estábamos
+	especial
+	el coche
+	María
+	había sido
+	en el centro
+	clase
+	la sopa
+	está
+	antiguo
+	el pastel
+	estudiar
+	es
+	delicioso
+	la película
+	muy
+	es
+	larga
+	actualmente
+	siempre
+	está
+	fácil para mí
+	esta celebración
+	como todos
+	he sido
+	horrible
+	
+
+

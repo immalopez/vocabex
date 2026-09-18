@@ -1,0 +1,29 @@
+{
+  "run_id": "20260913T065136Z_b7193eb1",
+  "model_id": "rq3_correction",
+  "created_at": "2026-09-13 07:15:21 UTC",
+  "fit_path": "fits/rq3_correction.rds",
+  "fit_sha256": "521634d02c1a8b9819870f30b9f74ee584a9eb0c5c11205d13c83d999d93f292",
+  "data_sha256": "adbc13a5c18a4588a6268f1dc92181903d364d0d4a695d7d0f1088edf3ce870b",
+  "specification_sha256": "d32f66b5d3dcb6213623346a359f9f2e96556783d5080e930100a0f3b3fd0583",
+  "formula": "correction ~ time * (prof_level + L1_group + le_il_z + ti_il_z + time_invested_sc + le_external_source_c) + (1 + time | participant_ID) + (1 | id)",
+  "family": {
+    "family": "binomial",
+    "link": "logit"
+  },
+  "priors": null,
+  "seed": null,
+  "settings": {
+    "optimizer": "bobyqa",
+    "maxfun": 200000,
+    "diagnostic_seed": 202505
+  },
+  "contrasts": ["contr.sum", "contr.poly"],
+  "cache_key": "4cb03733ed2ced5f11518b4f6fdc63fe160b485fd72a0c1dc03b1f4264b8f73d",
+  "cache_source": "20260913T060850Z_a7e1690c",
+  "observations": 2550,
+  "groups": {
+    "id": 1275,
+    "participant_ID": 85
+  }
+}

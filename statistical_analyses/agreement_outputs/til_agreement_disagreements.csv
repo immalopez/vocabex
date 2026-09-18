@@ -1,0 +1,50 @@
+"participant_ID","text_file","error","construct","dimension","unit","evidence_source","column","rater_1","rater_2","value_rater_1","value_rater_2"
+"ILA1_I","./data/processed/exercises/ILA1_I_E05.txt","La IA puede analizar datos personales de salud y actividad física para ofrecer recomendaciones de entreno personalizadas (sino también) [y] consejos sobre nutrición y prevención de lesiones.","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"FGC1_I","./data/processed/exercises/FGC1_I_E08.txt","este impresionante (espécimen) [fenómeno] celestial","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RUE1_I","./data/processed/exercises/RUE1_I_E04.txt","la intensidad y la cantidad de ejercicios (necesarias) [necesarios]","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RUE1_I","./data/processed/exercises/RUE1_I_E06.txt","una de las [mayores] críticas (mayores)","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RBI1_I","./data/processed/exercises/RBI1_I_E06.txt","lo jugué a (un) nivel profesional","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"FEM1_I","./data/processed/exercises/FEM1_I_E12.txt","(pasarse) [ocurrir]","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"FEM1_I","./data/processed/exercises/FEM1_I_E15.txt","sobre (reales) hechos científicos [reales]","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"FKN1_I","./data/processed/exercises/FKN1_I_E07.txt","los diferentes problemas (debido) [debidos] a la desigualdad","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"RCO1_I","./data/processed/exercises/RCO1_I_E15.txt","hay muchos accidentes, (que demuestran) [lo que demuestra]","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"FLR1_I","./data/processed/exercises/FLR1_I_E08.txt","(aumentación) [aumento]","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"FTR1_I","./data/processed/exercises/FTR1_I_E11.txt","(son) [están] vinculados","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"FGC2_S","./data/processed/exercises/FGC2_S_E02.txt","Empecé a jugar al fútbol en 2007, en un equipo local, fue muy (rápido) [pronto]","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"BEA1_S","./data/processed/exercises/BEA1_S_E04.txt","Nací (en) [el] / (once) [11 de] (Septiembre) / [septiembre de] 2001","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"FJE1_S","./data/processed/exercises/FJE1_S_E03.txt","(desde) [de] 2005 a 2010","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"PBJ1_S","./data/processed/exercises/PBJ1_S_E07.txt","En 2020 mi padre (adoptivo) [adoptó]","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"AKA1_S","./data/processed/exercises/AKA1_S_E09.txt","(mis) [mi] tercer cumpleaños","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"AKA1_S","./data/processed/exercises/AKA1_S_E14.txt","desde hace siete años (hice) [tengo] un perro","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"CGT1_S","./data/processed/exercises/CGT1_S_E02.txt","recuerdo un (familia) viaje [familiar] a Taiwán","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"CGT1_S","./data/processed/exercises/CGT1_S_E05.txt","(en) el primer año de la escuela secundaria, fui / (en) el año pasado, enseñé un curso","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"CGS1_S","./data/processed/exercises/CGS1_S_E09.txt","soy de Canada y (yo) nací en 2002 / no recuerdo mucho de mis primeros años de vida, pero (yo) sé","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"CGS1_S","./data/processed/exercises/CGS1_S_E11.txt","(en) [el] 5 de (Enero) [enero]","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"CMJ1_S","./data/processed/exercises/CMJ1_S_E01.txt","no (hube) [tenía] muchos deberes","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"ERA1_C","./data/processed/exercises/ERA1_C_E08.txt","(quieremos) [queremos] / (barrato) [barato] / (necessaria) [necesaria] / (expectitivas) [expectativas] / (nosotoras) [nosotras] / (cádo) [caro]","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"CAJ1_C","./data/processed/exercises/CAJ1_C_E07.txt","compraban (cosas para limpiar) [productos de limpieza] / (cosas de comer) [comida]","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"ABA1_C","./data/processed/exercises/ABA1_C_E15.txt","la profesora nos había (dado) [asignado] un proyecto en grupo","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"CTV1_C","./data/processed/exercises/CTV1_C_E01.txt","a la cafetería ni a (los espacios libres) [las áreas comunes]","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RBD1_D","./data/processed/exercises/RBD1_D_E08.txt","hay elementos (extras) [extra] como un narrador","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"RBD1_D","./data/processed/exercises/RBD1_D_E02.txt","ser (un) [una] trampa","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"FTE1_D","./data/processed/exercises/FTE1_D_E14.txt","1299€ [se] fueron al bolsillo de otra persona","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RWF1_D","./data/processed/exercises/RWF1_D_E15.txt","por (lo) [el] contrario","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"CDG1_D","./data/processed/exercises/CDG1_D_E13.txt","aplicar este conocimiento (en) [a] situaciones reales / resulte (a) [en]","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RPG1_D","./data/processed/exercises/RPG1_D_E14.txt","aunque yo (suporté) [experimenté] todo lo contrario","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RPG1_D","./data/processed/exercises/RPG1_D_E01.txt","escogí su agencia porque encontré (tantas) [muchas] críticas positivas","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"CPJ1_D","./data/processed/exercises/CPJ1_D_E05.txt","con (los) datos (muy) [tan] privados","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"RCF1_D","./data/processed/exercises/RCF1_D_E08.txt","nos llaman (frequentemente) [frecuentemente]","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RDL1_D","./data/processed/exercises/RDL1_D_E13.txt","estaba (tan) [muy] asustada mientras buscaba en línea","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"ASM1_D","./data/processed/exercises/ASM1_D_E14.txt","el nerviosismo me (dejaba) [hacía] olvidar que tenía que cargar mi portátil","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"ASM1_D","./data/processed/exercises/ASM1_D_E01.txt","(recelo) [desconfío] mucho [de] la veracidad de estas promesas","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"AWA1_D","./data/processed/exercises/AWA1_D_E12.txt","uno de (estes) [estos] mensajes","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"RRS1_D","./data/processed/exercises/RRS1_D_E07.txt","un lector crítico [se] asegura [de formarse] opiniones informadas","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"CAY1_J","./data/processed/exercises/CAY1_J_E02.txt","(un) otro marfileño aquí / (una) otra vez / encontrar (un) otro africano aquí","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"KCP1_J","./data/processed/exercises/KCP1_J_E08.txt","(hasta cuando) [desde que] llegué a Pamplona","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"CJS1_J","./data/processed/exercises/CJS1_J_E13.txt","fue una experiencia emocionante montar (un) [a] caballo","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"NOI1_J","./data/processed/exercises/NOI1_J_E04.txt","el problema aquí no es la misa privada, (pero) [sino] la misa con gente","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"NOI1_J","./data/processed/exercises/NOI1_J_E10.txt","(necesitades) [necesidades] / (impossibilidad) [imposibilidad] / (explicé) [expliqué] / (anniversario) [aniversario] / (abilidad) [habilidad]","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"EPE1_J","./data/processed/exercises/EPE1_J_E13.txt","corrimos (alrededor de) [por toda] la discoteca / listos (a) [para] bailar / una bebida (con) fuerte / me di (en) cuenta","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1
+"PSJ1_J","./data/processed/exercises/PSJ1_J_E08.txt","y ahora (jugo) [juego] cada semana / (cafetaria) [cafetería]","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"PSJ1_J","./data/processed/exercises/PSJ1_J_E10.txt","esa mañana (intenté) [probé] la tortilla de espinacas","TIL","retrieval","exercise","task_material","recall","original","rater_2",1,0
+"JTS1_J","./data/processed/exercises/JTS1_J_E03.txt","me invitó (en) [a] ese viaje","TIL","retrieval","exercise","task_material","recall","original","rater_2",0,1

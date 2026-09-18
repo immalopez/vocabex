@@ -1,0 +1,31 @@
+Práctica
+Este ejercicio se centra en la práctica de traducciones literales ruso-español que son inadecuadas debido a las diferencias estructurales entre ambos idiomas. Lee las frases que se presentan a continuación. Tu tarea es corregir la traducción incorrecta al español para que resulte más idiomática.
+Ejemplo
+Ruso: “Мошенник позвонил моей маме, притворяясь мной.”
+Traducción incorrecta: “El estafador llamó por teléfono a mi madre fingiendo ser mí”.
+Corrección: “El estafador llamó por teléfono a mi madre fingiendo ser yo”.
+
+
+      * Ruso: "Я верю в то, что ты говоришь."
+      * Traducción incorrecta: "Creo en esto lo que dices."
+      * Corrección: _______________________
+      * Ruso: "У меня болит голова"
+      * Traducción incorrecta: "Mi cabeza duele."
+      * Corrección: _______________________
+      * Ruso: "У меня хорошее настроение."
+      * Traducción incorrecta: "Tengo un buen humor."
+      * Corrección: _______________________
+      * Ruso: "Он причинил мне боль специально."
+      * Traducción incorrecta: "Me hizo daño especialmente."
+      * Corrección: _______________________
+      * Ruso: "У нас пошёл дождь."
+      * Traducción incorrecta:"Empezó a llover sobre nosotros."
+      * Corrección: _______________________
+      * Ruso: "У меня получилось решить задачу."
+      * Traducción incorrecta: "Me salió resolver el problema."
+      * Corrección: _______________________
+
+
+
+
+

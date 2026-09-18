@@ -1,0 +1,86 @@
+2026-09-13T09:51:36.494+0300 [INFO] Analysis run 20260913T065136Z_b7193eb1 started 
+2026-09-13T09:51:36.566+0300 [INFO] Starting step 'Snapshot source and raw inputs' 
+2026-09-13T09:51:36.728+0300 [INFO] Finished step 'Snapshot source and raw inputs' in 0.00 minutes (calculated) 
+2026-09-13T09:51:36.732+0300 [INFO] Starting step 'Data preparation' 
+2026-09-13T09:51:39.842+0300 [INFO] Finished step 'Data preparation' in 0.05 minutes (calculated) 
+2026-09-13T09:51:39.954+0300 [INFO] Starting step 'Render main analysis' 
+2026-09-13T09:51:40.032+0300 [MESSAGE] 
+
+processing file: analysis.Rmd
+ 
+2026-09-13T09:51:43.006+0300 [INFO] Starting step 'RQ1 recognition covariate-null fit' 
+2026-09-13T09:51:43.462+0300 [INFO] Finished step 'RQ1 recognition covariate-null fit' in 0.01 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:43.475+0300 [INFO] Starting step 'RQ1 correction covariate-null fit' 
+2026-09-13T09:51:44.077+0300 [INFO] Finished step 'RQ1 correction covariate-null fit' in 0.01 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:44.083+0300 [INFO] Starting step 'RQ1 recognition fit' 
+2026-09-13T09:51:44.731+0300 [INFO] Finished step 'RQ1 recognition fit' in 0.01 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:44.751+0300 [INFO] Starting step 'RQ1 correction fit' 
+2026-09-13T09:51:45.291+0300 [INFO] Finished step 'RQ1 correction fit' in 0.01 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:45.304+0300 [INFO] Starting step 'RQ1 recognition random-intercept fit' 
+2026-09-13T09:51:46.051+0300 [INFO] Finished step 'RQ1 recognition random-intercept fit' in 0.01 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:46.056+0300 [INFO] Starting step 'RQ1 correction random-intercept fit' 
+2026-09-13T09:51:46.861+0300 [INFO] Finished step 'RQ1 correction random-intercept fit' in 0.01 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:46.962+0300 [INFO] Starting step 'RQ1 recognition DHARMa simulation' 
+2026-09-13T09:51:48.047+0300 [INFO] Finished step 'RQ1 recognition DHARMa simulation' in 0.02 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:48.668+0300 [INFO] Starting step 'RQ1 correction DHARMa simulation' 
+2026-09-13T09:51:50.113+0300 [INFO] Finished step 'RQ1 correction DHARMa simulation' in 0.02 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:50.568+0300 [INFO] Starting step 'RQ1 influence checks' 
+2026-09-13T09:51:50.595+0300 [INFO] Finished step 'RQ1 influence checks' in 0.00 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:51:51.200+0300 [INFO] Starting step 'RQ2 primary Bayesian fit' 
+2026-09-13T09:52:01.547+0300 [INFO] Finished step 'RQ2 primary Bayesian fit' in 0.17 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:52:04.476+0300 [INFO] Starting step 'RQ2 Bayesian diagnostics' 
+2026-09-13T09:52:04.554+0300 [INFO] Finished step 'RQ2 Bayesian diagnostics' in 0.00 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:52:12.218+0300 [INFO] Starting step 'RQ2 moment-matched PSIS-LOO' 
+2026-09-13T09:52:12.232+0300 [INFO] Finished step 'RQ2 moment-matched PSIS-LOO' in 0.00 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T09:52:13.878+0300 [INFO] Starting step 'RQ2 exact LOO refits' 
+2026-09-13T10:14:23.369+0300 [INFO] Finished step 'RQ2 exact LOO refits' in 22.16 minutes (calculated) 
+2026-09-13T10:14:43.377+0300 [INFO] Starting step 'RQ3 correction fit' 
+2026-09-13T10:15:25.189+0300 [INFO] Finished step 'RQ3 correction fit' in 0.70 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T10:15:25.202+0300 [INFO] Starting step 'RQ3 time-only null fit' 
+2026-09-13T10:16:07.250+0300 [INFO] Finished step 'RQ3 time-only null fit' in 0.70 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T10:16:07.255+0300 [INFO] Starting step 'RQ3 no-interactions fit' 
+2026-09-13T10:16:50.818+0300 [INFO] Finished step 'RQ3 no-interactions fit' in 0.73 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T10:16:50.825+0300 [INFO] Starting step 'RQ3 random-intercept fit' 
+2026-09-13T10:17:33.817+0300 [INFO] Finished step 'RQ3 random-intercept fit' in 0.72 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T10:17:35.678+0300 [INFO] Starting step 'RQ3 DHARMa simulation' 
+2026-09-13T10:18:21.822+0300 [INFO] Finished step 'RQ3 DHARMa simulation' in 0.77 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T10:18:22.294+0300 [MESSAGE] output file: analysis.knit.md
+
+ 
+2026-09-13T10:18:23.139+0300 [MESSAGE] 
+Output created: runs/.incomplete/20260913T065136Z_b7193eb1/reports/analysis.html
+ 
+2026-09-13T10:18:23.140+0300 [INFO] Finished step 'Render main analysis' in 26.72 minutes (calculated) 
+2026-09-13T10:18:23.142+0300 [INFO] Starting step 'Render data exploration' 
+2026-09-13T10:18:23.154+0300 [MESSAGE] 
+
+processing file: data_exploration.Rmd
+ 
+2026-09-13T10:18:29.735+0300 [MESSAGE] output file: data_exploration.knit.md
+
+ 
+2026-09-13T10:18:30.082+0300 [MESSAGE] 
+Output created: runs/.incomplete/20260913T065136Z_b7193eb1/reports/data_exploration.html
+ 
+2026-09-13T10:18:30.083+0300 [INFO] Finished step 'Render data exploration' in 0.12 minutes (calculated) 
+2026-09-13T10:18:30.084+0300 [INFO] Starting step 'RQ2 prior sensitivity analysis' 
+2026-09-13T10:18:53.287+0300 [INFO] Starting step 'RQ2 generic-prior Bayesian fit' 
+2026-09-13T10:19:07.613+0300 [INFO] Finished step 'RQ2 generic-prior Bayesian fit' in 0.24 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T10:19:07.614+0300 [INFO] Starting step 'RQ2 sensitivity diagnostics: glmm_informed' 
+2026-09-13T10:19:07.694+0300 [INFO] Finished step 'RQ2 sensitivity diagnostics: glmm_informed' in 0.00 minutes (cached from 20260913T065136Z_b7193eb1) 
+2026-09-13T10:19:07.695+0300 [INFO] Starting step 'RQ2 sensitivity diagnostics: generic_weak' 
+2026-09-13T10:19:07.772+0300 [INFO] Finished step 'RQ2 sensitivity diagnostics: generic_weak' in 0.00 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T10:19:37.925+0300 [INFO] Starting step 'RQ2 moment-matched sensitivity LOO: glmm_informed' 
+2026-09-13T10:19:37.936+0300 [INFO] Finished step 'RQ2 moment-matched sensitivity LOO: glmm_informed' in 0.00 minutes (cached from 20260913T065136Z_b7193eb1) 
+2026-09-13T10:19:37.937+0300 [INFO] Starting step 'RQ2 moment-matched sensitivity LOO: generic_weak' 
+2026-09-13T10:19:37.952+0300 [INFO] Finished step 'RQ2 moment-matched sensitivity LOO: generic_weak' in 0.00 minutes (cached from 20260913T060850Z_a7e1690c) 
+2026-09-13T10:19:40.587+0300 [INFO] Starting step 'RQ2 exact sensitivity LOO refits: glmm_informed' 
+2026-09-13T10:19:40.597+0300 [INFO] Finished step 'RQ2 exact sensitivity LOO refits: glmm_informed' in 0.00 minutes (cached from 20260913T065136Z_b7193eb1) 
+2026-09-13T10:19:40.599+0300 [INFO] Starting step 'RQ2 exact sensitivity LOO refits: generic_weak' 
+2026-09-13T10:57:02.180+0300 [INFO] Finished step 'RQ2 exact sensitivity LOO refits: generic_weak' in 37.36 minutes (calculated) 
+2026-09-13T10:57:04.091+0300 [INFO] Finished step 'RQ2 prior sensitivity analysis' in 38.57 minutes (calculated) 
+2026-09-13T10:57:04.092+0300 [INFO] Starting step 'Register outputs and environment' 
+2026-09-13T10:57:08.964+0300 [INFO] Finished step 'Register outputs and environment' in 0.08 minutes (calculated) 
+2026-09-13T10:57:08.964+0300 [INFO] Starting step 'Validate run artifacts' 
+2026-09-13T10:57:50.635+0300 [INFO] Finished step 'Validate run artifacts' in 0.69 minutes (calculated) 
+2026-09-13T10:57:50.640+0300 [INFO] Analysis run 20260913T065136Z_b7193eb1 completed successfully 

@@ -1,0 +1,28 @@
+Práctica
+A continuación encontrarás una lista de situaciones en la columna de la izquierda y dos posibles oraciones en la columna de la derecha. Relaciona cada situación con la oración que tenga el verbo correcto, ya sea "dejar" o "hacer". Luego, explica por qué la opción elegida es la más adecuada en el contexto.
+
+
+Situación
+	Oraciones
+	La falta de sueño afecta tu energía.
+	a) El cansancio me hizo sentir agotado.
+b) El cansancio me dejó agotado.
+	Recibes una noticia que te provoca tristeza.
+	a) La noticia me dejó triste todo el día.
+b) La noticia me hizo triste todo el día.
+	Un amigo te cuenta una historia divertida.
+	a) Su historia me hizo reír a carcajadas.
+b) Su historia me dejó riendo a carcajadas.
+	Tienes una preocupación que causa olvidos.
+	a) La preocupación me hizo olvidar mi teléfono.
+b) La preocupación me dejó olvidando mi teléfono.
+	Estás sorprendido por algo inesperado.
+	a) La sorpresa me dejó sin palabras.
+b) La sorpresa me hizo sin palabras.
+	Una conversación te lleva a reflexionar.
+	a) Su comentario me hizo pensar en mis metas.
+b) Su comentario me dejó pensando en mis metas.
+	
+
+
+

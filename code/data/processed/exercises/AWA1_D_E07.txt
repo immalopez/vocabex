@@ -1,0 +1,57 @@
+Práctica
+Selecciona un elemento de cada columna para formar una frase completa. Asegúrate de que el uso de “ser” o “estar” sea el adecuado según el contexto de la frase que formes. Escribe una oración por fila. 
+Ejemplos
+Mi abuelo, en la playa, está aburrido.
+Hasta ahora estudiar había sido fácil para mí.
+
+
+
+
+Columna 1
+	Columna 2
+	Columna 3
+	Columna 4
+	Juan
+	el clima
+	es
+	agradable
+	la fiesta
+	en la playa
+	está
+	aburrido
+	el concierto
+	Ana
+	es
+	emocionante
+	este libro
+	mi casa
+	está
+	interesante
+	el coche
+	María
+	había sido
+	en el centro
+	mi abuelo
+	la sopa
+	está
+	antiguo
+	el pastel
+	estudiar
+	es
+	delicioso
+	la película
+	muy
+	es
+	larga
+	actualmente
+	siempre
+	está
+	fácil para mí
+	hasta ahora
+	como todos
+	he sido
+	horrible
+	
+
+
+

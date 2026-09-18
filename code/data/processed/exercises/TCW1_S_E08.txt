@@ -1,0 +1,39 @@
+Práctica
+Completa la siguiente tabla con el nombre del país, su gentilicio (cómo se llama a las personas de ese país), y el idioma que se habla en ese país.
+
+
+País
+	Gentilicio
+	Idioma
+	Países Bajos
+	neerlandés/neerlandesa
+	
+
+	Brasil
+	
+
+	
+
+	México
+	
+
+	
+
+	Taiwán
+	
+
+	
+
+	Filipinas
+	
+
+	
+
+	Marruecos
+	
+
+	
+
+	
+
+

@@ -1,0 +1,23 @@
+{
+  "run_id": "20260913T065136Z_b7193eb1",
+  "artifact_id": "figure_deca6485d6de",
+  "path": "figures/exploration-data.exploration-9.png",
+  "sha256": "deca6485d6de380475c1b8bb1669e1ffdb0794903cc49deeb87976f21aea2479",
+  "source_models": [
+    "rq1_recognition",
+    "rq1_correction",
+    "rq1_recognition_covariate_null",
+    "rq1_correction_covariate_null",
+    "rq1_recognition_random_intercept",
+    "rq1_correction_random_intercept",
+    "rq2_primary",
+    "rq3_correction",
+    "rq3_time_only_null",
+    "rq3_no_interactions",
+    "rq3_random_intercept"
+  ],
+  "settings": {
+    "generator": "data_exploration.Rmd"
+  },
+  "created_at": "2026-09-13 07:57:04 UTC"
+}

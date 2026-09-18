@@ -1,0 +1,12 @@
+{
+  "run_id": "20260913T065136Z_b7193eb1",
+  "artifact_id": "table_rq2_prior_sensitivity_high_k",
+  "path": "tables/rq2_prior_sensitivity_high_k.csv",
+  "sha256": "3c2cd23f7e46f631743037e1d1786f2ce72d36250d7310a2ebf98d88b8be6f60",
+  "source_models": [
+    "rq2_primary",
+    "rq2_generic_sensitivity"
+  ],
+  "settings": [],
+  "created_at": "2026-09-13 07:57:04 UTC"
+}

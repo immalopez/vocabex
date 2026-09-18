@@ -1,0 +1,62 @@
+Práctica
+Relaciona cada palabra del ámbito universitario con su definición adecuada.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        1. Asignatura
+                        2. Cátedra
+                        3. Faltar a clase
+                        4. Matrícula
+                        5. Convocatoria
+                        6. Tesis
+                        7. Docente
+                        8. Expediente académico
+                        9. Tutor
+                        10. Crédito
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        1. Proceso de inscripción oficial en un curso o universidad, normalmente asociado con el pago de una cuota.
+                        2. Documento que recoge las calificaciones y resultados obtenidos por un estudiante a lo largo de su vida académica.
+                        3. Profesor o catedrático que imparte clases en una universidad o escuela superior.
+                        4. Sistema para medir el tiempo o la cantidad de trabajo que conlleva una asignatura.
+                        5. Presentarse a un examen en una fecha específica, que suele ser determinada por la universidad.
+                        6. Un curso o tema específico que se estudia dentro de un programa académico.
+                        7. Trabajo de investigación extenso y original que se presenta como requisito para obtener un título de doctorado.
+                        8. Ausentarse de una clase sin asistir, ya sea por enfermedad u otra razón.
+                        9. Persona que ofrece apoyo académico y orientación a un estudiante.
+                        10. Puesto que ocupa un profesor, especialmente en una universidad, para impartir clases de una materia específica.
+
+

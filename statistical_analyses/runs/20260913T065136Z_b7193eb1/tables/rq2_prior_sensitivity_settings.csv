@@ -1,0 +1,3 @@
+model,prior_specification,seed,backend,chains,cores,threads_per_chain,iterations_per_chain,warmup_per_chain,retained_draws,metric,adapt_delta,max_treedepth,loo_method,diagnostic_seed,loo_seed
+glmm_informed,GLMM-informed hybrid,202502,cmdstanr,4,4,6,2000,1000,4000,diag_e,0.99,12,Moment-matched PSIS-LOO with exact refits for k > 0.7,202503,202504
+generic_weak,generic weakly informative,202502,cmdstanr,4,4,6,2000,1000,4000,diag_e,0.99,12,Moment-matched PSIS-LOO with exact refits for k > 0.7,202503,202504

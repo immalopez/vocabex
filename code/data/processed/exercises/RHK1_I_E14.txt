@@ -1,0 +1,23 @@
+
+
+Es interesante tener algo de conocimiento etimológico para comprender cómo funcionan la formación de cognados y la composición de las palabras en un idioma, y evitar así errores.
+Práctica
+Observa las siguientes palabras en español y su descomposición. Identifica el patrón en la composición, especialmente en la (des)aparición de unas letras y no de otras, y escribe una regla básica que explique este fenómeno.
+
+
+*Pista: Fíjate en si la raíz es un verbo o un sustantivo.
+
+
+destinar → destin- + -at- + -ario → destinatario (no *destinario, como en inglés)
+testamento → testament- + -ario → testamentario (como en inglés)
+contestar → contest- + -at- + -ario → contestatario 
+signar → sign- + -at- + -ario → signatario (similar al inglés)
+beneficio → benefici- + -ario → beneficiario (como en inglés)
+secreto → secret- + -airo → secretario (como en inglés)
+
+
+Regla:
+
+
+
+

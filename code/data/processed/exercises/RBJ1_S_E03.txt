@@ -1,0 +1,11 @@
+Práctica
+Lee las siguientes oraciones y elige la opción entre paréntesis adecuada para completarlas correctamente. ¿Qué tienen en común todas ellas?
+   1. ¿Te (gustan las vacaciones / gusta la vacación) en el mar?
+   2. No puedo ver bien porque no encuentro (mi gafa / mis gafas).
+   3. Necesitas (unas tijeras / una tijera) para cortar ese papel.
+   4. Nos divertimos muchísimo en (la fiesta / las fiestas) del pueblo.
+   5. (Las ganas / la gana) de aprender (es importante / son importantes) para mejorar.
+   6. Mis padres celebraron (sus segundas nupcias / su segunda nupcia) en un jardín muy bonito.
+   7. Esta tienda siempre tiene (rebaja / rebajas) en enero.
+   8. Aunque buscamos al ladrón por (el alrededor / los alrededores), no logramos encontrarlo.
+

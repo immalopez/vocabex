@@ -1,0 +1,16 @@
+Práctica
+                                 1. A continuación, verás varias frases en las que tendrás que decidir si debes escribir un número con letras (cinco) o con cifras (5).
+                                 2. ¿En qué situaciones es más común escribir los números con letras en lugar de cifras en español? ¿Cuándo es más apropiado usar cifras? ¿Cómo decides si un número debe escribirse con letras o cifras según el contexto?
+
+
+                                 * Tengo __________ amigas que viven en el extranjero.
+                                 * La tienda cierra a las __________ de la tarde.
+                                 * Compré __________ entradas para el concierto.
+                                 * La factura del restaurante fue de __________ euros.
+                                 * Mi madre tiene __________ hermanos.
+                                 * El partido terminó con un resultado de __________.
+                                 * El vuelo duró __________ horas y __________ minutos.
+
+
+
+

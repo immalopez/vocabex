@@ -1,0 +1,371 @@
+﻿Trabajo con los errores cometidos
+
+
+Ejercicio 1
+
+
+* "Se trata de" es una construcción impersonal que se utiliza para definir o explicar algo o alguien, sin un sujeto específico. No se debe emplear cuando hay un sujeto claro en la oración.
+* "Consiste en" se utiliza para explicar en qué consiste algo, es decir, para detallar los componentes o características de un sujeto o idea. Es adecuado usarlo cuando hay un sujeto claro que realiza la acción de consistir.
+Ejemplos
+* Se trata de un método efectivo para aprender idiomas. (Impersonal, no hay un sujeto claro).
+* La dieta mediterránea se trata de comer variado. (Hay un sujeto claro, "la dieta mediterránea", por lo que debería utilizarse "consiste en").
+* La dieta mediterránea consiste en comer variado.
+Práctica
+Completa las oraciones con “se trata de” o “consiste en”.
+
+
+1. ________ un problema complicado que requiere atención inmediata.
+2. El procedimiento ________ realizar tres pasos fundamentales.
+3. ________ una herramienta útil para el análisis de datos.
+4. La solución al conflicto ________ dialogar y llegar a un acuerdo mutuo.
+5. ________ una estrategia que busca maximizar los beneficios.
+
+
+
+
+Ejercicio 2
+Práctica
+Para cada grupo, identifica el participio que está incorrectamente formado o que no encaja en el contexto proporcionado.
+
+
+* Grupo 1: ha escrito una carta / descubrido un secreto / comido una manzana / visto una película / resuelto un misterio
+
+
+* Grupo 2: ha rompido el récord / corrido una maratón / decidido ir de viaje / perdido las llaves / resuelto el problema.
+
+
+* Grupo 3: ha prometido fidelidad / sido electo por su talento / cubrido al culpable / impreso el documento / cocinado una cena deliciosa
+
+
+* Grupo 4: ha vendido la casa / traído flores para la ceremonia / cubierto las expectativas / suspendido la reunión / sido absolvido de los cargos.
+
+
+
+
+Ejercicio 3
+
+
+¿Artículo o articulo?
+Práctica
+1. Observa cada imagen cuidadosamente.
+2. Inspirándote en lo que ves, crea una oración que utilice correctamente el verbo "articulo" (de manera que refleje la acción de conectar o expresar ideas) y otra para el sustantivo "artículo" (que describa algún elemento o detalle que observes en la imagen o que imagines que podría estar en un periódico).
+3. Asegúrate de que tu oración refleje el contexto o elementos presentes en la imagen.
+
+
+  
+  
+
+
+
+
+
+Ejercicio 4
+Práctica
+1. Selecciona la preposición o preposiciones que complete(n) correctamente cada frase.
+2. Piensa en cómo cada preposición cambia el significado de la frase y justifica cuál es la que mejor se ajusta al contexto.
+
+
+* Todos nosotros estamos de acuerdo (ø / en / sobre) que es necesario tomar medidas urgentes.
+* Las hojas se movían (por / en / con) el viento durante la tormenta.
+* Estoy muy interesado (sobre / en / por) aprender más sobre este tema.
+* Tengo mayor facilidad (en / de / para) resolver problemas que tú.
+* Aunque hay algunas desventajas (de / en / por) ser demasiado cauteloso, también hay beneficios.
+
+
+
+
+
+
+
+
+Ejercicio 5
+Práctica
+1. Relaciona cada verbo con la definición que mejor describa su uso en el contexto de una base de datos escribiendo el número del verbo junto a la letra de la definición correspondiente.
+2. Responde la pregunta de contexto seleccionando el verbo que creas que mejor completa la oración y explica brevemente por qué elegiste ese verbo.
+
+
+Verbos:
+* i. Buscar en
+* ii. Consultar en
+* iii. Extraer de
+* iv. Verificar
+* v. Manejar
+
+
+Definiciones:
+A. Acción de comprobar la integridad, seguridad o consistencia de los datos dentro de la base, asegurándose de que estos sean correctos y estén actualizados.
+
+
+B. Acción de acceder a la base de datos para recuperar información específica o datos basándose en ciertos criterios o consultas.
+
+
+C. Acción de obtener un conjunto de datos específicos de la base para su uso o análisis fuera de ella, a menudo con el objetivo de realizar una tarea específica o un análisis más detallado.
+
+
+D. Acción de realizar una búsqueda dentro de la base de datos con el objetivo de localizar información o registros específicos, empleando para ello palabras clave o criterios específicos.
+
+
+E. Acción de controlar o gestionar la base de datos en su totalidad, incluyendo la organización de los datos, la actualización de la información y la garantía de su accesibilidad para los usuarios.
+
+
+Pregunta de contexto:
+¿Qué verbo iría mejor en la oración "Los bilingües son más lentos hablando porque tienen que _______ dos bases de datos en sus cerebros"? Considera el significado de cada verbo en el contexto de procesamiento de la información en el cerebro humano.
+
+
+
+
+Ejercicio 6
+Cuando hablamos de "a nivel", solemos referirnos a una generalización o a una esfera de actividad, ámbito o grado de manera amplia. En cambio, "a un nivel" tiende a especificar o señalar un grado o estatus particular, a menudo resaltando la unicidad o especificidad dentro de un contexto general.
+
+
+Ejemplos
+* Generalización: "Las políticas se aplicarán a nivel nacional." Esta frase usa "a nivel" para referirse a un ámbito general, en este caso, el país entero, sin especificar detalles.
+* Especificación: "Las políticas se aplicarán a un nivel nunca antes visto en el país." Aquí, "a un nivel" especifica el grado o intensidad de la aplicación de las políticas, destacando su unicidad o la particularidad de la situación.
+Práctica
+Para cada una de las siguientes oraciones, decide si se debe utilizar "a nivel" para una generalización o "a un nivel" para una especificación. Luego, explica brevemente tu elección.
+
+
+1. "El programa busca promover la igualdad ____ nivel social."
+   * Justificación:
+
+
+2. "María ha demostrado sus habilidades ____ nivel muy alto en matemáticas."
+   * Justificación:
+
+
+3. "La discusión se centrará ____ nivel de detalle nunca antes visto."
+   * Justificación:
+
+
+4. "Queremos implementar cambios ____ nivel estructural de la organización."
+   * Justificación:
+
+
+5. "Este atleta compite ____ nivel que lo coloca entre los mejores del mundo."
+   * Justificación:
+
+
+
+
+Ejercicio 7
+Práctica
+Lee las siguientes parejas de frases. Cada par contiene una frase con "me" y otra sin él. Reflexiona sobre cómo la inclusión o exclusión del "me" podría influir en el significado o la connotación de la frase y si siempre es válida su presencia o ausencia.
+
+
+1. A) "En mi primer año de universidad, me he hecho muchos amigos."
+B) "En mi primer año de universidad, he hecho muchos amigos."
+
+
+2. A) "Me he ganado el respeto de mis colegas."
+B) "He ganado el respeto de mis colegas."
+
+
+3. A) "Me he inscrito en un curso de arte."
+B) "He inscrito en un curso de arte."
+
+
+
+
+Reflexión y respuesta
+Después de leer y comparar las frases, responde a las siguientes preguntas:
+* ¿Cómo crees que la inclusión del "me" afecta a la percepción de la acción realizada por el sujeto?
+* ¿En cuáles de estos ejemplos la inclusión del "me" sugiere una experiencia más personal o involucrada? ¿Por qué?
+
+
+
+
+Crea tus propias frases
+Con base en tu análisis, elige una situación de la vida cotidiana y escribe dos frases: una utilizando el pronombre reflexivo "me" y otra sin él. Luego, explica cómo cambia el matiz entre las dos frases.
+
+
+Situación elegida: _________.
+
+
+* Frase con "me": _________.
+* Frase sin "me": _________.
+* Explicación del cambio de matiz, si ambas opciones son posibles: _________.
+
+
+
+
+Ejercicio 8
+Práctica
+1. Elige entre "la orden" o "el orden" para completar cada oración de manera que tenga sentido.
+2. Recuerda que "la orden" se refiere a un mandato o instrucción, mientras que "el orden" está relacionado con la organización o secuencia.
+
+
+* El capitán dio (la orden / el orden) de avanzar hacia el objetivo sin hacer ruido.
+* Después de la fiesta, (la orden / el orden) en la sala era caótico, con objetos esparcidos por todas partes.
+* (La orden / El orden) de los factores no altera el producto en una multiplicación.
+* (La orden / El orden) que recibieron los empleados fue de priorizar la satisfacción del cliente.
+* Para mantener (la orden / el orden) en la biblioteca, se pide a los visitantes hablar en voz baja.
+* La reina emitió (la orden / el orden) de construir un nuevo jardín para el palacio.
+
+
+
+
+Ejercicio 9
+La elección de palabras en cualquier idioma a menudo se ve influenciada por factores culturales, geográficos y de contacto con otros idiomas. Por eso, el español del Norte de América, especialmente el caribeño, tiende a utilizar muchos calcos del inglés que no se corresponden con la norma lingüística del español.
+Práctica
+A continuación, se presentan una serie de frases en inglés con su correspondiente calco en español y una alternativa más idiomática. Identifica el calco y la alternativa idiomática. Luego, crea una nueva oración en español utilizando la alternativa idiomática.
+
+
+* Inglés: "This is a very sensitive topic."
+   * Calco: "Este es un tópico muy sensible."
+   * Idiomático: "Este es un tema muy delicado."
+   * Nueva oración: _______________________
+* Inglés: "She has good abilities in math."
+   * Calco: "Tiene buenas habilidades en matemáticas."
+   * Idiomático: "Tiene talento para las matemáticas."
+   * Nueva oración: _______________________
+* Inglés: "We need to implement new strategies."
+   * Calco: "Necesitamos implementar nuevas estrategias."
+   * Idiomático: "Tenemos que adoptar nuevas estrategias."
+   * Nueva oración: _______________________
+* Inglés: "Invaluable artwork was stolen."
+   * Calco: "Una obra de arte invaluable fue robada."
+   * Idiomático: "Se robó una obra de arte de valor incalculable."
+   * Nueva oración: _______________________
+* Inglés: "She made an actual observation."
+   * Calco: "Hizo una observación actual."
+   * Idiomático: "Hizo una observación pertinente."
+   * Nueva oración: _______________________
+
+
+
+
+Ejercicio 10
+Práctica
+Lee las siguientes palabras y decide si necesitan un acento gráfico según las normas de acentuación del español. Luego, escribe la palabra correctamente. Recuerda las tres reglas básicas de acentuación:
+1. Las palabras agudas llevan tilde cuando terminan en vocal, 'n' o 's'.
+2. Las palabras graves o llanas llevan tilde cuando no terminan en vocal, 'n' o 's'.
+3. Las palabras esdrújulas y sobresdrújulas llevan tilde siempre.
+
+
+dificil, comparacion, cientifica, dia, examen, lapiz, cafe, azucar, estres, joven, habiais
+
+
+Ejercicio 11
+"Cuando" generalmente se usa para referirse a momentos en el tiempo, "donde" para lugares, y "en la(s) que" (o "en el/los que", dependiendo del género y número del antecedente) para situaciones, contextos o acciones específicas que no necesariamente implican un lugar o tiempo concretos.
+Ejemplos
+1. La época del año en la que las calles se llenan de flores es mi favorita. (En general.)
+2. Recuerdo el momento cuando nos conocimos como si fuera ayer. (Específico.)
+Práctica
+Completa las siguientes frases usando "cuando", "donde" o "en el/la(s)/los que", según corresponda.
+
+
+* Hay libros ___ el final es totalmente inesperado.
+* La casa ___ crecí estaba cerca del río.
+* Hay momentos ___ simplemente necesitas estar solo.
+* Esta es una situación ___ es mejor no decir nada.
+* El parque ___ jugábamos de niños ha cambiado mucho.
+* Buscamos un lugar ___ podamos relajarnos y disfrutar de la naturaleza.
+* Hay días ___ parece que nada sale bien.
+* La conferencia será en el auditorio, ___ hay espacio para más de mil personas.
+
+
+
+
+Ejercicio 12
+Distinguir entre el imperfecto de subjuntivo y el futuro simple es crucial para expresar correctamente la temporalidad y la modalidad en español. Estas formas verbales se utilizan en contextos muy diferentes, reflejando esperanza, duda, certeza sobre el futuro o hipótesis sobre situaciones no reales en el pasado.
+Ejemplos
+* Ojalá que algún día encontraran un manuscrito original de Cervantes en la biblioteca (imperfecto de subjuntivo).
+* Los arqueólogos encontrarán más artefactos antiguos si continúan excavando en ese sitio (futuro simple).
+Práctica
+Lee cada par de oraciones. Una requiere la forma del imperfecto de subjuntivo y la otra el futuro simple. Decide cuál es la forma correcta del verbo y completa cada oración.
+
+
+1. a) Me gustaría que en la reunión no ____ (ellos, hablar) sobre política.
+b) Seguro que mañana en la conferencia ____ (ellos, hablar) sobre sus experiencias.
+
+
+2. a) Desearía que ____ (ella, saltar) más alto para que ____ (ella, ganar) la competición.
+b) Estoy segura de que ____ (ella, saltar) al siguiente nivel de su entrenamiento y ____ (ella, ganar) todas las competiciones.
+
+
+3. a) Si ellos ____ (ellos, pensar) en las consecuencias, no habrían tomado esa decisión.
+b) Algún día ____ (ellos, pensar) en una solución para este problema.
+
+
+4. a) No dudo que pronto ____ (ellos, cantar) en grandes escenarios.
+b) Sería agradable que ____ (ellos, cantar) en la ceremonia.
+
+
+5. a) Creo que ____ (impersonal, comenzar) a llover antes de que volvamos a casa.
+b) Si ____ (impersonal, comenzar) a llover mañana, se solucionaría la sequía.
+
+
+
+
+Ejercicio 13
+Práctica
+Este ejercicio está diseñado para ayudarte a reconocer y usar correctamente "el" (artículo definido masculino singular) y "él" (pronombre personal de tercera persona singular) en oraciones. La clave está en identificar si la palabra introduce un sustantivo (artículo) o si se refiere a un sujeto previamente mencionado o conocido (pronombre).
+
+
+Lee cada oración y decide si el espacio en blanco debe ser llenado con "el" o "él". Escribe la oración completa con la opción correcta.
+1. ___ niño que viste ayer en el parque quiere ser astronauta cuando crezca.
+2. Creo que ___ está interesado en aprender más sobre ciencias.
+3. ¿Vas a la playa este fin de semana? Sí, ___ clima va a estar perfecto.
+4. ___ dijo que volvería antes del anochecer.
+5. Me gustaría comprar ___ libro que recomendaste la última vez.
+
+
+
+
+Ejercicio 14
+
+
+Es interesante tener algo de conocimiento etimológico para comprender cómo funcionan la formación de cognados y la composición de las palabras en un idioma, y evitar así errores ortográficos.
+Práctica
+1. A continuación, se presentan palabras en inglés seguidas de su correspondiente traducción al español. Observa los patrones y escribe una regla básica que explique la morfología de estos cognados en ambas lenguas.
+
+
+* Scale - Escala
+* Scene - Escena
+* Science - Ciencia
+* Scintillating - Centelleante
+* Scientologist - Cientólogo
+* Scombroid - Escómbrido
+* Sculpture - Escultura
+* Scythian - Escita
+* Regla:
+
+
+2. Observa las siguientes palabras compuestas en español y su descomposición. Identifica el patrón en la composición, especialmente en la duplicación de unas consonantes y no de otras, y escribe una regla básica que explique este fenómeno.
+
+
+des- + a- + rollo + -ar → desarrollar
+des- + a- + regla + -ar → desarreglar
+des- + a- + ropa + -ar → desarropar
+des- + a- + broche + -ar → desabrochar
+des- + a- + justo + -ar → desajustar
+
+
+Regla:
+
+
+
+
+Ejercicio 15
+Para trabajar con las reformas ortográficas de la RAE de 2010, especialmente con la eliminación del acento en la palabra "solo" y en los pronombres demostrativos:
+
+
+1. Lee cada oración y determina si "solo" se utiliza como adverbio (equivalente a "solamente") o como adjetivo. Asimismo, identifica los pronombres demostrativos y comprende su función sin la necesidad del acento.
+2. Explica cómo el contexto ayuda a determinar su significado.
+
+
+* El explorador caminaba solo por el desierto.
+* Solo te pido que escuches con atención.
+* Ese libro, ese lápiz y ese cuaderno son los materiales que necesitas.
+* Ella quería estar sola para pensar en la situación.
+* Este coche es más económico que aquel.
+
+
+Identificación y corrección de errores similares
+Este fragmento incluye algunos errores similares a los que has cometido en las redacciones del curso. ¿Serías capaz de identificarlos y, en caso de ser necesario, corregirlos?
+El protagonista se sumergió en la lectura de una novela. Se trataba de un relato de redención. El siempre había estado de acuerdo con su amiga que la vida no era sencilla, especialmente desde que descubrió la infidelidad de su pareja. Para distraerse, siempre leía articulos en el periódico donde narraban sucesos terribles, pero aquella tarde la distracción no fue suficiente y decidió verificar, entre todas las de su despacho, la carta que ella le había dejado. A un nivel formal, la carta estaba impecablemente escrita, con palabras que él consideraba invaluables. Sacó el documento que tanto tiempo había dejado guardado en un cajón. Lo releyó. Con precisión scientifica, imitó la firma de ella, y luego dispuso los recortes de periódico sobre el suceso que había ido acumulando en una orden caótica. Nunca se había hecho muchos amigos, ni en la escuela, ni en la universidad, ni en el trabajo. Se sintió agitado. Abrió su diario y comenzó a desarollar sus ideas sobre el papel. Era difícil imaginar que algún día encontrarán a la chica de la carta. Sólo él sabía lo ocurrido y estaba decidido a llevarse el secreto a la tumba.
+
+
+Valoración de los ejercicios
+1. Valora, del 1 al 4 (donde 1 es “nada útil” y 4 es “muy útil”), la utilidad de cada uno de los 15 ejercicios que has resuelto para la posterior identificación y corrección de errores similares a los que has cometido en las redacciones del curso.
+2. Justifica brevemente (con una o dos frases) el porqué de cada puntuación.

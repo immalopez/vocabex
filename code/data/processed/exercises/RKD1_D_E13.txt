@@ -1,0 +1,19 @@
+Práctica
+A continuación, se presentan varias frases con algún error de lógica o incoherencia en el uso de las palabras. Tu tarea es leer cada frase cuidadosamente, identificar el error y corregirla para que sea más coherente y lógica.
+Ejemplo
+        Ese tipo es un estafador que siempre se aprovecha de las maldades de la gente.
+        Ese tipo es un estafador que siempre se aprovecha de las bondades de la gente.
+
+
+         1. Si estudias mucho, es probable que fracases en el examen final.
+         2. Me gusta salir a caminar bajo la lluvia sin paraguas porque odio mojarme.
+         3. Está agradecida a sus enemigos por el apoyo que le brindan.
+         4. Decidimos quedarnos en casa durante las vacaciones porque nos encanta viajar.
+         5. Para perder el tiempo, me inscribí en un curso que me interesaba mucho.
+         6. Los niños deberían aprender a ser egoístas para convivir mejor con los demás.
+         7. Me quedé sin dinero, así que decidí ir de compras al centro comercial.
+         8. Me encantan los dulces, por eso siempre como ensalada.
+
+
+
+

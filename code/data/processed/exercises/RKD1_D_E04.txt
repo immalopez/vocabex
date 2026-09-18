@@ -1,0 +1,18 @@
+Práctica
+Decide si las frases siguientes son correctas o no y, en caso de no serlo, corrígelas:
+
+
+   1. Durante la entrevista, me preguntaron cuáles eran mis partes débiles.
+   2. En la reunión, discutimos los puntos principales del proyecto.
+   3. Ayer encontramos algunas partes fuertes en su presentación.
+   4. Los puntos de la carta que enviaste ayer no están claros.
+   5. Esta es la parte más importante del discurso, ¡presta atención!
+   6. El profesor me pidió que revisara los puntos débiles de mi trabajo.
+   7. En la conferencia, señalaron varios puntos clave sobre el futuro de la empresa.
+   8. El análisis se centró en las partes débiles del proyecto.
+   9. Los puntos de mejora incluyen la comunicación y la eficiencia.
+   10. Este es un punto débil de nuestra estrategia actual.
+
+
+
+

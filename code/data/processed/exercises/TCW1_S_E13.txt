@@ -1,0 +1,14 @@
+Práctica
+         1. Lee el texto y completa los huecos con las palabras adecuadas de la lista proporcionada.
+         2. Describe, con tus propias palabras y a partir del contexto proporcionado por el texto, cuándo utilizar “persona”, “personas”, “gente” y “gentes”.
+
+
+personas ✴ buena gente ✴ las personas ✴
+✴ sus gentes ✴ una persona ✴ una persona ✴ mucha gente
+
+
+Marta es __________ muy trabajadora. Siempre está dispuesta a ayudar a los demás y a cumplir con sus responsabilidades. En la fiesta de anoche, había __________, apenas podíamos caminar, pero Marta se aseguró de que todo estuviera bajo control. Los voluntarios que nos ayudaron durante el evento fueron __________ muy amables y generosas. No conocía a nadie en la reunión, pero todos parecían __________. Gracias a ellos, el evento fue un éxito. Es importante que __________ mantengan siempre su integridad, sin importar las circunstancias. Marta es un buen ejemplo de ello, y por eso espero convertirme en __________ útil en el futuro, al igual que ella, y viajar a muchos lugares. Las costumbres varían mucho entre distintos países y __________, pero una cosa es cierta: la dedicación y el trabajo en equipo son universales.
+
+
+
+

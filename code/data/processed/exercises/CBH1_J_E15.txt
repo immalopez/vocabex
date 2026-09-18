@@ -1,0 +1,32 @@
+Práctica
+Este ejercicio se centra en la práctica de traducciones literales coreano-español que son inadecuadas debido a las diferencias estructurales entre ambos idiomas. Lee las frases que se presentan a continuación. Tu tarea es corregir la traducción incorrecta al español para que resulte más idiomática.
+Ejemplo
+Coreano: “김치는 한국인의 마음의 음식이다.”
+Traducción incorrecta: “El kimchi es la comida alma de los coreanos.”
+Corrección: “El kimchi es el plato nacional coreano.” (Sé que no es exactamente el mismo concepto, pero no existe un equivalente en español, y por “soul food” entendemos la gastronomía afroamericana.)
+
+
+      * Coreano: "나는 하루에 세 번 밥을 먹는다."
+      * Traducción incorrecta: "Como arroz tres veces al día."
+      * Corrección: _______________________
+      * Coreano: "그 사람은 손이 크다."
+      * Traducción incorrecta: "Esa persona tiene las manos grandes."
+      * Corrección: _______________________
+      * Coreano: "그는 머리가 좋다."
+      * Traducción incorrecta: "Tiene buena cabeza."
+      * Corrección: _______________________
+      * Coreano: "오늘 날씨가 덥다."
+      * Traducción incorrecta: "Hoy el clima está caliente."
+      * Corrección: _______________________
+      * Coreano: "나는 친구랑 놀았다."
+      * Traducción incorrecta: "Jugué con un amigo."
+      * Corrección: _______________________
+      * Coreano: "그는 노래를 잘 부른다."
+      * Traducción incorrecta: "Canta bien las canciones."
+      * Corrección: _______________________
+
+
+
+
+
+
