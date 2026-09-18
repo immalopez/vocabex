@@ -1,0 +1,45 @@
+Práctica
+A continuación tienes una lista de actividades o lugares. Clasifícalos en las columnas correctas, según si debes usar "ir a" o "ir de" y completa la tabla: viaje, playa, excursión, campamento, compras, fiesta, trabajar, vacaciones, reunión, escuela.
+
+Ir a
+	Ir de
+	resultado
+	-
+	viaje
+	ir de viaje
+	playa
+	-
+	ir a la playa
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+

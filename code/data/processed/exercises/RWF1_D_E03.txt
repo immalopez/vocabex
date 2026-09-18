@@ -1,0 +1,8 @@
+Práctica
+1. Lee el siguiente texto y subraya todas las expresiones relacionadas con el ámbito de las finanzas que puedas identificar en él.
+2. Traduce estas expresiones al inglés y observa las similitudes y las diferencias.
+
+
+El departamento de contabilidad revisó el importe íntegro de las facturas correspondientes al último trimestre, asegurándose de que los pagos se hubieran efectuado correctamente. Además, a final de mes, se procederá a la liquidación de cuentas, un proceso que se hace periódicamente para asegurar que no haya discrepancias entre los ingresos y los gastos. Uno de los puntos clave es verificar que el balance financiero esté equilibrado, ya que cualquier déficit podría afectar la estabilidad económica de la empresa. Por otro lado, el equipo también está a cargo de revisar los impuestos correspondientes al ejercicio fiscal actual y calcular el valor neto de los activos de la compañía. Es importante tener en cuenta que cualquier pago realizado fuera de plazo puede incurrir en intereses moratorios. Por ello, se recomienda que los clientes liquiden sus deudas en el tiempo establecido para evitar recargos adicionales. Finalmente, se enviará un informe detallado a la dirección con el total a pagar y los descuentos aplicables.
+
+

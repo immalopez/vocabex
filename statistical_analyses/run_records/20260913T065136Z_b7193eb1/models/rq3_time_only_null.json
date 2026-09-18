@@ -1,0 +1,28 @@
+{
+  "run_id": "20260913T065136Z_b7193eb1",
+  "model_id": "rq3_time_only_null",
+  "created_at": "2026-09-13 07:16:03 UTC",
+  "fit_path": "fits/rq3_time_only_null.rds",
+  "fit_sha256": "a53eccfabe96c206943ec29ffac82d34791db183c9562274ca0b99cbfa6a0e0d",
+  "data_sha256": "adbc13a5c18a4588a6268f1dc92181903d364d0d4a695d7d0f1088edf3ce870b",
+  "specification_sha256": "e5677de5e09b13178f65995c64a354b38018d503e3c7d51ac0e5c19f1f77e51b",
+  "formula": "correction ~ time + (1 + time | participant_ID) + (1 | id)",
+  "family": {
+    "family": "binomial",
+    "link": "logit"
+  },
+  "priors": null,
+  "seed": null,
+  "settings": {
+    "optimizer": "bobyqa",
+    "maxfun": 200000
+  },
+  "contrasts": ["contr.sum", "contr.poly"],
+  "cache_key": "7592ab280ebc016fd42d3f93efb5c2b294d420c89ffb70efb5ba511b6727764b",
+  "cache_source": "20260913T060850Z_a7e1690c",
+  "observations": 2550,
+  "groups": {
+    "id": 1275,
+    "participant_ID": 85
+  }
+}

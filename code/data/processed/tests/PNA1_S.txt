@@ -1,0 +1,409 @@
+﻿Trabajo con los errores cometidos
+
+
+Ejercicio 1
+Práctica
+Selecciona un elemento de cada columna para formar una frase completa. Asegúrate de que el uso de “ser” o “estar” sea el adecuado según el contexto de la frase que formes. Escribe una oración por fila. 
+Ejemplos
+Hoy, el clima está agradable.
+Juan siempre es agradable.
+
+
+
+
+Columna 1
+	Columna 2
+	Columna 3
+	Columna 4
+	hoy
+	el clima
+	es
+	agradable
+	la fiesta
+	en la playa
+	está
+	aburrida
+	el concierto
+	Ana
+	es
+	emocionante
+	este libro
+	mi casa
+	está
+	interesante
+	el coche
+	María
+	es
+	en el centro
+	mi abuelo
+	la sopa
+	está
+	antiguo
+	el pastel
+	el profesor
+	es
+	delicioso
+	la película
+	muy
+	es
+	larga
+	actualmente
+	siempre
+	está
+	feliz
+	Juan
+	como todos
+	está
+	horrible
+	
+
+
+Ejercicio 2
+Práctica
+Este ejercicio se centra en la práctica de verbos que comúnmente pueden ser mal traducidos del inglés al español debido a las diferencias estructurales entre ambos idiomas. Lee las frases que se presentan a continuación. Tu tarea es corregir la traducción incorrecta al español para que refleje la estructura adecuada del verbo en este idioma.
+Ejemplo
+Inglés: “They enjoy playing soccer”.
+Traducción incorrecta: “Disfrutan jugar fútbol”.
+Corrección: “Disfrutan de jugar al fútbol”.
+
+
+* Inglés: "My sister, who is already 18, still plays with dolls."
+   * Traducción incorrecta: "Mi hermana, que ya es 18, sigue jugando con muñecas."
+   * Corrección: _______________________
+* Inglés: "We tried to call you."
+   * Traducción incorrecta: "Intentamos de llamarte."
+   * Corrección: _______________________
+* Inglés: "I can’t afford to buy a new car."
+   * Traducción incorrecta: "No puedo permitirme a comprar un coche nuevo."
+   * Corrección: _______________________
+* Inglés: "I stopped smoking."
+   * Traducción incorrecta: "Paré fumar."
+   * Corrección: _______________________
+* Inglés: "She forgot to close the door."
+   * Traducción incorrecta: "Olvidó de cerrar la puerta."
+   * Corrección: _______________________
+* Inglés: "We moved back a couple of years later."
+   * Traducción incorrecta: "Mudamos atrás un par de años después."
+   * Corrección: _______________________
+
+
+
+
+Ejercicio 3
+Práctica
+Para cada grupo, identifica la combinación no idiomática:
+
+
+* Grupo 1: estudiante de primaria / estudiante de intercambio / estudiante destacado / estudiante caro
+
+
+* Grupo 2: valorar el apoyo económico / recibir apoyo psicológico / brindar apoyo incondicional / obligar apoyo constante
+
+
+* Grupo 3: soportar una carga / soportar el dolor / soportar a una persona / soportar una causa
+
+
+* Grupo 4: carácter abierto / final abierto / secreto abierto / puerta abierta
+
+
+Ejercicio 4
+Práctica
+1. A continuación, verás varios pares de oraciones. Observa cómo cambian las conjunciones "y" y "o" cuando se encuentran con palabras que comienzan con las vocales "i" o "o".
+2. Completa las frases usando correctamente "y", "e", "o", o "u" según corresponda.
+Ejemplo
+Marta estudia matemáticas y historia.
+➔ Marta estudia matemáticas e inglés.
+Prefiero ir al cine o al teatro.
+➔ Prefiero ir a la playa u observar las estrellas.
+Compré frutas y verduras.
+➔ Compré frutas e higos.
+Podemos viajar en tren o en coche.
+➔ Podemos viajar en tren u optar por el avión.
+
+
+* María comía chocolate __________ helado.
+* Ayer fuimos al parque __________ hicimos un picnic.
+* ¿Quieres agua __________ otro refresco?
+* Puedes estudiar matemáticas __________ ingeniería.
+* No sé si comprar un teléfono __________ una tablet.
+* Te invito a cenar __________ ir al cine.
+* Es importante ser honesto __________ íntegro.
+* Fuimos a la tienda __________ compramos pan __________ leche.
+
+
+
+
+Ejercicio 5
+Práctica
+¿Qué problema tienen estas oraciones?
+
+
+1. Ayer descubré un nuevo restaurante en el centro de la ciudad que me encantó.
+2. Durante nuestras vacaciones, descubremos una playa escondida con aguas cristalinas.
+3. Los científicos han descuberto una cura para esa enfermedad rara.
+4. Al leer ese libro, descubré muchas cosas sobre la historia de mi país que no conocía.
+5. Cuando revisó el correo, descubró una carta que había pasado por alto.
+
+
+
+
+Ejercicio 6
+Práctica
+Lee las siguientes palabras y decide si necesitan un acento gráfico según las normas de acentuación del español. Luego, escribe la palabra correctamente. Recuerda las tres reglas básicas de acentuación:
+1. Las palabras agudas llevan tilde cuando terminan en vocal, 'n' o 's'.
+2. Las palabras graves o llanas llevan tilde cuando no terminan en vocal, 'n' o 's'.
+3. Las palabras esdrújulas y sobresdrújulas llevan tilde siempre.
+
+
+dificil, camion, hice, tuve, azucar, certificado, rapido, tambor, examen, examenes
+
+
+Ejercicio 7
+Práctica
+Relaciona cada construcción con su significado. Después, completa las frases.
+
+
+
+
+1. terminar algo
+2. terminar de hacer algo
+3. terminar haciendo algo
+4. dejar de hacer algo
+
+
+
+
+
+
+
+
+1. Completar una tarea o actividad específica.
+2. Dejar de realizar una acción habitual o repetida.
+3. Finalizar una acción que estabas realizando.
+4. Hacer algo no previsto o inesperado.
+
+
+* Ayer, después de mucho esfuerzo, finalmente ___ mi proyecto de ciencias.
+* Después de discutir con mi equipo, todos queríamos descansar, pero ___ un viaje juntos.
+* Siempre me gustó tocar el piano, pero por falta de tiempo tuve que ___.
+* Tenía que limpiar toda la casa. Cuando ___, me sentí muy satisfecho.
+* Estaba viendo solo un episodio de la serie, pero ___ toda la temporada.
+* Mi amiga decidió ___ carne y ahora es vegetariana.
+
+
+
+
+Ejercicio 8
+Práctica
+1. Selecciona la preposición o preposiciones que complete(n) correctamente cada frase.
+2. Piensa en cómo cada preposición cambia el significado de la frase y justifica cuál es la que mejor se ajusta al contexto.
+
+
+* Todos nosotros estamos de acuerdo (ø / en / sobre) que es necesario tomar medidas urgentes.
+* El proyecto se enfoca (sobre / en / a) la innovación tecnológica para mejorar la eficiencia energética.
+* Estaba pensando (a / en / de) mudarse (a / en / de) una ciudad más grande para buscar mejores oportunidades laborales.
+* Estoy muy interesado (sobre / en / por) aprender más sobre este tema.
+* Tengo mayor facilidad (en / de / para) resolver problemas que tú.
+* Aunque hay algunas desventajas (de / en / por) ser demasiado cauteloso, también hay beneficios.
+* Es importante asegurarse (ø / de / por) que todas las puertas estén cerradas antes de salir de casa.
+* Soy estudiante de intercambio (ø / en / a) la Universidad de Oxford.
+
+
+
+
+Ejercicio 9
+Práctica
+1. Observa las frases siguientes y decide si son correctas o incorrectas.
+2. ¿Cuándo es necesario usar un artículo con nombres propios? ¿Por qué no lo hacemos en la mayoría de casos? ¿Qué diferencia hay entre decir “María” y “la María”? Piensa en cuál es la función de los artículos para responder.
+
+El presidente Sánchez habló en la conferencia.
+Pedro habló en la conferencia.
+Ayer fui al cine con Elena.
+Ayer fui al cine con el señor Ramírez.
+Ayer fui al cine con señor Ramírez.
+Papá Noel trae regalos en Navidad.
+Descubrí que el Papá Noel no existe.
+
+
+
+
+
+
+Ejercicio 10
+En español, debemos seguir ciertas reglas cuando escribimos las fechas. Estas son las más importantes:
+   * Los días de la semana y los meses en español se escriben con minúscula. Ejemplo: lunes, septiembre, marzo, junio.
+   * Utilizamos la preposición de entre el día, el mes y el año. Ejemplo: martes, 11 de septiembre de 2001.
+   * Día + mes + año como marcador temporal: Se utiliza el antes del número del día. Ejemplo: Nací el 11 de septiembre de 2001.
+   * Cuando mencionamos solo el mes o el año, usamos en. Ejemplos: Nací en septiembre. Nací en 2001.
+Práctica
+   1. Cada una de las siguientes frases tiene un error en la escritura de las fechas. Encuentra el error y corrígelo.
+   2. Escribe las siguientes fechas usando el formato correcto: el cumpleaños de un ser querido, la fecha de hoy, una fecha importante en la historia de tu país y la fecha en que comenzaste a aprender español.
+
+
+   * Nací en 10 de Abril de 2001.
+   * La reunión es el 15 de Julio.
+   * Comenzamos las clases en 7 de Septiembre 2019.
+   * Fui a París en Junio de 2022.
+   * Mi hermana nació el Mayo.
+
+
+
+
+
+
+Ejercicio 11
+En español, no siempre necesitamos usar pronombres personales (yo, tú, él, ella) para indicar quién realiza la acción, ya que muchas veces el verbo ya nos da esa información. Sin embargo, a veces usamos estos pronombres para dar énfasis o cuando queremos evitar confusión.
+Práctica
+   1. Lee las siguientes oraciones. Si el pronombre personal no es necesario, táchalo (él) y reescribe la oración sin él. Si crees que el pronombre es necesario, deja la oración como está.
+
+
+   * Yo vivo en Helsinki.
+   * Él trabaja en una tienda, pero no le gusta.
+   * Ella es mi mejor amiga.
+   * Nosotros vamos al parque todos los días.
+   * Tú hablas muy bien español.
+   * Marcos es un chico muy responsable. Él se levanta temprano todos los días.
+
+
+   2. Ahora te damos algunas frases sin pronombres. Añade un pronombre si crees que es necesario para dar énfasis, claridad o evitar confusión.
+
+
+   * Vive en una casa muy grande. (¿Quién? ¿Él o ella?)
+   * Nació en 2004 y es una persona importante en mi vida.
+   * Estudias mucho para los exámenes.
+   * Compré un coche nuevo ayer.
+   * Salimos de la casa temprano.
+   * No sé quién te ha robado el ordenador, pero no he sido.
+
+
+   3. Ahora, reflexiona y explica brevemente con ejemplos:
+
+
+   * En español, no usamos pronombres cuando el verbo ya nos indica quién es el sujeto. Ejemplo: Nací (sabemos que el verbo indica "yo").
+   * Sin embargo, a veces usamos el pronombre para enfatizar o cuando hay posible confusión. Ejemplo: Él nació en Madrid, no ella.
+
+
+
+
+Ejercicio 12
+Práctica
+   1. Lee los ejemplos y observa cuándo es necesario usar "que".
+   2. Completa las oraciones usando “que” solo si es necesario.
+
+
+   1. Descubrí que el libro es muy interesante.
+Descubrí el libro en la biblioteca.
+   2. Me dijeron que la película es buena.
+Me dijeron la verdad.
+   3. Me pidió que dejara de llamarle a todas horas.
+Me pidió un favor.
+
+
+      * Descubrí __________ el examen es mañana.
+      * Me contaron __________ el profesor no vendrá hoy.
+      * Pienso __________ mi hermano está cansado.
+      * Me dijeron __________ el restaurante cierra a las 10.
+      * Creo __________ ella está equivocada.
+      * Pienso __________ el futuro será mejor.
+      * Creen __________ la fiesta será divertida.
+      * Me dijeron __________ el resultado del partido.
+
+
+
+
+Ejercicio 13
+En español, algunos adjetivos de grado extremo ya expresan una cualidad en su máxima intensidad, por lo que no necesitan intensificadores como "muy", "bastante" o "un poco". Usar un intensificador con estos adjetivos es incorrecto porque ya implican una evaluación extrema.
+Por ejemplo:
+      * "Esto fue muy horrible."
+      * "Esto fue horrible."
+      * "Esto fue muy feo." ➔ "horrible" expresa una forma más intensa de “feo”.
+Práctica
+      1. Completa la tabla con los adjetivos de grado extremo “horrible”, “espantoso”, “enorme”, “excelente”, “sorprendente” y “fantástico”.
+      2. Corrige las oraciones cuando sea necesario.
+
+
+
+
+Adjetivo de intensidad moderada
+	Adjetivo de grado extremo
+	muy feo
+	
+
+	muy malo
+	
+
+	muy grande
+	
+
+	muy bueno
+	
+
+	muy sorprendente
+	
+
+	muy divertido
+	
+
+	
+
+
+
+      * Ese gesto estuvo un poco feo por tu parte.
+      * La película fue un poco excelente.
+      * El espectáculo fue ligeramente increíble.
+      * La comida estuvo muy perfecta.
+      * Su interpretación fue bastante sublime.
+      * El accidente fue muy espantoso.
+
+
+
+Ejercicio 14
+Práctica
+Completa las oraciones siguientes con "este", "esta", "estos", "estas", "ese", "esa", “esto”, “eso”, "esos" o "esas", según corresponda. Recuerda que "este" se usa para referirse a algo que está física, temporal o discursivamente cerca del hablante, y "ese" para referirse a algo que está más lejos del hablante, pero no necesariamente cerca del oyente.
+
+
+         1. ¿Puedes pasarme __________ libro que está sobre la mesa?
+         2. No me gustan __________ zapatos; prefiero __________ que vimos ayer en la tienda.
+         3. __________ coche que está aparcado ahí es de mi hermano.
+         4. __________ revistas están desactualizadas; deberías leer __________ que están en la biblioteca.
+         5. No entiendo __________ instrucciones del examen; ¿podrías explicarme __________ parte de aquí?
+         6. __________ días están siendo muy calurosos, a diferencia de __________ de la semana pasada.
+         7. Debido al hecho de que deben concentrarse para no mezclar idiomas, los bilingües trabajan más las áreas del cerebro responsables de la atención y, por consiguiente, tienen un mayor control de su concentración. Para averiguar __________, Albert Costa realizó varios experimentos con los grupos de jóvenes, utilizando señales de tráfico o series de números.
+
+
+
+
+Ejercicio 15
+Práctica
+Completa las siguientes oraciones eligiendo la opción correcta entre visité o avisté. Luego, explica por qué has elegido esa opción.
+
+
+         1. _________ a mis abuelos el fin de semana y pasamos todo el día juntos.
+         * a) visité
+         * b) avisté
+
+            2. Desde el mirador, _________ un barco en el horizonte.
+            * a) visité
+            * b) avisté
+
+               3. Durante nuestras vacaciones, _________ varias ciudades históricas en España.
+               * a) visité
+               * b) avisté
+
+                  4. Mientras hacíamos senderismo, _________ un águila volando sobre las montañas.
+                  * a) visité
+                  * b) avisté
+
+                     5. El mes pasado, _________ a mi amiga que vive en otra ciudad.
+                     * a) visité
+                     * b) avisté
+
+
+Identificación y corrección de errores similares
+Este fragmento incluye algunos errores similares a los que has cometido en tu biografía. ¿Serías capaz de identificarlos y, en caso de ser necesario, corregirlos?
+Nací en marzo en 2003, y desde pequeña tuvé interés por la música. Cuando era cinco años, yo empecé a tocar el piano, descubré tenía talento y desde entonces no he parado. Una cosa llevó a la otra y hicé mi primer recital en público el año pasado. Fue una experiencia increíble. A partir de entonces, comencé a viajar mucho para dar conciertos por toda España. Uno de los viajes más importantes fue cuando visté a mi abuela en el sur del país. Durante ese viaje, conocí al Javier, que se acabó convirtiendo en mi novio. Este estuvo un momento muy fantástico en mi vida. Cuando terminé a la escuela secundaria, decidí que quería estudiar en el extranjero, así que ahora soy estudiante intercambio a la Universidad de Ámsterdam y mantengo mi relación a distancia con Javier.
+
+
+Valoración de los ejercicios
+                     1. Valora, del 1 al 4 (donde 1 es “nada útil” y 4 es “muy útil”), la utilidad de cada uno de los 15 ejercicios que has resuelto para la posterior identificación y corrección de errores similares a los que has cometido en tu biografía.
+                     2. Justifica brevemente (con una o dos frases) el porqué de cada puntuación.

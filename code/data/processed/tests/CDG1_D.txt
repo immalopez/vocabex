@@ -1,0 +1,379 @@
+﻿Trabajo con los errores cometidos
+Ejercicio 1
+Práctica
+Selecciona un elemento de cada columna para formar una frase completa. Asegúrate de que el uso de “ser” o “estar” sea el adecuado según el contexto de la frase que formes. Escribe una oración por fila. 
+Ejemplos
+Juan siempre es agradable.
+Durante la época de exámenes en la biblioteca debo estar tranquila.
+
+
+
+
+Columna 1
+	Columna 2
+	Columna 3
+	Columna 4
+	Juan
+	el clima
+	es
+	agradable
+	la fiesta
+	en la playa
+	está
+	aburrida
+	el concierto
+	Ana
+	es
+	emocionante
+	este libro
+	mi casa
+	está
+	interesante
+	el coche
+	María
+	estar
+	en el centro
+	mi abuelo
+	la sopa
+	está
+	antiguo
+	el pastel
+	en la biblioteca debo
+	es
+	delicioso
+	la película
+	muy
+	es
+	larga
+	actualmente
+	siempre
+	está
+	tranquila
+	durante la época de exámenes
+	como todos
+	he sido
+	horrible
+	
+
+
+Ejercicio 2
+Práctica
+Lee las siguientes palabras y decide si necesitan un acento gráfico según las normas de acentuación del español. Luego, escribe la palabra correctamente. Recuerda las tres reglas básicas de acentuación:
+1. Las palabras agudas llevan tilde cuando terminan en vocal, 'n' o 's'.
+2. Las palabras graves o llanas llevan tilde cuando no terminan en vocal, 'n' o 's'.
+3. Las palabras esdrújulas y sobresdrújulas llevan tilde siempre.
+
+
+recibio, pidiendole, indole, util, titulos, solo, dificil, mia, habia, examen, examenes,
+tambien, especificas, azucar, asignaste, ultimo, ingles, cafeteria, comprension
+
+
+Ejercicio 3
+Práctica
+i. Relaciona cada palabra con su significado y después reflexiona sobre la importancia de los acentos en español.
+ii. Escribe una oración para cada pareja de palabras.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. mas
+2. más
+3. esta
+4. está
+5. paso
+6. pasó
+7. tenia
+8. tenía
+9. mi
+10. mí
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Tercera persona del singular del imperfecto de indicativo del verbo “tener” (he/she had).
+2. Adjetivo que indica posesión en relación con la persona que habla (my); nota musical (mi).
+3. Cinta parasitaria que puede vivir en el intestino (tapeworm).
+4. Tercera persona del singular del pretérito indefinido del verbo “pasar”, que indica una acción concluida en el pasado (he/she/it passed or happened).
+5. Pronombre demostrativo (this).
+6. Adverbio que indica superioridad, aumento o intensidad (more).
+7. Conjunción adversativa equivalente a “pero”, utilizada para expresar contraste u oposición en una oración (but).
+8. Pronombre personal que se refiere a la persona que habla (me).
+9. Sustantivo referido a un movimiento de avance al caminar o al progresar en algo (step); primera persona del singular del presente de indicativo del verbo “pasar” (I pass).
+10. Tercera persona del singular del presente de indefinido del verbo “estar” (he/she is).
+Ejercicio 4
+
+
+El orden de los adjetivos en español es más complejo de lo que parece a simple vista. Si bien el adjetivo suele colocarse después del sustantivo que modifica, hay muchas excepciones:
+* Orden General en Español: Sustantivo + Adjetivo.
+* Excepciones: Adjetivos numerales y ordinales (un, seis, primer, segundo, tercer, etc.), expresiones fijas (p. ej., “buen día”), cambios de significado en función del orden (p. ej., “viejo amigo” vs. “amigo viejo”).
+Ejemplos
+* Casa grande. (Y no “grande casa”, como sería en inglés.)
+* Primer lugar. (Los adjetivos numerales y ordinales preceden al sustantivo y, además, algunos deben apocoparse: p. ej., uno → un, primero → primer, tercero → tercer.)
+* Los trabajadores estudiantes aprobaron el examen. (Todos eran trabajadores y todos aprobaron.)
+* Los estudiantes trabajadores aprobaron el examen (Solo los trabajadores lo aprobaron; el resto, no.)
+Práctica
+Coloca los elementos de las frases en el orden correcto.
+
+
+1. mes / tercer / el / es.
+2. azul / cielo / el / es.
+3. tienen / segundo / piso / un / ellos.
+4. pequeño / un / tiene / perro / mi hermano.
+5. cuarta / tiene / ella / una / opción.
+6. libros / antiguos / algunos / tiene / ella.
+7. fui / Tailandia / a / primer / mi / para / Erasmus.
+8. capítulo / séptimo / el / es / interesante.
+9. nuevo / tiene / coche / un / ella.
+10. en / año / Universidad / de / Ámsterdam / un / estudió / durante / la.
+
+
+Ejercicio 5
+Para hablantes de francés y español, el uso de las preposiciones puede causar mucha confusión, dadas las similitudes percibidas entre ambos idiomas. A continuación, resolverás un ejercicio contrastivo para abordar esta confusión.
+Práctica
+Completa las frases en español y luego tradúcelas al francés, prestando especial atención al uso de las preposiciones en español y sus equivalentes en francés.
+Ejemplos
+Vivo en Madrid (Je vis à Madrid).
+En mi primer Erasmus, fui a París (Pour mon premier Erasmus, je suis allée à Paris).
+
+
+* Estudio ________ la Universidad de Salamanca / J’étudie ________ l’Université de Salamanque.
+* ________ verano, siempre viajo ________ a la costa / ________ été, je voyage toujours ________ la côte.
+* Mi hermano trabaja ________ un banco internacional / Mon frère travaille ________ une banque internationale.
+* El concierto es ________ el estadio central / Le concert est ________ le stade central.
+* Me gusta ir ________ la montaña los fines de semana / J’aime aller ________ la montagne les week-ends.
+
+
+Ejercicio 6
+Práctica
+Las siguientes frases han sido estructuradas de forma poco idiomática en español, probablemente por influencia del francés. Reescríbelas para que suenen más naturales.
+Ejemplo
+La constante dependencia de ideas externas puede hacer que el artista pierda confianza en su intuición, lo que resulta en ya no ser creativo su mismo.
+La constante dependencia de ideas externas puede hacer que el artista pierda confianza en su intuición, lo que resulta en dejar de ser creativo por sí mismo.
+
+
+* La empresa está planeando una campaña publicitaria que falta de algunos detalles importantes.
+* Este aparato es capaz de hacer cosas que la gente no imaginan ni siquiera.
+* Hay una falta gritante de viviendas asequibles en esta ciudad.
+* Traté de ponerme en contacto con su servicio de atención al cliente, quien ayudó a nadie.
+* Los habitantes se quejan a menudo del ruido excesivo la noche.
+* Esta tecnología hace posible experiencias hasta entonces inimaginables.
+* El proyecto de ley está muy contestado por parte de la comunidad debido a sus posibles impactos medioambientales.
+
+
+Ejercicio 7
+Práctica
+Lee las siguientes oraciones y elige la opción entre paréntesis adecuada para completarlas correctamente.
+1. La inteligencia artificial me ayuda mucho a buscar (informaciones / información).
+2. Este verano, (mis vacaciones fueron increíbles / mi vacación fue increíble).
+3. No puedo ver bien porque no encuentro (mi gafa / mis gafas).
+4. Necesitas (unas tijeras / una tijera) para cortar ese papel.
+5. Nos divertimos muchísimo en (la fiesta / las fiestas) del pueblo.
+6. (Las ganas / la gana) de aprender (es importante / son importantes) para mejorar.
+7. Mis padres celebraron (sus segundas nupcias / su segunda nupcia) en un jardín muy bonito.
+8. Esta tienda siempre tiene (rebaja / rebajas) en enero.
+9. Aunque buscamos al ladrón por (el alrededor / los alrededores), no logramos encontrarlo.
+
+Ejercicio 8
+Práctica
+Las palabras siguientes han sido mal escritas. Corrígelas y después escribe una frase con cada una.
+
+
+   1. incorperarlo →
+   2. perda →
+   3. insuaron →
+   4. jugé →
+   5. funccionar →
+   6. defectuos →
+
+
+
+
+Ejercicio 9
+Práctica
+Lee el siguiente texto y reflexiona sobre los errores que contiene. ¿Por qué crees que la persona ha podido cometerlos? Luego, reescribe el texto corrigiendo lo que consideres necesario.
+
+
+Mi nombre es Lucía y soy un estudiante de español que está muy comprometido con su aprendizaje. Desde pequeño, siempre me ha interesado conocer nuevas culturas y mejorar mis habilidades lingüísticas. Ahora, con mucho esfuerzo, he logrado alcanzar un nivel avanzado en el idioma, y estoy muy orgulloso de mí mismo por todo lo que he conseguido. Además, estoy emocionado por los nuevos retos que vendrán en el futuro, ya que me considero una persona curiosa y motivada.
+
+
+
+
+Ejercicio 10
+Práctica
+Para cada grupo, identifica la combinación no idiomática:
+
+
+   * Grupo 1: venir la satisfacción / alcanzarse la satisfacción / mostrar la satisfacción / dar la satisfacción
+
+
+   * Grupo 2: llegar a un arreglo / inventar un arreglo / tener arreglo / proponer un arreglo
+
+
+   * Grupo 3: estar de intercambio / efectuar un intercambio / fomentar el intercambio / construir un intercambio
+
+   * Grupo 4: incumplir una resolución / encontrar una resolución / proponer una solución / encontrar una solución.
+
+
+
+
+Ejercicio 11
+
+
+“Ser” o “estar” en la voz pasiva
+      * Ser + participio pasado: Se utiliza para formar la voz pasiva cuando el enfoque está en la acción que recibe el sujeto. Se usa para indicar qué o quién realiza la acción, especialmente si se incluye un complemento agente (p. ej. “por María”).
+      * Estar + participio pasado: Sirve para indicar el estado o la condición resultante de la acción, sin enfocarse necesariamente en quién la realiza.
+Ejemplos
+      * El proyecto está evaluado en términos de impacto ambiental y viabilidad económica antes de su aprobación final (Enfoque en el resultado de la acción, que ya está terminada en el momento de iniciarse la segunda acción, es decir, la aprobación.)
+      * Cada trimestre, el estudiante es evaluado en todas las materias para medir su progreso y determinar sus áreas de mejora (Enfoque en el desarrollo de la acción, que se presenta a la vez que otra, esto es, el progreso del estudiante.)
+Práctica
+Para cada situación, decide si es más adecuado utilizar “ser” o “estar” en la voz pasiva y formula la oración correspondiente.
+
+
+      1. Un libro escrito por Gabriel García Márquez.
+      2. Una puerta que permanece abierta después de que alguien la haya abierto.
+      3. Un puente construido con madera.
+      4. Una cena que Eva se encuentra preparando ahora mismo.
+      5. Una persona desaparecida.
+
+
+
+
+Ejercicio 12
+Práctica
+Completa las oraciones siguientes con "este", "esta", "estos", "estas", "ese", "esa", “esto”, “eso”, "esos" o "esas", según corresponda. Recuerda que "este" se usa para referirse a algo que está física, temporal o discursivamente cerca del hablante, y "ese" para referirse a algo que está más lejos del hablante, pero no necesariamente cerca del oyente.
+
+
+      1. ¿Puedes pasarme __________ libro que está sobre la mesa?
+      2. No me gustan __________ zapatos; prefiero __________ que vimos ayer en la tienda.
+      3. __________ coche que está aparcado ahí es de mi hermano.
+      4. __________ revistas están desactualizadas; deberías leer __________ que están en la biblioteca.
+      5. No entiendo __________ instrucciones del examen; ¿podrías explicarme __________ parte de aquí?
+      6. __________ días están siendo muy calurosos, a diferencia de __________ de la semana pasada.
+      7. Debido al hecho de que deben concentrarse para no mezclar idiomas, los bilingües trabajan más las áreas del cerebro responsables de la atención y, por consiguiente, tienen un mayor control de su concentración. Para averiguar __________, Albert Costa realizó varios experimentos con los grupos de jóvenes, utilizando señales de tráfico o series de números.
+
+
+
+
+Ejercicio 13
+Práctica
+      1. Selecciona la preposición o preposiciones que complete(n) correctamente cada frase.
+      2. Piensa en cómo cada preposición cambia el significado de la frase y justifica cuál es la que mejor se ajusta al contexto.
+
+
+      * Es fundamental tomar precauciones (sobre / ante / para) estafas, especialmente cuando se realizan transacciones en línea.
+      * Todos nosotros estamos de acuerdo (ø / en / sobre) que es necesario tomar medidas urgentes.
+      * El proyecto se enfoca (sobre / en / a) la innovación tecnológica para mejorar la eficiencia energética.
+      * Estaba pensando (a / en / de) mudarse (a / en / de) una ciudad más grande para buscar mejores oportunidades laborales.
+      * Estoy muy interesado (sobre / en / por) aprender más sobre este tema.
+      * Tengo mayor facilidad (en / de / para) resolver problemas que tú.
+      * Nuestro objetivo es que los estudiantes puedan aplicar este conocimiento (para / a / en) situaciones prácticas, de modo que resulte (a / en / por) una mejora tangible de sus habilidades profesionales.
+      * Nos falta (ø / de / a) el contexto para entender completamente la situación.
+
+
+
+
+Ejercicio 14
+Práctica
+Para practicar la identificación y corrección de traducciones inadecuadas de palabras en inglés al español que son comúnmente confundidas debido a su similitud, elige en cada caso la opción que utiliza el término correcto en español:
+
+
+      1. A) La investigación fue muy extensiva en cuanto a su alcance.
+B) La investigación fue muy extensa en cuanto a su alcance.
+
+
+      2. A) El equipo trabajó arduamente en el proyecto y, como resulto, lograron alcanzar todos los objetivos antes del plazo establecido.
+B) El equipo trabajó arduamente en el proyecto y, como resultado, lograron alcanzar todos los objetivos antes del plazo establecido.
+
+
+      3. A) Voy a la librería a estudiar para mi examen.
+B) Voy a la biblioteca a estudiar para mi examen.
+
+
+      4. A) La situación actual es muy diferente de lo que dicen.
+B) La situación real es muy diferente de lo que dicen.
+
+
+      5. A) Voy a asistir al cliente con su reclamación.
+B) Voy a atender al cliente con su reclamación.
+
+
+      6. A) Necesito una nueva carpeta para el suelo del comedor.
+B) Necesito una nueva alfombra para el suelo del comedor.
+
+
+
+
+Ejercicio 15
+Práctica
+Lee las siguientes oraciones y elige si es más adecuado usar "estar" o "encontrarse" en cada caso. Luego, explica el porqué de tu elección.
+
+
+      1. El televisor __________ apagado porque no tenía electricidad.
+
+         * Respuesta: ___________________________
+
+            2. El electrodoméstico __________ defectuoso y por eso lo devolvieron a la tienda.
+
+               * Respuesta: ___________________________
+
+                  3. La lámpara __________ en el cuarto, pero no funcionaba bien.
+
+                     * Respuesta: ___________________________
+
+                        4. Después de tanto uso, el microondas __________ muy deteriorado.
+
+                           * Respuesta: ___________________________
+
+                              5. Al recibirlo, notaron que el lavavajillas __________ en mal estado.
+
+                                 * Respuesta: ___________________________
+
+
+
+
+
+
+Identificación y corrección de errores similares
+Este fragmento incluye algunos errores similares a los que has cometido en redacciones anteriores, como tu carta de reclamación. ¿Serías capaz de identificarlos y, en caso de ser necesario, corregirlos?
+Mi nombre es María, hace poco que he empezado a estudiar alemán y me está resultando bastante difícil. Creo que estoy intentando incorperarlo demasiado rápido en mis estudios, y a veces temo que el esfuerzo no sea suficiente, o que mi motivación perda su fuerza con el tiempo. Aun así, me esfuerzo en aplicar mi nuevo conocimiento en situaciones reales, lo que puede hacer que el aprendizaje resulte a una mejora más evidente. Eso refleja mi énfasis en el aprendizaje práctico y me impulsa a seguir mejorando. En cuanto a la tecnología, sólo la uso para encontrar recursos y mejorar mi comprénsion de la gramática. Me ayuda mucho a buscar informaciones relevantes de una forma ágil y rápida, sobre todo cuando estudio en la biblioteca, donde debo ser tranquila para concentrarme. Sin embargo, para mi, una dependencia excesiva de ideas externas puede resultar a ya no ser creativo su mismo. Además, recientemente me compré un ordenador que se encontraba defectuoso y, como resulto, me ha costado tomar apuntes estas últimas clases. Por otro lado, estoy muy emocionada porque para mi primero Erasmus voy a ir a Berlín, y sé que es una gran oportunidad. Si bien me da miedo enfrentarme al sistema universitario alemán, especialmente a los exámenes orales, creo que la satisfacción de la realización personal puede venir cuando alcanzamos nuestras metas, aunque también depende mucho de la situación en la que soy evaluado. En general, considero que las experiencias de aprendizaje en contextos de inmersión pueden enriquecer la creatividad. 
+
+
+Valoración de los ejercicios
+                                 1. Valora, del 1 al 4 (donde 1 es “nada útil” y 4 es “muy útil”), la utilidad de cada uno de los 15 ejercicios que has resuelto para la posterior identificación y corrección de errores similares a los que has cometido en redacciones anteriores, como tu carta de reclamación.
+                                 2. Justifica brevemente (con una o dos frases) el porqué de cada puntuación.

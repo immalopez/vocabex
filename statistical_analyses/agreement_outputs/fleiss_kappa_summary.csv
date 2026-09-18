@@ -1,0 +1,2 @@
+"analysis","raters","n_items","n_raters","n_categories","fleiss_kappa","bootstrap_iterations","seed","bootstrap_standard_error","confidence_level","ci_low","ci_high","z_value","p_value"
+"error_type","A01,A02,A03",1275,3,13,0.95165748295141,2000,42,0.0057025564929785,0.95,0.940637319217975,0.962984619243123,166.882605042699,0

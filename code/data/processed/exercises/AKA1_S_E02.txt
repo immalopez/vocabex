@@ -1,0 +1,19 @@
+Práctica
+A continuación, encontrarás oraciones que pueden ser poco idiomáticas por utilizar números cardinales (7, 3, etc.) en lugar del adjetivo ordinal correspondiente. Corrige las oraciones cuando sea necesario para que se adecúen al español.
+Ejemplos
+   * Conocí a María durante el grado 7. ➔ Conocí a María durante el séptimo grado.
+   * Estoy en el año 3 de mis estudios de doctorado. ➔ Estoy en el tercer año de mis estudios de doctorado.
+
+
+   1. María está en grado 6.
+➔ ______________________________________________________
+   2. Llegamos al piso 5 del hotel.
+➔ ______________________________________________________
+   3. Su cumpleaños es el día 15 de junio.
+➔ ______________________________________________________
+   4. En mi cumpleaños de 18, mis padres me regalaron un coche.
+➔ ______________________________________________________
+   5. Juan acabó la carrera en la posición 8.
+➔ ______________________________________________________
+
+

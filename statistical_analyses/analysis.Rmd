@@ -1,0 +1,1876 @@
+---
+title: "Personalized vocabulary exercises for lexical error correction in L2 Spanish"
+author: "Inmaculada López-Solà"
+date: "2025-05-18"
+output: html_document
+---
+
+Dear reader, thank you for your interest in our work. Let us guide you through this data analysis.
+
+**Libraries needed** (_if you have not already, remember to install them via_ `install.packages()` _first_):
+
+```{r libraries, include=TRUE, echo=TRUE, message=FALSE}
+
+library(tidyverse)
+library(stringr)
+library(compositions)
+library(psych)
+library(ggpattern)
+library(tidytext)
+library(lme4)
+library(emmeans)
+library(DHARMa)
+library(influence.ME)
+library(performance)
+library(parallel)
+library(broom.mixed)
+library(pROC)
+library(brms)
+library(cmdstanr)
+library(marginaleffects)
+library(posterior)
+library(purrr)
+library(collapse)
+library(caret)
+library(FactoMineR)
+library(factoextra)
+library(ggrepel)
+library(future.apply)
+library(patchwork)
+library(bayesplot)
+library(ggeffects)
+
+options(contrasts = c("contr.sum","contr.poly"))
+
+source("R/run_registry.R")
+if (run_is_active()) {
+  knitr::opts_chunk$set(fig.path = file.path(run_dir(TRUE), "figures", "analysis-"))
+  cat("Analysis run ID:", run_id(TRUE), "\n")
+}
+
+analysis_seeds <- list(
+  rq1_dharma       = 202501L,
+  rq1_influence    = 1L,
+  rq2_fit          = 202502L,
+  rq2_diagnostics  = 202503L,
+  rq2_loo          = 202504L,
+  rq3_dharma       = 202505L
+)
+if (run_is_active()) update_run_manifest(seeds = analysis_seeds)
+
+```
+
+**Loading and preparing the data**
+
+For the error locus variable, we will collapse those observations involving more than one category into "Mixed".
+
+Additionally, we only have 3 "Specification" errors, corresponding with:
+
+* FDS1_S's Exercise 5: empecé (el) [a hacer] teatro
+* IMM1_C's Exercise 13: he conseguido conocer a muchas personas (y) [, entre ellas] estudiantes[,] de Pamplona
+* CPJ1_D's Exercise 4: he obtenido el (DELE B2) certificado [DELE de nivel B2]
+
+Which will give us trouble in our statistical analyses. We will thus merge them with their closest error type: "Synthesis" for the first two, and "Order" for the last one.
+
+Lastly, we'll make sure certain variables are factors.
+
+```{r setup, include=TRUE, echo=TRUE, message=FALSE}
+
+df <- read_csv(run_input("data_for_analysis.csv"))
+
+df <- df %>%
+  mutate(
+    gram_primary = case_when(
+      n_gramcats == 1 ~ gram_primary,
+      n_gramcats > 1 ~ "Mixed"
+    )
+  )
+
+df$error_type[as.character(df$id) %in% c("440","583")] <- "Synthesis"
+df$error_type[as.character(df$id) == "904"] <- "Order"
+
+df <- df %>%
+  mutate(id = factor(id),
+         participant_ID = factor(participant_ID),
+         error_type = factor(error_type))
+
+
+```
+
+We first need to apply dimensionality reduction techniques on our linguistic complexity features so that we can simplify our models. In order to do that, we will perform principal component analysis (PCA).
+
+```{r PCA, include=TRUE, echo=TRUE}
+
+# =============================================================================
+# 1. Using PCA on linguistic complexity variables for dimensionality reduction
+# =============================================================================
+
+# 1.1. ------ One PCA per block, fitted on the pooled exercise+imm+del matrix
+# so all three share the same axes. Then we score each set separately. ------
+
+fit_block_pca3 <- function(df, base_regex, ex_suf = "", imm_suf = "_imm",
+                           del_suf = "_del", transform = c("clr", "z"),
+                           k = 1, prefix){
+  transform <- match.arg(transform)
+  
+  ex_regex <- paste0(base_regex, ex_suf, "$")
+  imm_regex <- paste0(base_regex, imm_suf, "$")
+  del_regex <- paste0(base_regex, del_suf, "$")
+  
+  ex_cols <- grep(ex_regex, names(df), value = TRUE)
+  imm_cols <- grep(imm_regex, names(df), value = TRUE)
+  del_cols <- grep(del_regex, names(df), value = TRUE)
+  
+  # strip suffixes to get "base" names
+  base_ex <- sub(paste0(ex_suf, "$"), "", ex_cols)
+  base_imm <- sub(paste0(imm_suf, "$"), "", imm_cols)
+  base_del <- sub(paste0(del_suf, "$"), "", del_cols)
+
+  # union of features across the three sets
+  all_feats <- sort(unique(c(base_ex, base_imm, base_del)))
+
+  # helper to extract a matrix with all_feats (add zeros for missing)
+  get_block <- function(cols, base_names, suf) {
+    out <- matrix(0, nrow = nrow(df), ncol = length(all_feats))
+    colnames(out) <- all_feats
+    if (length(cols)) {
+      M <- as.matrix(df[cols])
+      colnames(M) <- base_names
+      keep <- intersect(all_feats, base_names)
+      out[, keep] <- M[, keep, drop = FALSE]
+    }
+    out
+  }
+  
+  X_ex <- get_block(ex_cols,  base_ex,  ex_suf)
+  X_imm <- get_block(imm_cols, base_imm, imm_suf)
+  X_del <- get_block(del_cols, base_del, del_suf)
+  
+  X <- rbind(X_ex, X_imm, X_del) # pooled ex+imm+del
+  
+  zscore <- function(M) scale(M)
+  clr_block <- function(M, eps = 1e-6){
+    # Force proportions then centered log-ratios
+    rs <- rowSums(M, na.rm = TRUE); M[is.na(M)] <- 0
+    M <- sweep(M, 1, ifelse(rs == 0, 1, rs), "/"); M[M == 0] <- eps
+    compositions::clr(M)
+  }
+  
+  # Transform
+  X <- if (transform=="clr") zscore(clr_block(X)) else zscore(X)
+  
+  # Principal component analysis on already standardized data
+  pca <- prcomp(X, center = FALSE, scale. = FALSE)
+  keep <- min(k, ncol(pca$x)); SCORES <- pca$x[, 1:keep, drop = FALSE]
+  n <- nrow(df)
+  
+  # Split back ex/imm/del
+  S_ex <- SCORES[seq_len(n), , drop=FALSE]
+  S_imm <- SCORES[n + seq_len(n), , drop=FALSE]
+  S_del <- SCORES[2*n + seq_len(n), , drop=FALSE]
+  
+  colnames(S_ex) <- paste0(prefix, "_PC", seq_len(keep), "_ex")
+  colnames(S_imm) <- paste0(prefix, "_PC", seq_len(keep), "_imm")
+  colnames(S_del) <- paste0(prefix, "_PC", seq_len(keep), "_del")
+  
+  # Quick report
+  cat("\n==== ", prefix, " ====\n")
+  print(round(summary(pca)$importance[2, 1:keep], 3))
+  cat("Top loadings (PC1):\n"); print(sort(pca$rotation[,1], TRUE)[1:min(8, ncol(pca$rotation))])
+  cat("Bottom loadings (PC1)\n"); print(sort(pca$rotation[,1], FALSE)[1:min(8, ncol(pca$rotation))])
+  
+  list(scores=cbind(as.data.frame(S_ex), as.data.frame(S_imm), as.data.frame(S_del)),
+       pca=pca, features=all_feats)
+}
+
+# 1.1.1. Lexical sophistication - CLR + PCA
+# -----------------------------------------
+rx_cefr_base <- "^Freq (A1|A2|B1|B2|C1|C2)"
+
+res_cefr <- fit_block_pca3(
+  df,
+  base_regex = rx_cefr_base,
+  transform = "clr", k = 1, prefix = "Soph"
+)
+
+# 1.1.2. Lexical diversity - z + PCA
+# ----------------------------------
+rx_lexdiv_base <- "^(mtld|hdd|mattr|msttr)"
+
+res_lexdiv <- fit_block_pca3(
+  df,
+  base_regex = rx_lexdiv_base,
+  transform = "z", k = 1, prefix = "LexDiv"
+)
+
+# 1.1.3. POS mix (coarse UPOS) - CLR + PCA
+# ----------------------------------------
+upos_tags <- c("NOUN", "VERB", "ADJ", "ADV", "ADP", "DET", "PRON", "PROPN", "AUX",
+               "CCONJ", "SCONJ", "PART", "INTJ", "NUM", "PUNCT", "SYM", "X")
+base_names <- paste0("upos-", upos_tags, " DOC%")
+
+get_pooled_vec <- function(df, base) {
+  cols <- c(base, paste0(base, "_imm"), paste0(base, "_del"))
+  vals <- lapply(cols, function(cx) if (cx %in% names(df)) df[[cx]] else rep(0, nrow(df)))
+  unlist(vals, use.names = FALSE)
+}
+
+pooled <- lapply(base_names, \(b) get_pooled_vec(df, b))
+names(pooled) <- base_names
+
+zero_rate <- sapply(pooled, \(v) mean(v == 0, na.rm = TRUE))
+sd_val <- sapply(pooled, \(v) sd(v, na.rm = TRUE))
+
+keep_mask <- (sd_val > 0) & (zero_rate < 0.80)
+keep_feats <- names(keep_mask)[keep_mask]
+drop_feats <- setdiff(base_names, keep_feats)
+
+rx_pos_base <- paste0("^(", paste(keep_feats, collapse="|"), ")")
+
+res_pos <- fit_block_pca3(
+  df,
+  base_regex = rx_pos_base,
+  transform = "clr", k = 2, prefix = "POS"
+)
+
+# 1.1.4. Tree shape - z + PCA
+# ---------------------------
+rx_tree_base <- "^(tree_min_w|tree_max_w|tree_avg_w|tree_min_h|tree_max_h|tree_avg_h)"
+
+res_tree <- fit_block_pca3(
+  df,
+  base_regex = rx_tree_base,
+  transform = "z",
+  k = 1,
+  prefix = "Tree"
+)
+
+# 1.1.5. Dependency mix - CLR + PCA
+# ---------------------------------
+rx_deprel_base <- "^deprel-[A-Za-z:]+ DOC%"
+
+res_deprel <- fit_block_pca3(
+  df,
+  base_regex = rx_deprel_base,
+  transform = "clr",
+  k = 1,
+  prefix = "Deprel"
+)
+
+# 1.1.7. Merge PC scores
+# ----------------------
+df <- bind_cols(
+  df, res_cefr$scores, res_lexdiv$scores, res_pos$scores, res_tree$scores
+)
+
+# =============================================================================
+# 2. Flip signs of PC loadings (directions) to improve interpretability
+# =============================================================================
+
+orient_pc <- function(df, res_obj, prefix, anchor_ex, anchor_imm, anchor_del,
+                      pc = 1){
+  sc_ex <- as.numeric(df[[paste0(prefix, "_PC", pc, "_ex")]])
+  sc_imm <- as.numeric(df[[paste0(prefix, "_PC", pc, "_imm")]])
+  sc_del <- as.numeric(df[[paste0(prefix, "_PC", pc, "_del")]])
+  
+  s <- c(sc_ex, sc_imm, sc_del)
+  a <- as.numeric(c(anchor_ex, anchor_imm, anchor_del))
+  
+  r <- suppressWarnings(cor(s, a, use = "pairwise.complete.obs"))
+  if (!is.na(r) && r < 0){
+    for (suf in c("_ex", "_imm", "_del"))
+      df[[paste0(prefix, "_PC", pc, suf)]] <- -df[[paste0(prefix, "_PC", pc, suf)]]
+    res_obj$pca$rotation[, pc] <- -res_obj$pca$rotation[, pc]
+    res_obj$pca$x[, pc] <- -res_obj$pca$x[, pc]
+  }
+  list(df = df, res = res_obj, r = r)
+}
+
+# 2.1. Soph_PC1 (Higher = more advanced)
+# --------------------------------------
+
+high_soph_ex <- df$`Freq C1` + df$`Freq C2`
+high_soph_imm <- df$`Freq C1_imm` + df$`Freq C2_imm`
+high_soph_del <- df$`Freq C1_del` + df$`Freq C2_del`
+
+tmp <- orient_pc(df, res_cefr, "Soph", high_soph_ex, high_soph_imm, high_soph_del, pc = 1)
+df <- tmp$df; res_cefr <- tmp$res
+
+# 2.2. POS_PC1 (Higher = more content words) & POS_PC2 (Higher = more verbal/connective)
+# --------------------------------------------------------------------------------------
+
+get_content_share <- function(df, suf) {
+  content <- rowSums(df[, c(paste0("upos-NOUN DOC%", suf),
+                            paste0("upos-DET DOC%", suf), # most nouns come with a DET and they had high PC loading
+                            paste0("upos-VERB DOC%", suf),
+                            paste0("upos-ADJ DOC%", suf),
+                            paste0("upos-ADV DOC%", suf))], na.rm = TRUE)
+  total <- rowSums(df[, grep(paste0("^upos-.* DOC%", suf, "$"),
+                             names(df), value = TRUE), drop = FALSE], na.rm = TRUE)
+  content / pmax(total, 1e-6)
+}
+
+cs_ex <- get_content_share(df, "")
+cs_imm <- get_content_share(df, "_imm")
+cs_del <- get_content_share(df, "_del")
+
+tmp <- orient_pc(df, res_pos, "POS", cs_ex, cs_imm, cs_del, pc = 1)
+df <- tmp$df; res_pos <- tmp$res
+
+get_vc_share <- function(df, suf) {
+  verbal <- rowSums(df[, c(paste0("upos-VERB DOC%",suf),
+                           paste0("upos-AUX DOC%",suf),
+                           paste0("upos-PRON DOC%",suf),
+                           paste0("upos-ADP DOC%",suf),
+                           paste0("upos-SCONJ DOC%",suf),
+                           paste0("upos-CCONJ DOC%",suf),
+                           paste0("upos-ADV DOC%",suf),
+                           paste0("upos-PART DOC%",suf))], na.rm=TRUE)
+  total <- rowSums(df[, grep(paste0("^upos-.* DOC%",suf,"$"),
+                             names(df), value=TRUE), drop=FALSE], na.rm=TRUE)
+  verbal / pmax(total, 1e-6)
+}
+
+vc_ex  <- get_vc_share(df, "")
+vc_imm <- get_vc_share(df, "_imm")
+vc_del <- get_vc_share(df, "_del")
+
+# Flip POS PC2 so higher = more verbal/connective (if needed)
+tmp <- orient_pc(df, res_pos, "POS", vc_ex, vc_imm, vc_del, pc = 2)
+df <- tmp$df; res_pos <- tmp$res
+
+
+# 2.3. LexDiv_PCA1 (Higher = more diversity)
+# ------------------------------------------
+lex_ex  <- df$mtld
+lex_imm <- df$mtld_imm
+lex_del <- df$mtld_del
+
+tmp <- orient_pc(df, res_lexdiv, "LexDiv", lex_ex, lex_imm, lex_del, pc = 1)
+df <- tmp$df; res_lexdiv <- tmp$res
+
+# 2.4. Tree_PC1 (Higher = bigger/deeper)
+# --------------------------------------
+
+avg_size <- function(df, suf) rowMeans(cbind(df[[paste0("tree_avg_w", suf)]],
+                                             df[[paste0("tree_avg_h", suf)]],
+                                             df[[paste0("tree_max_w", suf)]],
+                                             df[[paste0("tree_max_h", suf)]]),
+                                       na.rm = TRUE)
+
+sz_ex <- avg_size(df, "")
+sz_imm <- avg_size(df, "_imm")
+sz_del <- avg_size(df, "_del")
+
+tmp <- orient_pc(df, res_tree, "Tree", sz_ex, sz_imm, sz_del, pc = 1)
+df <- tmp$df; res_tree <- tmp$res
+
+
+# =============================================================================
+# 3. Quality control checks
+# =============================================================================
+
+get_block_mats <- function(df, base_regex, ex_suf = "", imm_suf = "_imm", del_suf = "_del"){
+  ex_cols <- grep(paste0(base_regex, ex_suf, "$"), names(df), value = TRUE)
+  imm_cols <- grep(paste0(base_regex, imm_suf, "$"), names(df), value = TRUE)
+  del_cols <- grep(paste0(base_regex, del_suf, "$"), names(df), value = TRUE)
+  base_ex <- sub(paste0(ex_suf, "$"), "", ex_cols)
+  base_imm <- sub(paste0(imm_suf, "$"), "", imm_cols)
+  base_del <- sub(paste0(del_suf, "$"), "", del_cols)
+  all_feats <- sort(unique(c(base_ex, base_imm, base_del)))
+  pull <- function(cols, base_names){
+    out <- matrix(0, nrow = nrow(df), ncol = length(all_feats))
+    colnames(out) <- all_feats
+    if(length(cols)){
+      M <- as.matrix(df[cols]); colnames(M) <- base_names
+      keep <- intersect(all_feats, base_names)
+      out[, keep] <- M[, keep, drop = FALSE]
+    }
+    out
+  }
+  X_ex <- pull(ex_cols, base_ex)
+  X_imm <- pull(imm_cols, base_imm)
+  X_del <- pull(del_cols, base_del)
+  list(X_pool = rbind(X_ex, X_imm, X_del))
+}
+to_props <- function(M){ rs <- rowSums(M); rs[rs == 0] <- 1; sweep(M, 1, rs, "/")}
+clr_eps <- function(P, eps){P[is.na(P)] <- 0; P[P == 0] <- eps; scale(clr(P))}
+
+qc_eps <- function(df, base_regex, eps_grid = c(1e-6, 1e-5, 1e-4)){
+  P <- to_props(get_block_mats(df, base_regex)$X_pool)
+  fits <- lapply(eps_grid, function(e){
+    Z <- clr_eps(P, e); p <- prcomp(Z, center = FALSE, scale. = FALSE)
+    list(pc1 = p$x[, 1], var = (p$sdev^2)[1]/sum(p$sdev^2))
+  })
+  K <- length(fits)
+  C <- matrix(NA_real_, K, K, dimnames = list(paste0("eps = ", eps_grid), paste0("eps = ", eps_grid)))
+  for(i in 1:K) for(j in 1:K)
+    C[i, j] <- suppressWarnings(abs(cor(fits[[i]]$pc1, fits[[j]]$pc1, use = "pairwise")))
+  list(pc1_align = C, pc1_var = setNames(sapply(fits, `[[`, "var"), paste0("eps = ", eps_grid)))
+}
+
+qc_zeros <- function(df, base_regex){
+  P <- to_props(get_block_mats(df, base_regex)$X_pool)
+  zr <- colMeans(P == 0, na.rm = TRUE)
+  list(zero_summary = summary(zr), zero_by_feat = sort(zr, decreasing = TRUE))
+}
+
+anchor_r <- function(df, prefix, pc, a_ex, a_imm, a_del){
+  s <- c(df[[paste0(prefix, "_PC", pc, "_ex")]],
+         df[[paste0(prefix, "_PC", pc, "_imm")]],
+         df[[paste0(prefix, "_PC", pc, "_del")]])
+  a <- c(a_ex, a_imm, a_del)
+  suppressWarnings(cor(s, a, use = "pairwise.complete.obs"))
+}
+
+# 3.1. Soph (CLR)
+# ---------------
+cat("\n[Soph] variance PC1 = ", round((res_cefr$pca$sdev^2/sum(res_cefr$pca$sdev^2))[1], 3),
+    " | anchor r (C1+C2) = ", round(anchor_r(df, "Soph", 1,
+                                           high_soph_ex, high_soph_imm, high_soph_del), 3), "\n")
+SOPH_Z <- qc_zeros(df, rx_cefr_base); print(SOPH_Z$zero_summary)
+SOPH_E <- qc_eps(df, rx_cefr_base); print(round(SOPH_E$pc1_align, 3)); print(round(SOPH_E$pc1_var, 3))
+
+
+# 3.2. POS (CLR)
+# ---------------
+cat("\n[POS] variance PC1, PC2 = ",
+    paste(round((res_pos$pca$sdev^2/sum(res_pos$pca$sdev^2))[1:2], 3), collapse=", "),
+    " | r_PC1(core+DET) = ", round(anchor_r(df, "POS", 1, cs_ex, cs_imm, cs_del), 3),
+    " | r_PC2(verbal) = ", round(anchor_r(df, "POS", 2, vc_ex, vc_imm, vc_del), 3), "\n")
+POS_Z <- qc_zeros(df, rx_pos_base); print(POS_Z$zero_summary)
+POS_E <- qc_eps(df, rx_pos_base); print(round(POS_E$pc1_align, 3)); print(round(POS_E$pc1_var, 3))
+
+
+# 3.3. LexDiv (z)
+# ---------------
+cat("\n[LexDiv] variance PC1 = ",
+    round((res_lexdiv$pca$sdev^2/sum(res_lexdiv$pca$sdev^2))[1], 3),
+    " | anchor r (MTLD) = ", round(anchor_r(df, "LexDiv", 1, lex_ex, lex_imm, lex_del), 3), "\n")
+
+# 3.4. Tree (z)
+# -------------
+cat("\n[Tree] variance PC1 = ",
+    round((res_tree$pca$sdev^2/sum(res_tree$pca$sdev^2))[1], 3),
+    " | anchor r (size) = ", round(anchor_r(df, "Tree", 1, sz_ex, sz_imm, sz_del), 3), "\n")
+
+
+# =============================================================================
+# 4. Before modeling
+# =============================================================================
+
+# 4.1 Save rotation + features for reproducibility
+# ------------------------------------------------
+
+saveRDS(list(Soph=res_cefr, LexDiv=res_lexdiv, POS=res_pos, Tree=res_tree),
+        run_output("fits", "pca_objects_raw.rds"))
+
+# 4.2. Z-score PCs to be modelled (pooled so coef scales are comparable)
+# ----------------------------------------------------------------------
+
+pool_scale <- function(df, base) {
+  cols <- paste0(base, c("_ex", "_imm", "_del"))
+  v <- unlist(df[cols])
+  m <- mean(v, na.rm=TRUE); s <- sd(v, na.rm=TRUE)
+  df[paste0(cols, "_z")] <- lapply(df[cols], function(x) (x - m)/s)
+  df
+}
+
+for (b in c("Soph_PC1", "LexDiv_PC1", "POS_PC1", "POS_PC2", "Tree_PC1")) {
+  df <- pool_scale(df, b)
+}
+
+# Length too
+len_cols <- c("Total", "Total_imm", "Total_del")
+mL <- mean(unlist(df[len_cols]), na.rm=TRUE); sL <- sd(unlist(df[len_cols]), na.rm=TRUE)
+df[paste0(len_cols, "_z")] <- lapply(df[len_cols], function(x) (x - mL)/sL)
+
+# Save CSV file for data exploration
+write_csv(df, run_output("inputs", "data_for_analysis_pca.csv"))
+
+```
+
+From the results, we can see that the `Deprel` block doesn't add much to the mix, so we have dropped it. We have also flipped the directions of certain PC loadings (i.e., their eigenvectors) to enhance interpretability.
+
+## RQ1. Do personalized AI-generated vocabulary exercises improve learners’ ability to detect and correct their own lexical errors in writing, and are these gains maintained one week later?
+
+**Primary outcomes**
+
+ * `recognition_imm`, `recognition_del`, `correction_imm`, `correction_del`.
+ * Retention = change from immediate to delayed (time effect).
+ * Unit of analysis: each (participant x error/exercise). 15 exercises per participant -> repeated measures.
+ * Random effects: participant and item (row/id). We include a random slope of time by participant.
+
+```{r RQ1.models, include=TRUE, echo=TRUE, fig.width = 12, fig.height = 6}
+
+# =============================================================================
+# 1. Prepare the data
+# =============================================================================
+
+# 1.1. --------- Long format + clean predictors ---------
+
+df_clean <- df %>%
+  dplyr::select(
+    id, participant_ID, text_file, prof_level = level, error_type, exercise_type,
+    exercise_format, complete, exercise_score, recognition_imm, correction_imm,
+    overall_score_imm, recognition_del, correction_del, overall_score_del,
+    time_invested, goal_productive_use_of_targets, goal_meaning_and_sense_elaboration,
+    goal_contextual_retrieval, goal_paraphrastic_flexibility,
+    goal_conceptual_organization, goal_pragmatic_appropriateness,
+    goal_collocational_control, fmt_discrete_choice, fmt_sentence_reconstruction,
+    fmt_matching, fmt_prompted_writing, fmt_metalinguistic_reflection, fmt_cloze,
+    fmt_accent_marking_and_read_aloud, fmt_text_editing, fmt_paradigmatic_systematization,
+    fmt_vocabulary_extraction_and_list_creation, fmt_translation, fmt_syntagmatic_systematization,
+    n_goals, n_formats, gram_cat_clean, gram_primary, gram_Preposition, gram_Adjective, gram_Adverb,
+    gram_Noun, `gram_Conjunctive phrase`, gram_Verb, gram_Pronoun, gram_Determiner,
+    n_gramcats, il_22, il_need_motivation, il_noticing, il_search, il_retrieval,
+    il_evaluation_generation, il_retention, Soph_PC1_ex_z, Soph_PC1_imm_z,
+    Soph_PC1_del_z, LexDiv_PC1_ex_z, LexDiv_PC1_imm_z, LexDiv_PC1_del_z,
+    POS_PC1_ex_z, POS_PC1_imm_z, POS_PC1_del_z, POS_PC2_ex_z, POS_PC2_imm_z,
+    POS_PC2_del_z, Tree_PC1_ex_z, Tree_PC1_imm_z, Tree_PC1_del_z, Total_z,
+    Total_imm_z, Total_del_z
+    ) %>%
+  mutate(prof_level = relevel(factor(prof_level, ordered = FALSE), ref = "Heritage"),
+         gram_primary = as.factor(gram_primary))
+
+# 1.2. ---------  We first focus on task-induced IL, not learner-experienced
+# (motivational)  ---------
+
+ti_il_raw <- c("il_retrieval", "il_evaluation_generation", "il_noticing",
+                 "il_retention", "il_search")
+le_il_raw <- "il_need_motivation"
+
+df_clean <- df_clean %>%
+  mutate(ti_il = rowSums(pick(all_of(ti_il_raw)), na.rm = FALSE),
+         le_il = rowSums(pick(all_of(le_il_raw)), na.rm = FALSE),
+         ti_il_z = as.numeric(scale(ti_il)),
+         le_il_z = as.numeric(scale(le_il)))
+
+make_long <- function(data, target = c("recognition", "correction")){
+  target <- match.arg(target)
+  wide <- paste0(target, c("_imm", "_del"))
+  data %>%
+    transmute(
+      id, participant_ID, prof_level, error_type, complete, exercise_score, ti_il_z,
+      Soph_ex = Soph_PC1_ex_z, LexDiv_ex = LexDiv_PC1_ex_z, POS1_ex = POS_PC1_ex_z,
+      POS2_ex = POS_PC2_ex_z, Tree_ex = Tree_PC1_ex_z, Total_ex = Total_z,
+      Soph_imm = Soph_PC1_imm_z, LexDiv_imm = LexDiv_PC1_imm_z,
+      POS1_imm = POS_PC1_imm_z, POS2_imm = POS_PC2_imm_z,
+      Tree_imm = Tree_PC1_imm_z, Total_imm = Total_imm_z,
+      Soph_del = Soph_PC1_del_z, LexDiv_del = LexDiv_PC1_del_z,
+      POS1_del = POS_PC1_del_z, POS2_del = POS_PC2_del_z,
+      Tree_del = Tree_PC1_del_z, Total_del = Total_del_z, le_il_z,
+      !!sym(wide[1]), !!sym(wide[2])
+    ) %>%
+    pivot_longer(all_of(wide), names_to = "time", values_to = target) %>%
+    mutate(time = factor(if_else(grepl("imm", time), "imm", "del"),
+                         levels = c("imm", "del"))) %>%
+    mutate(
+      Soph_post = if_else(time=="imm", Soph_imm, Soph_del),
+      LexDiv_post = if_else(time=="imm", LexDiv_imm, LexDiv_del),
+      POS1_post = if_else(time=="imm", POS1_imm, POS1_del),
+      POS2_post = if_else(time=="imm", POS2_imm, POS2_del),
+      Tree_post = if_else(time=="imm", Tree_imm, Tree_del),
+      Total_post = if_else(time=="imm", Total_imm, Total_del),
+      across(c(Soph_ex, LexDiv_ex, POS1_ex, POS2_ex, Tree_ex, Total_ex,
+               Soph_post, LexDiv_post, POS1_post, POS2_post, Tree_post, Total_post,
+               exercise_score),
+             ~ as.numeric(scale(.x)), .names = "{.col}_sc")
+    )
+}
+
+df_rec <- make_long(df_clean, "recognition")
+df_cor <- make_long(df_clean, "correction")
+
+
+# 1.2b. --------- descriptive statistics ---------
+
+appendix_primary_outcome_descriptives <- tibble(
+  outcome = c(
+    "Immediate recognition",
+    "Delayed recognition",
+    "Immediate correction",
+    "Delayed correction",
+    "Exercise performance score",
+    "Immediate overall score",
+    "Delayed overall score"
+  ),
+  variable = c(
+    "recognition_imm",
+    "recognition_del",
+    "correction_imm",
+    "correction_del",
+    "exercise_score",
+    "overall_score_imm",
+    "overall_score_del"
+  )
+) %>%
+  rowwise() %>%
+  mutate(
+    N = sum(!is.na(df_clean[[variable]])),
+    Mean = mean(df_clean[[variable]], na.rm = TRUE),
+    SD = sd(df_clean[[variable]], na.rm = TRUE)
+  ) %>%
+  ungroup() %>%
+  mutate(
+    Mean = round(Mean, 3),
+    SD = round(SD, 3)
+  ) %>%
+  dplyr::select(outcome, N, Mean, SD)
+
+goal_cols <- grep("^goal_", names(df_clean), value = TRUE)
+format_cols <- grep("^fmt_", names(df_clean), value = TRUE)
+
+pretty_label <- function(x) {
+  x %>%
+    gsub("^(goal|fmt)_", "", .) %>%
+    gsub("_", " ", .)
+}
+
+appendix_goal_distribution_table <- tibble(
+  goal = pretty_label(goal_cols),
+  n = vapply(goal_cols, function(col) sum(df_clean[[col]] == 1, na.rm = TRUE), numeric(1))
+) %>%
+  mutate(percent = round(100 * n / nrow(df_clean), 1)) %>%
+  arrange(desc(n))
+
+appendix_format_distribution_table <- tibble(
+  exercise_format = pretty_label(format_cols),
+  n = vapply(format_cols, function(col) sum(df_clean[[col]] == 1, na.rm = TRUE), numeric(1))
+) %>%
+  mutate(percent = round(100 * n / nrow(df_clean), 1)) %>%
+  arrange(desc(n))
+
+appendix_design_balance_summary <- tibble(
+  metric = c(
+    "Participants",
+    "Item-level observations",
+    "Unique exercise-type combinations",
+    "Exercise-type combinations with n < 5",
+    "Unique exercise-format combinations",
+    "Exercise-format combinations with n < 5"
+  ),
+  value = c(
+    dplyr::n_distinct(df_clean$participant_ID),
+    nrow(df_clean),
+    dplyr::n_distinct(df_clean$exercise_type),
+    sum(table(df_clean$exercise_type) < 5),
+    dplyr::n_distinct(df_clean$exercise_format),
+    sum(table(df_clean$exercise_format) < 5)
+  )
+)
+
+
+# 1.3. ---------  We now decompose dose into between-person and
+# within-person  --------
+
+df_cor <- df_cor %>%
+  group_by(participant_ID) %>%
+  mutate(
+    dose_BP_sc = mean(exercise_score_sc, na.rm = TRUE),
+    dose_WP_sc = exercise_score_sc - dose_BP_sc
+  ) %>%
+  ungroup()
+
+df_rec <- df_rec %>%
+  group_by(participant_ID) %>%
+  mutate(
+    dose_BP_sc = mean(exercise_score_sc, na.rm = TRUE),
+    dose_WP_sc = exercise_score_sc - dose_BP_sc
+  ) %>%
+  ungroup()
+
+
+# =============================================================================
+# 2. Fit the models
+# =============================================================================
+
+# Null models
+# -----------
+f_rec0 <- recognition ~ time * prof_level + dose_BP_sc + error_type +
+  (1 + time | participant_ID) + (1 | id)
+f_cor0 <- correction ~ time * prof_level + dose_BP_sc + error_type +
+  (1 + time | participant_ID) + (1 | id)
+
+m_rec0 <- cached_run_fit(
+  "RQ1 recognition covariate-null fit", "rq1_recognition_covariate_null",
+  data = df_rec, formula = f_rec0, family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa"), packages = c("lme4", "Matrix"),
+  fit_function = function() glmer(
+    f_rec0, data = df_rec, family = binomial,
+    control = glmerControl(optimizer = "bobyqa")
+  ), filename = "rq1_recognition_covariate_null.rds"
+)
+
+m_cor0 <- cached_run_fit(
+  "RQ1 correction covariate-null fit", "rq1_correction_covariate_null",
+  data = df_cor, formula = f_cor0, family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa"), packages = c("lme4", "Matrix"),
+  fit_function = function() glmer(
+    f_cor0, data = df_cor, family = binomial,
+    control = glmerControl(optimizer = "bobyqa")
+  ), filename = "rq1_correction_covariate_null.rds"
+)
+
+
+# Full models
+# -----------
+f_rec <- recognition ~ time * ti_il_z + time * prof_level +
+  time * dose_WP_sc + dose_BP_sc + error_type +
+  (1 + time | participant_ID) + (1 | id)
+
+m_rec <- cached_run_fit(
+  "RQ1 recognition fit", "rq1_recognition", data = df_rec, formula = f_rec,
+  family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa", diagnostic_seed = analysis_seeds$rq1_dharma),
+  packages = c("lme4", "Matrix"),
+  fit_function = function() glmer(
+    f_rec, data = df_rec, family = binomial,
+    control = glmerControl(optimizer = "bobyqa")
+  ), filename = "rq1_recognition.rds"
+)
+
+summary(m_rec)
+
+
+m_cor_formula <- correction ~ time * ti_il_z + time * prof_level +
+  time * dose_WP_sc + dose_BP_sc + error_type +
+  (1 + time | participant_ID) + (1 | id)
+
+m_cor <- cached_run_fit(
+  "RQ1 correction fit", "rq1_correction", data = df_cor, formula = m_cor_formula,
+  family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa", diagnostic_seed = analysis_seeds$rq1_dharma),
+  packages = c("lme4", "Matrix"),
+  fit_function = function() glmer(
+    m_cor_formula, data = df_cor, family = binomial,
+    control = glmerControl(optimizer = "bobyqa")
+  ), filename = "rq1_correction.rds"
+)
+
+summary(m_cor)
+
+# =============================================================================
+# 2.1. Formal checks for multilevel structure
+# =============================================================================
+
+is_variance_row <- function(var2) {
+  is.na(var2) | var2 == ""
+}
+
+pull_re_variance <- function(vc, group, term = "(Intercept)") {
+  vals <- vc %>%
+    filter(grp == group, var1 == term, is_variance_row(var2)) %>%
+    pull(vcov)
+
+  if (length(vals) != 1) {
+    stop(sprintf("Expected one variance for %s / %s, found %s.", group, term, length(vals)))
+  }
+
+  vals
+}
+
+icc_logit <- function(model, item_group = "id", participant_group = "participant_ID") {
+  vc <- as.data.frame(VarCorr(model))
+  var_item <- pull_re_variance(vc, item_group)
+  var_participant <- pull_re_variance(vc, participant_group)
+  var_residual <- (pi^2) / 3
+
+  tibble(
+    item_icc = var_item / (var_item + var_participant + var_residual),
+    participant_icc = var_participant / (var_item + var_participant + var_residual)
+  )
+}
+
+extract_icc_summary <- function(fitted_model, label) {
+  icc <- icc_logit(fitted_model)
+
+  tibble(
+    model = label,
+    item_icc = round(icc$item_icc, 3),
+    participant_icc = round(icc$participant_icc, 3)
+  )
+}
+
+compare_time_slope <- function(fitted_model, random_intercept_model = NULL) {
+  model_int <- if (is.null(random_intercept_model)) {
+    update(fitted_model, . ~ . - (1 + time | participant_ID) + (1 | participant_ID))
+  } else {
+    random_intercept_model
+  }
+  comparison <- anova(model_int, fitted_model, test = "Chisq")
+
+  list(
+    random_intercept = model_int,
+    comparison = comparison,
+    fit_indices = tibble(
+      fit_type = c("random_intercept", "random_slope"),
+      AIC = c(AIC(model_int), AIC(fitted_model)),
+      BIC = c(BIC(model_int), BIC(fitted_model))
+    )
+  )
+}
+
+extract_time_slope_summary <- function(result, label) {
+  cmp <- as.data.frame(result$comparison)
+
+  tibble(
+    model = label,
+    chi_sq = cmp$Chisq[2],
+    df = cmp$Df[2],
+    p_value = cmp$`Pr(>Chisq)`[2],
+    AIC_random_intercept = result$fit_indices$AIC[result$fit_indices$fit_type == "random_intercept"],
+    AIC_random_slope = result$fit_indices$AIC[result$fit_indices$fit_type == "random_slope"],
+    BIC_random_intercept = result$fit_indices$BIC[result$fit_indices$fit_type == "random_intercept"],
+    BIC_random_slope = result$fit_indices$BIC[result$fit_indices$fit_type == "random_slope"]
+  ) %>%
+    mutate(
+      across(c(chi_sq, AIC_random_intercept, AIC_random_slope,
+               BIC_random_intercept, BIC_random_slope), ~ round(.x, 2)),
+      p_value = signif(p_value, 3)
+    )
+}
+
+extract_glmm_fit_variance <- function(fitted_model, label, outcome) {
+  vc <- as.data.frame(VarCorr(fitted_model))
+
+  item_var <- pull_re_variance(vc, "id")
+  participant_var <- pull_re_variance(vc, "participant_ID")
+  time_slope_var <- pull_re_variance(vc, "participant_ID", "time1")
+
+  tibble(
+    model = label,
+    outcome = outcome,
+    AIC = round(AIC(fitted_model), 2),
+    BIC = round(BIC(fitted_model), 2),
+    item_intercept_variance = round(item_var, 3),
+    participant_intercept_variance = round(participant_var, 3),
+    participant_timepoint_slope_variance = round(time_slope_var, 3),
+    residual_variance_latent = round((pi^2) / 3, 3)
+  )
+}
+
+f_rec_intercept <- update.formula(f_rec, . ~ . - (1 + time | participant_ID) + (1 | participant_ID))
+f_cor_intercept <- update.formula(m_cor_formula, . ~ . - (1 + time | participant_ID) + (1 | participant_ID))
+
+m_rec_intercept <- cached_run_fit(
+  "RQ1 recognition random-intercept fit", "rq1_recognition_random_intercept",
+  data = df_rec, formula = f_rec_intercept, family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa"), packages = c("lme4", "Matrix"),
+  fit_function = function() update(m_rec, formula. = f_rec_intercept),
+  filename = "rq1_recognition_random_intercept.rds"
+)
+m_cor_intercept <- cached_run_fit(
+  "RQ1 correction random-intercept fit", "rq1_correction_random_intercept",
+  data = df_cor, formula = f_cor_intercept, family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa"), packages = c("lme4", "Matrix"),
+  fit_function = function() update(m_cor, formula. = f_cor_intercept),
+  filename = "rq1_correction_random_intercept.rds"
+)
+
+rq1_slope_rec <- compare_time_slope(m_rec, m_rec_intercept)
+rq1_slope_cor <- compare_time_slope(m_cor, m_cor_intercept)
+
+rq1_slope_rec$comparison
+rq1_slope_rec$fit_indices
+
+rq1_slope_cor$comparison
+rq1_slope_cor$fit_indices
+
+
+# Model comparisons: hypothesis likelihood ratio tests (vs explicit nulls)
+# ------------------------------------------------------------------------
+anova(m_rec0, m_rec, test = "Chisq")
+anova(m_cor0, m_cor, test = "Chisq")
+
+
+# =============================================================================
+# 3. Conduct sanity checks
+# =============================================================================
+
+# 3.1. ---------  Rows used, missignness, WP/BP sanity  --------
+
+check_data <- function(df, m, dose_wp="dose_WP_sc", dose_bp="dose_BP_sc"){
+  cat("\nRows data/model:", nrow(df), nrow(model.frame(m)), "\n")
+  print(naniar::miss_var_summary(df))
+  cat("\ncor(WP,BP):", with(df, cor(get(dose_wp), get(dose_bp))), "\n")
+  print(df %>% group_by(participant_ID) %>%
+          summarise(mean_WP = mean(.data[[dose_wp]])) %>% slice_head(n=5))
+}
+
+check_data(df_rec, m_rec)
+check_data(df_cor, m_cor)
+
+
+# 3.2. ---------  Collinearity and identifiability  --------
+
+check_collinearity(m_rec)
+kappa(getME(m_rec, "X"))
+check_singularity(m_rec)
+
+check_collinearity(m_cor)
+kappa(getME(m_cor, "X"))
+check_singularity(m_cor)
+
+
+# 3.3. ---------  Residual diagnostics  --------
+
+set.seed(analysis_seeds$rq1_dharma)
+sim_rec <- cached_run_rds(
+  "RQ1 recognition DHARMa simulation", "rq1_recognition_dharma",
+  file.path("diagnostics", "rq1_recognition_dharma.rds"),
+  inputs = list(model = run_fit_signature(m_rec)),
+  settings = list(n = 1000L, seed = analysis_seeds$rq1_dharma),
+  packages = c("DHARMa", "lme4"),
+  source_models = "rq1_recognition",
+  compute_function = function() simulateResiduals(m_rec, n = 1000)
+)
+plot(sim_rec)
+testDispersion(sim_rec); testZeroInflation(sim_rec)
+
+set.seed(analysis_seeds$rq1_dharma)
+sim_cor <- cached_run_rds(
+  "RQ1 correction DHARMa simulation", "rq1_correction_dharma",
+  file.path("diagnostics", "rq1_correction_dharma.rds"),
+  inputs = list(model = run_fit_signature(m_cor)),
+  settings = list(n = 1000L, seed = analysis_seeds$rq1_dharma),
+  packages = c("DHARMa", "lme4"),
+  source_models = "rq1_correction",
+  compute_function = function() simulateResiduals(m_cor, n = 1000)
+)
+plot(sim_cor)
+testDispersion(sim_cor); testZeroInflation(sim_cor)
+
+
+# 3.4. ---------  Calibration and discrimination  --------
+
+# calib <- function(m, df, yname){
+#   y <- model.response(model.frame(m))
+#   p <- predict(m, type="response")
+#   brier <- mean((y - p)^2)
+#   brier_null <- mean((y - mean(y))^2)
+#   auc <- as.numeric(roc(y, p)$auc)
+  
+#   d <- data.frame(y=y, p=p)
+#   d$bin <- cut(d$p, breaks = quantile(d$p, probs=seq(0, 1, .1), include.lowest = TRUE),
+#                incude.lowest = TRUE)
+#   cal <- d %>% group_by(bin) %>% summarise(p_hat=mean(p), p_obs=mean(y), n=n(), .groups="drop")
+  
+#   print(list(Brier=brier, Brier_null=brier_null, AUC=auc))
+#   print(cal)
+  
+#   ggplot(cal, aes(p_hat, p_obs, size = n)) +
+#     geom_point(alpha=.7) + geom_abline(slope=1, intercept=0, linetype=2) +
+#     labs(title=paste("Calibration:", yname), x="Predicted", y="Observed") +
+#     theme_minimal()
+# }
+
+# calib(m_rec, df_rec, "recognition")
+# calib(m_cor, df_cor, "correction")
+
+# These calibration results are too optimistic.
+
+# Marginal population-level predictions (no random effects)
+p_rec_marg <- predict(m_rec, type="response", re.form=NA)
+p_cor_marg <- predict(m_cor, type="response", re.form=NA)
+
+calib_marg <- function(y, p){
+  list(
+    Brier = mean((y - p)^2),
+    AUC = as.numeric(roc(y, p)$auc)
+  )
+ }
+
+y_rec <- model.response(model.frame(m_rec))
+y_cor <- model.response(model.frame(m_cor))
+
+calib_marg(y_rec, p_rec_marg)
+calib_marg(y_cor, p_cor_marg)
+
+
+# 3.5. ---------  Influence (participants and items)  --------
+
+# These checks are intentionally expensive: 85 leave-one-participant-out refits
+# per outcome plus reproducible samples of 100 leave-one-item-out refits per
+# outcome. Full results are retained as an identified run diagnostic.
+source("R/influence_checks.R")
+rq1_influence_started <- Sys.time()
+if (exists("run_log", mode = "function")) run_log("Starting step 'RQ1 influence checks'")
+rq1_influence_path <- run_output("diagnostics", "rq1_influence_checks.rds")
+rq1_influence_key <- rq1_influence_cache_key(
+  recognition_model = m_rec,
+  correction_model = m_cor,
+  coef_name = "dose_WP_sc",
+  item_sample_size = 100L,
+  seed = analysis_seeds$rq1_influence
+)
+rq1_influence_cached <- find_rq1_influence_cache(
+  rq1_influence_key,
+  active_run_dir = if (run_is_active()) run_dir(TRUE) else NULL,
+  standalone_path = rq1_influence_path
+)
+
+if (is.null(rq1_influence_cached)) {
+  rq1_influence_checks <- run_rq1_influence_checks(
+    recognition_model = m_rec,
+    correction_model = m_cor,
+    recognition_data = df_rec,
+    correction_data = df_cor,
+    coef_name = "dose_WP_sc",
+    item_sample_size = 100L,
+    seed = analysis_seeds$rq1_influence
+  )
+  rq1_influence_checks$cache <- list(reused = FALSE, source = NULL)
+} else {
+  rq1_influence_checks <- rq1_influence_cached$result
+  rq1_influence_checks$cache <- list(
+    reused = TRUE, source = rq1_influence_cached$source
+  )
+}
+rq1_influence_checks$cache_key <- rq1_influence_key
+
+saveRDS(rq1_influence_checks, rq1_influence_path)
+record_run_artifact(
+  rq1_influence_path,
+  "rq1_influence_checks",
+  source_models = c("rq1_recognition", "rq1_correction"),
+  settings = c(
+    rq1_influence_checks$settings,
+    list(cache_key = rq1_influence_key, cache = rq1_influence_checks$cache)
+  )
+)
+if (exists("record_step_timing", mode = "function")) {
+  record_step_timing(
+    "RQ1 influence checks", rq1_influence_started,
+    cache_status = if (rq1_influence_checks$cache$reused) "cached" else "calculated",
+    cache_source = rq1_influence_checks$cache$source
+  )
+}
+
+cat(
+  "RQ1 influence cache:",
+  if (rq1_influence_checks$cache$reused) {
+    paste("reused from", rq1_influence_checks$cache$source)
+  } else {
+    "recalculated"
+  },
+  "\n"
+)
+knitr::kable(rq1_influence_checks$summary, digits = 4)
+
+# 3.6. ---------  Reportables  --------
+
+# Sum coding, k = 2
+b.rec <- fixef(m_rec)
+b.cor <- fixef(m_cor)
+lev.cor <- levels(model.frame(m_cor)$time) # expected c("imm","del")
+
+k <- if (identical(lev.cor, c("imm","del"))) -2 else 2  # del vs imm contrast
+OR_time_del_vs_imm.rec <- exp(k * b.rec["time1"])
+OR_dose_slope_del_vs_imm.rec <- exp(k * b.rec["time1:dose_WP_sc"])
+OR_dose_avg.rec <- exp(b.rec["dose_WP_sc"])
+OR_ti_il.rec <- exp(b.rec["ti_il_z"])
+OR_time_del_vs_imm.cor <- exp(k * b.cor["time1"])
+OR_dose_slope_del_vs_imm.cor <- exp(k * b.cor["time1:dose_WP_sc"])
+OR_dose_avg.cor <- exp(b.cor["dose_WP_sc"])
+OR_ti_il.cor <- exp(b.cor["ti_il_z"])
+
+
+# Predicted p at low/med/high dose (imm, del)
+qs_rec <- quantile(df_rec$dose_WP_sc, c(.17, .5, .83), na.rm=TRUE)
+emmeans(m_rec, ~ time | dose_WP_sc, at=list(dose_WP_sc=as.numeric(qs_rec)), type="response")
+
+qs_cor <- quantile(df_cor$dose_WP_sc, c(.17,.5,.83), na.rm=TRUE)
+emmeans(m_cor, ~ time | dose_WP_sc, at=list(dose_WP_sc=as.numeric(qs_cor)), type="response")
+
+
+# 3.7. ---------  95% CIs and SEs  --------
+
+or_table_sum <- function(m, dose = "dose_WP_sc", ti = "ti_il_z"){
+  b <- fixef(m); V <- vcov(m)
+  lev <- levels(model.frame(m)$time); stopifnot(length(lev)==2)
+
+  # del vs imm sign (imm,del) -> need -2 to get del-imm
+  k <- if (identical(lev, c("imm","del"))) -2 else 2
+
+  # indices
+  i_time_main <- which(startsWith(names(b), "time") & !grepl(":", names(b)))
+  stopifnot(length(i_time_main) == 1)
+
+  i_int <- which(grepl("time", names(b)) & grepl(dose, names(b)))
+  stopifnot(length(i_int) == 1)
+
+  i_dose <- match(dose, names(b));  i_ti <- match(ti, names(b))
+  stopifnot(!is.na(i_dose), !is.na(i_ti))
+
+  # log-ORs
+  L <- c(
+    dose_avg = b[i_dose],
+    time_del_vs_imm = k * b[i_time_main],
+    dose_slope_del_vs_imm = k * b[i_int],
+    ti_il_z = b[i_ti]
+  )
+  SE <- c(
+    dose_avg = sqrt(V[i_dose, i_dose]),
+    time_del_vs_imm = abs(k) * sqrt(V[i_time_main, i_time_main]),
+    dose_slope_del_vs_imm = abs(k) * sqrt(V[i_int, i_int]),
+    ti_il_z = sqrt(V[i_ti, i_ti])
+  )
+  LCL <- L - 1.96*SE; UCL <- L + 1.96*SE
+
+  tibble(
+    term = c(
+      "dose_WP_sc (avg across time)",
+      paste0("time (", lev[2], " vs ", lev[1], ")"),
+      paste0("dose×time slope diff (", lev[2], "−", lev[1], ")"),
+      "ti_il_z"
+    ),
+    logOR = L, SE = SE, OR = exp(L), LCL = exp(LCL), UCL = exp(UCL)
+  )
+}
+
+or_table_sum(m_rec)
+or_table_sum(m_cor)
+
+
+```
+
+## RQ2. Which exercise features—e.g., goal, format, linguistic complexity, task-induced IL—predict immediate and delayed correction success, and how do these features interact with error type?
+
+```{r RQ2.models, include=TRUE, echo=TRUE, fig.width = 12, fig.height = 12}
+# =============================================================================
+# 1. Prepare the data
+# =============================================================================
+
+df_brm_cor <- df_clean
+
+# --------- Center binary dummies with ±0.5 coding  --------
+
+to_pm05 <- function(x) if (is.numeric(x)) x - 0.5 else x
+goal_vars <- grep("^goal_", names(df_clean), value = TRUE)
+fmt_vars <- grep("^fmt_", names(df_clean), value = TRUE)
+vars <- union(goal_vars, fmt_vars)
+
+df_brm_cor <- df_brm_cor |>
+  mutate(across(all_of(vars), ~ as.numeric(.) , .names = "{.col}")) |>
+  mutate(across(all_of(vars), to_pm05))
+
+df_brm_cor <- df_brm_cor %>%
+  left_join(
+    df_cor %>% dplyr::select(id, time, dose_BP_sc, dose_WP_sc, correction, Soph_post_sc,
+                      LexDiv_post_sc, POS1_post_sc, POS2_post_sc, Tree_post_sc, Total_post_sc,
+                      Soph_ex_sc, LexDiv_ex_sc, POS1_ex_sc, POS2_ex_sc, Tree_ex_sc, Total_ex_sc),
+    by = "id"
+  ) %>%
+  distinct()
+
+# Preserve the exact model data for later stages in this run. Reconstructing it
+# from a CSV can introduce tiny floating-point and attribute differences.
+if (run_is_active()) save_run_data(df_brm_cor, "rq2_primary")
+
+
+# =============================================================================
+# 2. Stepwise strategy
+# =============================================================================
+
+# --------- 2.1. Baseline model: random intercept for error_type  --------
+
+f1 <- bf(
+  correction ~
+    time +
+    ti_il_z +
+    prof_level +
+    Soph_post_sc +
+    LexDiv_post_sc +
+    POS1_post_sc +
+    POS2_post_sc +
+    Tree_post_sc +
+    Total_post_sc +
+    goal_productive_use_of_targets +
+    goal_meaning_and_sense_elaboration +
+    goal_contextual_retrieval +
+    goal_paraphrastic_flexibility +
+    goal_conceptual_organization +
+    goal_pragmatic_appropriateness +
+    goal_collocational_control +
+    fmt_discrete_choice +
+    fmt_sentence_reconstruction +
+    fmt_matching +
+    fmt_prompted_writing +
+    fmt_metalinguistic_reflection +
+    fmt_cloze +
+    fmt_accent_marking_and_read_aloud +
+    fmt_text_editing +
+    fmt_paradigmatic_systematization +
+    fmt_vocabulary_extraction_and_list_creation +
+    fmt_translation +
+    fmt_syntagmatic_systematization +
+    Soph_ex_sc + LexDiv_ex_sc + POS1_ex_sc + POS2_ex_sc + Tree_ex_sc + Total_ex_sc +
+    (1 | participant_ID) +
+    (1 | id) +
+    (1 | error_type),
+  family = bernoulli(link = "logit"),
+  decomp = "QR")
+
+# --- Build priors: Pull GLMM summaries ---
+
+fe <- fixef(m_cor)                         # named vector of GLMM fixed-effect means
+se <- sqrt(diag(vcov(m_cor)))              # named vector of GLMM SEs
+vc <- VarCorr(m_cor)                       # GLMM random-effects
+
+# --- Inspect model priors layout ---
+gp <- get_prior(f1, data = df_brm_cor)
+
+# --- GLMM-informed fixed-effect priors: Normal(mean = β̂, sd = 2×SÊ) ---
+inflate <- 2
+b_names <- subset(gp, class == "b" & nzchar(coef))$coef
+exclude <- c("(Intercept)")
+shared <- intersect(setdiff(names(fe), exclude), b_names)
+
+pri_shared_list <- lapply(shared, function(nm) {
+  mu <- unname(fe[[nm]])
+  s <- unname(se[[nm]]) * inflate
+  set_prior(sprintf("normal(%0.6f,%0.6f)", mu, s), class = "b", coef = nm)
+})
+pri_shared <- if (length(pri_shared_list)) do.call(c, pri_shared_list) else NULL
+
+add_if_present <- function(gp, class, prior_str, coef=NULL, group=NULL){
+  m <- gp$class == class
+  if (!is.null(coef))  m <- m & (gp$coef %in% coef)
+  if (!is.null(group)) m <- m & (gp$group %in% group)
+  hits <- gp[m, , drop = FALSE]; if (!nrow(hits)) return(NULL)
+  Reduce(c, lapply(seq_len(nrow(hits)), function(i)
+    set_prior(prior_str,
+              class = hits$class[i],
+              coef = if (nzchar(hits$coef[i])) hits$coef[i],
+              group = if (nzchar(hits$group[i])) hits$group[i])
+  ))
+}
+
+# --- Intercept prior centered at GLMM intercept (loose) ---
+pri_int <- set_prior(sprintf("student_t(3,%0.6f,2)", unname(fe[["(Intercept)"]])),
+                     class = "Intercept")
+
+# --- Random-effect SD priors (anchor to GLMM SDs if available) ---
+sd_id_int <- tryCatch(attr(vc$id, "stddev")[["(Intercept)"]], error = function(e) NA_real_)
+sd_p_int  <- tryCatch(attr(vc$participant_ID, "stddev")[["(Intercept)"]], error = function(e) NA_real_)
+
+if (is.finite(sd_id_int)) {
+  pri_sd_id <- set_prior(sprintf("exponential(%0.6f)", 1 / sd_id_int),
+                         class = "sd", group = "id", coef = "Intercept")
+} else {
+  pri_sd_id <- set_prior("exponential(1.5)", class = "sd", group = "id", coef = "Intercept")
+}
+
+if (is.finite(sd_p_int)) {
+  pri_sd_pid <- set_prior(sprintf("exponential(%0.6f)", 1 / sd_p_int),
+                          class = "sd", group = "participant_ID", coef = "Intercept")
+} else {
+  pri_sd_pid <- set_prior("exponential(1.5)", class = "sd", group = "participant_ID", coef = "Intercept")
+}
+
+# Mild shrinker
+pri_sd_err <- set_prior("exponential(2.0)", class = "sd", group = "error_type", coef = "Intercept")
+
+# --- Global fallback for any remaining betas (weak, symmetric) ---
+pri_global_b <- prior(normal(0, 1), class = "b")
+
+# --- Assemble all priors (skip NULLs safely) ---
+pri1 <- do.call(c, Filter(Negate(is.null), list(
+  pri_int, pri_shared, pri_sd_id, pri_sd_pid, pri_sd_err, pri_global_b
+)))
+
+# --- Fit ---
+# fit1 <- brm(
+#   f1, data = df_brm_cor, prior = pri1,
+#   backend = "cmdstanr", seed = 2025,
+#   chains = 4, cores = 4, threads = threading(6),
+#   iter = 2000, warmup = 1000,
+#   control = list(metric = "diag_e", adapt_delta = 0.95, max_treedepth = 12),
+#   refresh = 50
+#   )
+
+
+# --------- 2.2. Final model  --------
+
+f2 <- bf(
+  correction ~
+    time +
+    ti_il_z +
+    prof_level +
+    Soph_post_sc +
+    LexDiv_post_sc +
+    POS1_post_sc +
+    POS2_post_sc +
+    Tree_post_sc +
+    Total_post_sc +
+    goal_productive_use_of_targets +
+    goal_meaning_and_sense_elaboration +
+    goal_contextual_retrieval +
+    goal_paraphrastic_flexibility +
+    goal_conceptual_organization +
+    goal_pragmatic_appropriateness +
+    goal_collocational_control +
+    fmt_discrete_choice +
+    fmt_sentence_reconstruction +
+    fmt_matching +
+    fmt_prompted_writing +
+    fmt_metalinguistic_reflection +
+    fmt_cloze +
+    fmt_accent_marking_and_read_aloud +
+    fmt_text_editing +
+    fmt_paradigmatic_systematization +
+    fmt_vocabulary_extraction_and_list_creation +
+    fmt_translation +
+    fmt_syntagmatic_systematization +
+    Soph_ex_sc + LexDiv_ex_sc + POS1_ex_sc + POS2_ex_sc + Tree_ex_sc + Total_ex_sc +
+    (1 | participant_ID) +
+    (1 | id) +
+    (1 + time +
+       fmt_sentence_reconstruction + fmt_matching +
+       fmt_text_editing + fmt_translation +
+       fmt_prompted_writing + fmt_metalinguistic_reflection +
+       goal_paraphrastic_flexibility +
+       goal_meaning_and_sense_elaboration +
+       goal_conceptual_organization || error_type),
+  family = bernoulli(link = "logit"),
+  decomp = "QR")
+
+
+# --- Define priors ---
+
+gp2 <- get_prior(f2, data = df_brm_cor)
+
+pri_err_slopes <- add_if_present(
+  gp2, class = "sd",
+  prior_str = "exponential(3)",    # direct number, no variable
+  coef = c("time1",
+           "fmt_sentence_reconstruction",
+           "fmt_matching",
+           "fmt_text_editing",
+           "fmt_translation",
+           "fmt_metalinguistic_reflection",
+           "fmt_prompted_writing",
+           "goal_paraphrastic_flexibility",
+           "goal_meaning_and_sense_elaboration",
+           "goal_conceptual_organization"),
+  group = "error_type"
+)
+
+pri2 <- c(pri1, pri_err_slopes)
+
+# A separate same-model trial at 0.99 resolved the original divergence and R-hat flag.
+# See ../investigations/rq2-sampler-2026-09-12/README.md for diagnostics and the preserved comparison.
+rq2_control <- list(metric = "diag_e", adapt_delta = 0.99, max_treedepth = 12L)
+
+fit2 <- cached_run_fit(
+  "RQ2 primary Bayesian fit", "rq2_primary", data = df_brm_cor, formula = f2,
+  family = list(family = "bernoulli", link = "logit"), priors = pri2,
+  seed = analysis_seeds$rq2_fit,
+  settings = list(backend = "cmdstanr", chains = 4, cores = 4, threads_per_chain = 6,
+                  iter = 2000, warmup = 1000, control = rq2_control,
+                  refresh = 50, save_pars = "all",
+                  diagnostic_seed = analysis_seeds$rq2_diagnostics,
+                  loo_seed = analysis_seeds$rq2_loo),
+  packages = c("brms", "cmdstanr", "posterior"),
+  fit_function = function() {
+    fit <- brm(
+      f2, data = df_brm_cor, prior = pri2,
+      backend = "cmdstanr", seed = analysis_seeds$rq2_fit,
+      chains = 4, cores = 4, threads = threading(6),
+      iter = 2000, warmup = 1000, control = rq2_control,
+      refresh = 50, save_pars = save_pars(all = TRUE)
+    )
+    attr(fit, "diagnostic_control") <- rq2_control
+    fit
+  },
+  filename = "rq2_primary.rds"
+)
+
+
+# =============================================================================
+# 3. Model diagnostics
+# =============================================================================
+
+summary(fit2)
+prior_summary(fit2)
+
+# With sum coding and levels c("imm", "del"), time1 is half the
+# immediate-minus-delayed log-odds contrast. Report the requested
+# delayed-versus-immediate contrast by multiplying every draw by -2 before
+# summarizing it. This preserves the posterior mean on the log-odds scale and
+# uses equal-tailed credible limits.
+rq2_time_levels <- levels(model.frame(fit2)$time)
+stopifnot(identical(rq2_time_levels, c("imm", "del")))
+
+rq2_time1_draws <- posterior::as_draws_matrix(
+  fit2, variable = "b_time1"
+)[, "b_time1"]
+rq2_time_log_or <- -2 * rq2_time1_draws
+
+rq2_time_contrast_table <- tibble(
+  contrast = "Delayed vs. immediate",
+  OR = exp(mean(rq2_time_log_or)),
+  LCL = exp(quantile(rq2_time_log_or, 0.025)),
+  UCL = exp(quantile(rq2_time_log_or, 0.975))
+)
+
+knitr::kable(rq2_time_contrast_table, digits = 2)
+
+# Reusable post-warmup diagnostics and in-sample calibration.
+source("R/diagnostics.R")
+set.seed(analysis_seeds$rq2_diagnostics)
+rq2_diagnostics <- cached_run_rds(
+  "RQ2 Bayesian diagnostics", "rq2_primary_diagnostics",
+  file.path("diagnostics", "rq2_primary_diagnostics.rds"),
+  inputs = list(model = run_fit_signature(fit2)),
+  settings = list(seed = analysis_seeds$rq2_diagnostics),
+  packages = c("rstan", "posterior"), source_models = "rq2_primary",
+  compute_function = function() bayesian_diagnostics(
+    fit2, observed = model.frame(fit2)$correction
+  )
+)
+knitr::kable(rq2_diagnostics$sampler_summary, digits = 3)
+knitr::kable(rq2_diagnostics$problematic_parameters, digits = 3)
+knitr::kable(rq2_diagnostics$calibration_bins, digits = 3)
+rq2_diagnostics$calibration_plot
+
+# Posterior predictive checks
+
+pp_check(fit2, type = "hist", ndraws = 11) +
+  ggplot2::geom_histogram(binwidth = 0.5)
+pp_check(fit2, type = "bars_grouped", group = "error_type", ndraws = 1000)
+pp_check(fit2, type = "ecdf_overlay", ndraws = 1000) 
+
+# LOO. First stabilize PSIS with moment matching, then replace every remaining
+# k > .7 contribution with an exact leave-one-out refit. The same two-stage
+# rule is used for the same-formula prior-sensitivity comparison.
+set.seed(analysis_seeds$rq2_loo)
+loo_fit2 <- cached_run_rds(
+  "RQ2 moment-matched PSIS-LOO", "rq2_primary_loo_moment_matched",
+  file.path("diagnostics", "rq2_primary_loo_moment_matched.rds"),
+  inputs = list(model = run_fit_signature(fit2)),
+  settings = list(moment_match = TRUE, seed = analysis_seeds$rq2_loo),
+  packages = c("brms", "loo"), source_models = "rq2_primary",
+  compute_function = function() loo(fit2, moment_match = TRUE)
+)
+loo::pareto_k_table(loo_fit2)
+
+# Inspect the remaining high-k rows before refitting. This records whether they
+# cluster by participant/item/error type, whether their observed outcomes were
+# surprising under the full posterior, and their largest standardized numeric
+# predictor deviation. Exact refits are warranted because the flagged rows span
+# distinct participants/items and each item has only two outcome occasions.
+rq2_high_k_inspection <- inspect_high_k_observations(fit2, loo_fit2, threshold = 0.7)
+knitr::kable(rq2_high_k_inspection, digits = 3)
+
+rq2_exact_loo_enabled <- !identical(Sys.getenv("VOCABEX_SKIP_EXACT_LOO"), "true")
+if (rq2_exact_loo_enabled) {
+  set.seed(analysis_seeds$rq2_loo + 1L)
+  loo_fit2_reported <- cached_run_rds(
+    "RQ2 exact LOO refits", "rq2_primary_loo_exact",
+    file.path("diagnostics", "rq2_primary_loo_exact.rds"),
+    inputs = list(model = run_fit_signature(fit2), approximate_loo = sha256_object(loo_fit2)),
+    settings = list(k_threshold = 0.7, seed = analysis_seeds$rq2_loo + 1L,
+                    backend = "cmdstanr", cores = 4L, future_globals_gib = 2),
+    packages = c("brms", "loo"), source_models = "rq2_primary",
+    compute_function = function() exact_reloo(fit2, loo_fit2, cores = 4L)
+  )
+  rq2_loo_resolution <- summarize_exact_loo(loo_fit2, loo_fit2_reported, threshold = 0.7)
+} else {
+  warning("Exact RQ2 LOO refits were skipped; reported LOO retains the listed high-k observations.")
+  loo_fit2_reported <- loo_fit2
+  rq2_loo_resolution <- data.frame(
+    method = "Moment-matched PSIS-LOO (exact refits skipped)",
+    looic = loo_fit2$estimates["looic", "Estimate"],
+    looic_se = loo_fit2$estimates["looic", "SE"],
+    p_loo = loo_fit2$estimates["p_loo", "Estimate"],
+    psis_over_threshold = nrow(rq2_high_k_inspection),
+    exact_refits = 0L,
+    unresolved = nrow(rq2_high_k_inspection)
+  )
+}
+knitr::kable(rq2_loo_resolution, digits = 2)
+
+# Random effects
+VarCorr(fit2)
+rq2_error_type_coef <- coef(fit2)$error_type
+rq2_error_type_coef[ , , c("fmt_sentence_reconstruction","fmt_matching","time1")] |> str()
+
+vc_bayes <- VarCorr(fit2)
+
+appendix_bayes_fit_variance_table <- tibble(
+  model = "RQ2",
+  fit_criterion = if (rq2_exact_loo_enabled) {
+    "LOOIC with exact refits for moment-matched PSIS k > .7"
+  } else {
+    "Moment-matched PSIS-LOO (exact refits skipped)"
+  },
+  estimate = round(loo_fit2_reported$estimates["looic", "Estimate"], 2),
+  se = round(loo_fit2_reported$estimates["looic", "SE"], 2),
+  p_loo = round(loo_fit2_reported$estimates["p_loo", "Estimate"], 2),
+  pareto_k_initially_over_0_7 = sum(loo::pareto_k_values(loo_fit2) > 0.7),
+  exact_refits = if (rq2_exact_loo_enabled) nrow(rq2_high_k_inspection) else 0L,
+  unresolved_pareto_k_over_0_7 = sum(
+    loo::pareto_k_values(loo_fit2_reported) > 0.7, na.rm = TRUE
+  ),
+  item_intercept_sd = round(vc_bayes$id$sd["Intercept", "Estimate"], 3),
+  participant_intercept_sd = round(vc_bayes$participant_ID$sd["Intercept", "Estimate"], 3),
+  error_type_intercept_sd = round(vc_bayes$error_type$sd["Intercept", "Estimate"], 3),
+  error_type_timepoint_slope_sd = round(vc_bayes$error_type$sd["time1", "Estimate"], 3)
+)
+
+knitr::kable(appendix_bayes_fit_variance_table, digits = 3)
+
+plot_by_errortype <- function(cf, term) {
+  stopifnot(term %in% dimnames(cf)[[3]])
+
+  M <- as.data.frame(cf[, , term])
+  M$error_type <- rownames(M)
+
+  ggplot(M, aes(x = reorder(error_type, Estimate), y = Estimate)) +
+    geom_hline(yintercept = 0, linetype = 2) +
+    geom_pointrange(aes(ymin = `Q2.5`, ymax = `Q97.5`)) +
+    coord_flip() +
+    labs(x = "Error type", y = paste0("Effect (log-odds)"),
+         title = paste("\nSpecific slope:\n", term))
+}
+
+# examples for varying slopes:
+
+plots <- list(
+  plot_by_errortype(rq2_error_type_coef, "fmt_matching"),
+  plot_by_errortype(rq2_error_type_coef, "fmt_sentence_reconstruction"),
+  plot_by_errortype(rq2_error_type_coef, "fmt_text_editing"),
+  plot_by_errortype(rq2_error_type_coef, "fmt_translation"),
+  plot_by_errortype(rq2_error_type_coef, "fmt_prompted_writing"),
+  plot_by_errortype(rq2_error_type_coef, "fmt_metalinguistic_reflection"),
+  plot_by_errortype(rq2_error_type_coef, "goal_paraphrastic_flexibility"),
+  plot_by_errortype(rq2_error_type_coef, "goal_meaning_and_sense_elaboration"),
+  plot_by_errortype(rq2_error_type_coef, "goal_conceptual_organization")
+  )
+
+wrap_plots(plots, ncol = 3)
+
+
+
+```
+
+
+## RQ3. Which learner factors (e.g., L1, proficiency, learner-experienced IL, time on task, and use of external resources) moderate the effect of the exercises on immediate and delayed correction success?
+
+
+```{r RQ3.models, include=TRUE, echo=TRUE, fig.width = 12, fig.height = 6}
+
+# =============================================================================
+# 1. Data preparation
+# =============================================================================
+
+df_pers <- df %>%
+  mutate(
+    # No participant-level L1 variable is available. This is an explicit
+    # country-derived proxy; unexpected countries must be reviewed rather than
+    # being silently folded into the heterogeneous "Other" category.
+    L1_group = as.factor(case_when(
+      country %in% c("France","Belgium","Italy","Romania","Ivory Coast",
+                     "Luxembourg","Algeria","Brazil") ~ "Romance",
+      country %in% c("UK","US","Ireland","Canada","Germany","Netherlands",
+                     "Nigeria","Kenya") ~ "Germanic",
+      country %in% c("Russia","Poland","Croatia","Slovakia") ~ "Other", # "Slavic",
+      country %in% c("China","Taiwan","Japan","South Korea") ~ "East Asian",
+      country %in% c("Greece","Finland","Turkey") ~ "Other",
+      TRUE ~ NA_character_
+    )),
+    time_invested_sc = as.numeric(scale(time_invested)),
+    le_external_source_c = ifelse(external_source == 1, 0.5, -0.5)
+  )
+
+if (anyNA(df_pers$L1_group)) {
+  unmapped_countries <- sort(unique(df_pers$country[is.na(df_pers$L1_group)]))
+  stop(
+    "Country-derived L1 proxy has unmapped countries: ",
+    paste(unmapped_countries, collapse = ", "),
+    ". Review the proxy mapping before fitting RQ3."
+  )
+}
+
+
+df_pers <- df_cor %>%
+  left_join(
+    df_pers %>% dplyr::select(id, participant_ID, L1_group, time_invested_sc, le_external_source_c),
+    by = c("id", "participant_ID")
+  )
+
+df_pers$L1_group <- relevel(df_pers$L1_group, ref = "Other")
+
+
+# =============================================================================
+# 2. Model fit
+# =============================================================================
+
+f_rq3 <- correction ~ time * (
+  prof_level + L1_group + le_il_z + ti_il_z + time_invested_sc + le_external_source_c
+) + (1 + time | participant_ID) + (1 | id)
+
+m_rq3 <- cached_run_fit(
+  "RQ3 correction fit", "rq3_correction", data = df_pers, formula = f_rq3,
+  family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa", maxfun = 2e5,
+                  diagnostic_seed = analysis_seeds$rq3_dharma),
+  packages = c("lme4", "Matrix"),
+  fit_function = function() glmer(
+    f_rq3, data = df_pers, family = binomial,
+    control = glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5))
+  ),
+  filename = "rq3_correction.rds"
+)
+
+summary(m_rq3)
+
+
+f_rq3_null <- correction ~ time + (1 + time | participant_ID) + (1 | id)
+f_rq3_no_int <- correction ~ time + prof_level + L1_group + le_il_z + ti_il_z +
+  time_invested_sc + le_external_source_c +
+  (1 + time | participant_ID) + (1 | id)
+
+m_rq3_null <- cached_run_fit(
+  "RQ3 time-only null fit", "rq3_time_only_null", data = df_pers,
+  formula = f_rq3_null, family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa", maxfun = 2e5), packages = c("lme4", "Matrix"),
+  fit_function = function() glmer(
+    f_rq3_null, data = df_pers, family = binomial,
+    control = glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5))
+  ), filename = "rq3_time_only_null.rds"
+)
+
+m_rq3_no_int <- cached_run_fit(
+  "RQ3 no-interactions fit", "rq3_no_interactions", data = df_pers,
+  formula = f_rq3_no_int, family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa", maxfun = 2e5), packages = c("lme4", "Matrix"),
+  fit_function = function() glmer(
+    f_rq3_no_int, data = df_pers, family = binomial,
+    control = glmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5))
+  ), filename = "rq3_no_interactions.rds"
+)
+
+
+# =============================================================================
+# 3. Formal checks for multilevel structure and model diagnostics
+# =============================================================================
+
+f_rq3_intercept <- update.formula(
+  f_rq3, . ~ . - (1 + time | participant_ID) + (1 | participant_ID)
+)
+m_rq3_intercept <- cached_run_fit(
+  "RQ3 random-intercept fit", "rq3_random_intercept", data = df_pers,
+  formula = f_rq3_intercept, family = list(family = "binomial", link = "logit"),
+  settings = list(optimizer = "bobyqa", maxfun = 2e5), packages = c("lme4", "Matrix"),
+  fit_function = function() update(m_rq3, formula. = f_rq3_intercept),
+  filename = "rq3_random_intercept.rds"
+)
+rq3_slope <- compare_time_slope(m_rq3, m_rq3_intercept)
+
+appendix_icc_table <- bind_rows(
+  extract_icc_summary(m_rec, "RQ1 recognition"),
+  extract_icc_summary(m_cor, "RQ1 correction"),
+  extract_icc_summary(m_rq3, "RQ3 correction")
+)
+
+knitr::kable(appendix_icc_table, digits = 3)
+
+rq3_slope$comparison
+rq3_slope$fit_indices
+
+appendix_time_slope_table <- bind_rows(
+  extract_time_slope_summary(rq1_slope_rec, "RQ1 recognition"),
+  extract_time_slope_summary(rq1_slope_cor, "RQ1 correction"),
+  extract_time_slope_summary(rq3_slope, "RQ3 correction")
+)
+
+knitr::kable(appendix_time_slope_table, digits = 2)
+
+appendix_glmm_fit_variance_table <- bind_rows(
+  extract_glmm_fit_variance(m_rec, "RQ1", "Recognition"),
+  extract_glmm_fit_variance(m_cor, "RQ1", "Correction"),
+  extract_glmm_fit_variance(m_rq3, "RQ3", "Correction")
+)
+
+knitr::kable(appendix_primary_outcome_descriptives, digits = 3)
+knitr::kable(appendix_goal_distribution_table, digits = 1)
+knitr::kable(appendix_format_distribution_table, digits = 1)
+knitr::kable(appendix_design_balance_summary, digits = 0)
+knitr::kable(appendix_glmm_fit_variance_table, digits = 3)
+
+
+## Odds ratios + 95% CIs
+est <- tidy(m_rq3, effects = "fixed", conf.int = TRUE, conf.method = "Wald") %>%
+  mutate(
+    OR = exp(estimate),
+    LCL = exp(conf.low),
+    UCL = exp(conf.high)
+  ) %>%
+  select(term, estimate, std.error, OR, LCL, UCL, p.value) %>%
+  arrange(desc(abs(estimate)))
+
+print(est, n = Inf)
+
+
+## Marginal effects plots (key moderators)
+dfp_l1 <- as.data.frame(
+  emmeans(m_rq3, ~ time | L1_group, type = "response", weights = "proportional"))
+p_l1 <- ggplot(dfp_l1, aes(x = time, y = prob, color = L1_group)) +
+  geom_point(position = position_dodge(width = 0.3)) +
+  geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+                width = 0.2, position = position_dodge(width = 0.3)) +
+  ggtitle("Predicted correction by time x L1 group") +
+  ylab("Predicted correction") +
+  xlab("Time")
+
+dfp_prof <- as.data.frame(
+  emmeans(m_rq3, ~ time | prof_level, type = "response", weights = "proportional"))
+p_prof <- ggplot(dfp_prof, aes(x = time, y = prob, color = prof_level)) +
+  geom_point(position = position_dodge(width = 0.3)) +
+  geom_errorbar(aes(ymin = asymp.LCL, ymax = asymp.UCL),
+                width = 0.2, position = position_dodge(width = 0.3)) +
+  scale_color_discrete(labels = c(
+    "Heritage" = "Heritage",
+    "Advanced" = "B2",
+    "Beginner" = "A1-A2",
+    "Intermediate" = "B1",
+    "Superior" = "C1-C2"
+  )) +
+  ggtitle("Predicted correction by time x proficiency") +
+  ylab("Predicted correction") +
+  xlab("Time")
+
+(p_l1 | p_prof)
+
+p_external_source <- ggpredict(m_rq3, terms = c("le_external_source_c [-0.5, 0.5]"), bias_correction = TRUE)
+plot(p_external_source) + ggtitle("Predicted correction by external resource use")
+
+
+## Simple effects / contrasts
+emm_l1_time <- emmeans(m_rq3, ~ time | L1_group, type = "response")
+emm_prof_time <- emmeans(m_rq3, ~ time | prof_level, type = "response")
+
+# Each object contains one immediate-versus-delayed contrast per subgroup.
+# Remove the `by` grouping when summarizing so multiplicity is controlled
+# across all contrasts in the substantive family: four L1 contrasts and,
+# separately, five proficiency contrasts. The adjustment applies to both
+# tests and confidence intervals.
+l1_time_contrasts <- pairs(emm_l1_time, adjust = "none")
+prof_time_contrasts <- pairs(emm_prof_time, adjust = "none")
+
+l1_tab <- summary(
+  l1_time_contrasts,
+  by = NULL,
+  adjust = "bonferroni",
+  infer = c(TRUE, TRUE),
+  level = 0.95,
+  type = "response"
+)
+prof_tab <- summary(
+  prof_time_contrasts,
+  by = NULL,
+  adjust = "bonferroni",
+  infer = c(TRUE, TRUE),
+  level = 0.95,
+  type = "response"
+)
+
+external_source_tab <- summary(
+  pairs(emmeans(m_rq3, ~ le_external_source_c, type = "response")),
+  infer = c(TRUE, TRUE),
+  type = "response"
+)
+
+rq3_joint_tests <- as.data.frame(joint_tests(m_rq3))
+
+appendix_rq3_joint_tests_table <- tibble(
+  term = rq3_joint_tests[[1]],
+  df1 = rq3_joint_tests$df1,
+  df2 = rq3_joint_tests$df2,
+  F_ratio = round(rq3_joint_tests$F.ratio, 3),
+  Chisq = round(rq3_joint_tests$Chisq, 3),
+  p_value = signif(rq3_joint_tests$p.value, 3)
+)
+
+appendix_rq3_l1_posthoc_table <- as.data.frame(l1_tab) %>%
+  transmute(
+    L1_group,
+    contrast,
+    OR = round(odds.ratio, 2),
+    LCL = round(asymp.LCL, 2),
+    UCL = round(asymp.UCL, 2),
+    p_value = signif(p.value, 3)
+  )
+
+appendix_rq3_prof_posthoc_table <- as.data.frame(prof_tab) %>%
+  transmute(
+    prof_level,
+    contrast,
+    OR = round(odds.ratio, 2),
+    LCL = round(asymp.LCL, 2),
+    UCL = round(asymp.UCL, 2),
+    p_value = signif(p.value, 3)
+  )
+
+appendix_rq3_external_source_contrast_table <- as.data.frame(external_source_tab) %>%
+  transmute(
+    contrast,
+    OR = round(odds.ratio, 2),
+    LCL = round(asymp.LCL, 2),
+    UCL = round(asymp.UCL, 2),
+    p_value = signif(p.value, 3)
+  )
+
+knitr::kable(appendix_rq3_joint_tests_table, digits = 3)
+knitr::kable(appendix_rq3_l1_posthoc_table, digits = 3)
+knitr::kable(appendix_rq3_prof_posthoc_table, digits = 3)
+knitr::kable(appendix_rq3_external_source_contrast_table, digits = 3)
+
+## Model comparisons (LRT/AIC)
+anova(m_rq3_null, m_rq3_no_int, m_rq3, test = "Chisq")
+
+
+## Variance decomposition / ICCs (logistic models use residual variance π²/3 on the latent scale)
+appendix_icc_table %>%
+  filter(model == "RQ3 correction") %>%
+  knitr::kable(digits = 3)
+
+
+## Overdispersion
+overdisp_fun <- function(model){
+  rdf <- df.residual(model)
+  rp <- residuals(model, type = "pearson")
+  Pearson.chisq <- sum(rp^2)
+  prat <- Pearson.chisq / rdf
+  pval <- pchisq(Pearson.chisq, df = rdf, lower.tail = FALSE)
+  c(chisq = Pearson.chisq, ratio = prat, rdf = rdf, p = pval)
+}
+
+overdisp_fun(m_rq3)
+
+
+## DHARMa residual diagnostics
+set.seed(analysis_seeds$rq3_dharma)
+simres3 <- cached_run_rds(
+  "RQ3 DHARMa simulation", "rq3_correction_dharma",
+  file.path("diagnostics", "rq3_correction_dharma.rds"),
+  inputs = list(model = run_fit_signature(m_rq3)),
+  settings = list(n = 1000L, seed = analysis_seeds$rq3_dharma),
+  packages = c("DHARMa", "lme4"),
+  source_models = "rq3_correction",
+  compute_function = function() simulateResiduals(m_rq3, n = 1000)
+)
+plot(simres3)
+testDispersion(simres3)
+testOutliers(simres3)
+
+
+```
+
+```{r save-analysis-objects, include=FALSE}
+# Expensive analysis objects are saved when they are calculated or restored.
+if (!run_is_active()) saveRDS(loo_fit2, "rq2_primary_loo_moment_matched.rds")
+```

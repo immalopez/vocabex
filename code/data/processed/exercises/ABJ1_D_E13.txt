@@ -1,0 +1,28 @@
+Práctica
+Este ejercicio se centra en la práctica de traducciones literales alemán-español que son inadecuadas debido a las diferencias estructurales entre ambos idiomas. Lee las frases que se presentan a continuación. Tu tarea es corregir la traducción incorrecta al español para que resulte más idiomática.
+Ejemplo
+Alemán: “Ich habe viel mit ihnen geschrieben”.
+Traducción incorrecta: “Escribí mucho con ellos”.
+Corrección: “Les escribí mucho”.
+
+
+               * Alemán: "Das macht keinen Sinn."
+               * Traducción incorrecta: "Eso no hace sentido."
+               * Corrección: _______________________
+               * Alemán: "Er ist mir auf die Nerven gegangen."
+               * Traducción incorrecta: "Me ha ido a los nervios."
+               * Corrección: _______________________
+               * Alemán: "Er hat seine Meinung geändert."
+               * Traducción incorrecta: "Ha cambiado su opinión."
+               * Corrección: _______________________
+               * Alemán: "Sie geht ins Bett."
+               * Traducción incorrecta: "Va en la cama."
+               * Corrección: _______________________
+               * Alemán: "Ich treffe eine Entscheidung."
+               * Traducción incorrecta: "Encuentro una decisión."
+               * Corrección: _______________________
+               * Alemán: "Es ist mir kalt."
+               * Traducción incorrecta: "Es frío para mí."
+               * Corrección: _______________________
+
+

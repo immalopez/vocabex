@@ -1,0 +1,42 @@
+Práctica
+1. Selecciona un cuantificador de la columna izquierda, un sustantivo de la columna del medio y una oración subordinada de la columna derecha.
+2. Combínalos para formar una frase del tipo “las muchas variables que nos ocupan”. Debes formular una frase por fila.
+3. Asegúrate de que el artículo, cuando sea necesario, concuerde correctamente con el cuantificador y el sustantivo.
+
+
+
+
+Cuantificador
+	Sustantivo
+	Oración subordinada
+	muchos
+	problemas
+	posibles a este dilema
+	varios
+	soluciones
+	que respaldan esta teoría
+	pocos
+	estudios
+	que necesitan ser resueltos
+	diversos
+	factores
+	sobre el mejor camino a seguir
+	numerosos
+	opiniones
+	que influyen en el resultado
+	todos
+	ejemplos
+	de éxito en situaciones similares
+	ningún
+	ocasiones
+	asociados con esta decisión
+	algunos
+	personas
+	que la empresa podría adoptar
+	bastantes
+	estrategias
+	que aún no conocen esta tecnología
+	
+
+
+

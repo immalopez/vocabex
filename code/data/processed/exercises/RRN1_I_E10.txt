@@ -1,0 +1,15 @@
+Práctica
+1. Determina si en las siguientes oraciones el infinitivo del verbo es “ir” o “ser”.
+2. ¿En qué tiempo verbal están? ¿Cómo es posible distinguirlos en cada caso?
+3. ¿Pueden ambos verbos construirse con el pronombre “se”?
+
+   * Si yo fuera rico, viajaría por todo el mundo.
+   * Quería que fueras al cine conmigo ayer.
+   * Era importante que el proyecto fuera completado antes del viernes.
+   * Les sugerí que se fueran antes de que empezara a llover.
+   * Si fuese el ganador, habría dado un discurso de agradecimiento.
+   * Ojalá nosotros fuéramos a la playa con vosotros.
+   * Prefería que ella no fuera tan crítica con los demás.
+   * ¿Te molestaría que ellos se fuesen sin despedirse?
+
+

@@ -1,0 +1,28 @@
+Práctica
+A continuación, se presentan una serie de frases en inglés con su correspondiente calco en español y una alternativa más idiomática. Identifica el calco y la alternativa idiomática. Luego, crea una nueva oración en español utilizando la alternativa idiomática.
+
+
+* Inglés: "This is a very sensitive topic."
+   * Calco: "Este es un tópico muy sensible."
+   * Idiomático: "Este es un tema muy delicado."
+   * Nueva oración: _______________________
+* Inglés: "Quality training data is crucial for successful machine learning models."
+   * Calco: "Los datos de formación de calidad son fundamentales para los modelos de aprendizaje automático exitosos."
+   * Idiomático: "Los datos de calidad son fundamentales para entrenar modelos de aprendizaje automático con éxito."
+   * Nueva oración: _______________________
+* Inglés: "We need to push out any ideas that don’t align with our project goals."
+   * Calco: "Necesitamos mover fuera cualquier idea que no se alinee con nuestros objetivos del proyecto."
+   * Idiomático: "Tenemos que descartar cualquier idea que no se alinee con los objetivos de nuestro proyecto."
+   * Nueva oración: _______________________
+* Inglés: "It’s important to stick to the rules of the game to ensure fair play for everyone involved."
+   * Calco: "Es importarse pegarse a las normas del juego para asegurar un juego justo para todos los involucrados."
+   * Idiomático: "Es importante ceñirse a las normas para garantizar un juego limpio a todo el mundo."
+   * Nueva oración: _______________________
+* Inglés: "Knowing the rules is essential before competing to prevent issues or penalties."
+   * Calco: "Saber las reglas es esencial antes de competir para evitar problemas o penalizaciones."
+   * Idiomático: "Para evitar problemas o penalizaciones, es esencial conocer las reglas antes de competir."
+   * Nueva oración: _______________________
+
+
+
+

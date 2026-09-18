@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+venv/
+env/
+.venv/
+.env/
+*.zip
+__pycache__/
+.DS_Store
+cache/
+*.rds
+statistical_analyses/runs/

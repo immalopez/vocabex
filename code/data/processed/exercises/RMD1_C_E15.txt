@@ -1,0 +1,62 @@
+Práctica
+Observa la parrilla de sujetos, verbos, y complementos indirectos. Combina los elementos de las primeras tres columnas y completa cada frase escribiendo el objeto directo en la última columna. Asegúrate de elegir un objeto directo adecuado para cada verbo y contexto.
+
+
+Ejemplo
+María habló con Marcos sobre lo sucedido la noche anterior.
+
+
+Sujeto
+	Verbo
+	Objeto  indirecto
+	Objeto directo
+	estudiante
+	pedir
+	profesor
+	
+
+	vosotros
+	hablar
+	Marcos
+	lo sucedido la noche anterior
+	yo
+	consultar
+	supervisor
+	
+
+	nosotros
+	informar
+	coordinadora
+	
+
+	empleados
+	solicitar
+	jefe
+	
+
+	María
+	preguntar
+	comité
+	
+
+	padres
+	comentar
+	director
+	
+
+	comisión
+	proponer
+	conserje
+	
+
+	alumno
+	explicar
+	compañeros
+	
+
+	
+
+
+
+
+

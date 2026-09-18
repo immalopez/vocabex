@@ -1,0 +1,22 @@
+[project]
+name = "vocabex"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "anytree>=2.13.0",
+  "codetiming>=1.4.0",
+  "funcy>=2.0",
+  "ipykernel>=6.29.5",
+  "lexicalrichness>=0.5.1",
+  "nltk>=3.9.1",
+  "openpyxl>=3.1.5",
+  "pandas>=2.2.3",
+  "stanza>=1.10.1",
+  "xlsxwriter>=3.2.3",
+]
+[tool.ruff.lint]
+ignore = [
+  "F401", # imported but unused
+]
