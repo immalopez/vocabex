@@ -1,0 +1,10 @@
+Práctica
+1. Lee el texto siguiente y subraya todos los términos relacionados con la tecnología y la comunicación que puedas identificar en él.
+2. Traduce estos términos a tu lengua materna y observa las similitudes y las diferencias.
+
+
+Uno de los principales problemas asociados con la ciberseguridad es la vulneración de datos. Las brechas de seguridad pueden conducir a la exposición de información confidencial, como nombres de usuario, contraseñas, información financiera y datos personales, lo que puede tener graves consecuencias tanto para las empresas como para los usuarios finales. Además del impacto económico, las violaciones de datos también pueden erosionar la confianza de la población en las instituciones y afectar negativamente la reputación de las organizaciones afectadas. Para abordar estos desafíos, es crucial implementar medidas sólidas de seguridad cibernética, incluyendo la adopción de prácticas de seguridad robustas, la concienciación y capacitación de los usuarios, el uso de herramientas de cifrado y autenticación multifactor, y la colaboración entre el sector público y privado para compartir información y mejores prácticas. Solo a través de un enfoque integral y proactivo podemos mitigar los riesgos y proteger nuestra infraestructura digital de manera efectiva.
+
+
+
+

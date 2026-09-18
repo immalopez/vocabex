@@ -1,0 +1,7 @@
+Práctica
+                                          1. Lee el siguiente texto y subraya todas las expresiones relacionadas con el ámbito de las transacciones bancarias que puedas identificar en él.
+                                          2. Traduce estas expresiones a tu lengua materna y observa las similitudes y las diferencias.
+
+
+Hoy en día, al recibir una transferencia bancaria, es importante verificar los datos del remitente para confirmar la procedencia de los fondos. En las transacciones internacionales, se recomienda revisar la divisa utilizada, ya que el tipo de cambio puede afectar la cantidad final recibida. Además, en algunos casos, el beneficiario debe pagar una comisión que puede variar según el importe y el banco intermediario involucrado. Al enviar dinero, también es fundamental incluir el concepto de la transacción para especificar el motivo de la transferencia. Algunos bancos permiten domiciliar pagos, lo cual facilita las transacciones recurrentes, como suscripciones y facturas. En estos casos, el titular de la cuenta debe asegurarse de que haya fondos suficientes para evitar cargos adicionales. Finalmente, al hacer una transacción en línea, se requiere confirmar el número de cuenta y el código SWIFT del banco de destino, especialmente en transferencias internacionales. Para mayor seguridad, es recomendable utilizar la autenticación de doble factor antes de confirmar la operación.
+

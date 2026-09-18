@@ -1,0 +1,12 @@
+Práctica
+Lee las siguientes palabras y decide si necesitan un acento gráfico según las normas de acentuación del español. Luego, escribe la palabra correctamente. Recuerda las tres reglas básicas de acentuación:
+1. Las palabras agudas llevan tilde cuando terminan en vocal, 'n' o 's'.
+2. Las palabras graves o llanas llevan tilde cuando no terminan en vocal, 'n' o 's'.
+3. Las palabras esdrújulas y sobresdrújulas llevan tilde siempre.
+
+
+dificil, comparacion, cientifica, habiais, examen, tambien, especificas, azucar, joven
+
+
+
+

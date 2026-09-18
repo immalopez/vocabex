@@ -1,0 +1,28 @@
+Práctica
+Lee cada situación en la columna de la izquierda y emparéjala con el término correcto en la columna de la derecha según el tipo de compensación que corresponde. Después de emparejar, justifica por qué elegiste cada opción en función del propósito de la compensación.
+
+
+Situación
+	Término
+	Tras la cancelación de su vuelo, la aerolínea le ofreció una compensación por las molestias.
+	a) recompensa
+b) indemnización
+	Un equipo de rescate ofrece una suma a quien proporcione información para encontrar a una persona.
+	a) recompensa
+b) indemnización
+	La empresa pagó una compensación a un trabajador por los daños sufridos en el trabajo.
+	a) recompensa
+b) indemnización
+	A quien devuelva la mascota perdida, se le ofrece un premio.
+	a) recompensa
+b) indemnización
+	Tras el robo, el seguro le otorgó una suma para cubrir la pérdida.
+	a) recompensa
+b) indemnización
+	 En una competición, el ganador recibirá un incentivo por sus habilidades.
+	a) recompensa
+b) indemnización
+	
+
+
+

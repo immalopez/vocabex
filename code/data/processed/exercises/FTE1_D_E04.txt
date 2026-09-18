@@ -1,0 +1,10 @@
+Práctica
+                     1. Lee el siguiente texto sobre el uso de internet. Subraya o selecciona todo el vocabulario relacionado con el mundo digital y las páginas web.
+                     2. Traduce estas expresiones al francés y observa las similitudes y las diferencias.
+
+
+Hoy en día, es muy importante verificar la autenticidad de las páginas web antes de proporcionar cualquier dato personal. Uno de los pasos clave es observar la extensión del dominio, ya que puede darnos pistas sobre la legitimidad del sitio. Además, siempre debemos asegurarnos de que la página utilice el protocolo HTTPS para una navegación segura. Cuando buscamos información, es fundamental revisar que se fundamente en fuentes confiables y asegurarnos de que los comentarios de los usuarios no mencionen problemas de seguridad o fraudes. También, es recomendable emplear motores de búsqueda reconocidos para evitar caer en sitios maliciosos. Al navegar por una tienda en línea, siempre debemos tener en cuenta las medidas de seguridad del sitio web, como los certificados SSL, y leer las políticas de privacidad. Finalmente, cuando estamos a punto de realizar una compra, es crucial comprobar que no estemos en un sitio con ofertas fraudulentas.
+
+
+
+

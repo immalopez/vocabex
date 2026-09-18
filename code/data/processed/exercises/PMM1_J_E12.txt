@@ -1,0 +1,12 @@
+Práctica
+Lee el texto y completa los huecos con los conectores adecuados de la lista proporcionada. Ten en cuenta que NO pueden repetirse y que uno sobrará.
+
+
+siguiente ✴ a continuación ✴ después ✴ luego ✴ más tarde ✴ por último
+
+
+Fuimos a un mercado local por la mañana, donde paseamos por los puestos y compramos algunos productos frescos. __________, visitamos un museo de arte moderno que estaba cerca del centro. Nos quedamos allí por un par de horas, y __________ decidimos ir a comer a un restaurante típico. La comida estaba deliciosa, especialmente el postre. __________, hicimos una degustación de vinos en una bodega cercana, donde aprendimos sobre su proceso de elaboración. __________, nos dirigimos al hotel para descansar un poco antes de la cena. __________, dimos el día por terminado con una cena en un restaurante con vistas al mar.
+
+
+
+

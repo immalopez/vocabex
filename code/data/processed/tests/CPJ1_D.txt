@@ -1,0 +1,523 @@
+﻿Trabajo con los errores cometidos
+
+
+Ejercicio 1
+Práctica
+Este ejercicio se centra en la práctica de traducciones literales mandarín-español que son inadecuadas debido a las diferencias estructurales entre ambos idiomas. Lee las frases que se presentan a continuación. Tu tarea es corregir la traducción incorrecta al español para que resulte más idiomática.
+Ejemplo
+Mandarín: “我想培养与他人交流的能力。”
+Traducción incorrecta: “Quiero cultivar mi poder de comunicarme con los demás”.
+Corrección: “Quiero mejorar mi capacidad de comunicarme con los demás”.
+
+
+* Mandarín: "我觉得看到你很高兴。"
+   * Traducción incorrecta: "Me pienso muy feliz de verte".
+   * Corrección: _______________________
+* Mandarín: "我在2022年夏天学会了开车。"
+   * Traducción incorrecta: "Supe conducir en verano de 2022."
+   * Corrección: _______________________
+* Mandarín: " 那家餐厅有很多人。我们找不到座位。"
+   * Traducción incorrecta: "Este restaurante tiene muchas personas: no encontramos asiento."
+   * Corrección: _______________________
+* Mandarín: "你喜欢喝茶酒吗？我听说在西班牙很流行。"
+   * Traducción incorrecta: "¿Tú gusta beber licor de té? He oído que es bastante popular en España."
+   * Corrección: _______________________
+* Mandarín: "给他们更多时间完成项目。"
+   * Traducción incorrecta: "Da a ellos más tiempo para terminar el proyecto."
+   * Corrección: _______________________
+* Mandarín: " 西班牙菜咸味很重，但是很好吃。"
+   * Traducción incorrecta: "La comida española tiene un salado sabor muy fuerte, pero es deliciosa."
+   * Corrección: _______________________
+
+
+Ejercicio 2
+Práctica
+1. Selecciona la preposición o preposiciones que complete(n) correctamente cada frase.
+2. Piensa en cómo cada preposición cambia el significado de la frase y justifica cuál es la que mejor se ajusta al contexto.
+
+
+* El informe incluye información relacionada (a / de / con) las nuevas políticas de sostenibilidad de la empresa.
+* Todos nosotros estamos de acuerdo (ø / en / sobre) que es necesario tomar medidas urgentes.
+* El proyecto se enfoca (sobre / en / a) la innovación tecnológica para mejorar la eficiencia energética.
+* Estaba pensando (a / en / de) mudarse (a / en / de) una ciudad más grande para buscar mejores oportunidades laborales.
+* Estoy muy interesado (sobre / en / por) aprender más sobre este tema.
+* Tengo mayor facilidad (en / de / para) resolver problemas que tú.
+* Es importante asegurarse (ø / de / por) que todas las puertas estén cerradas antes de salir de casa.
+* Nos falta (ø / de / a) el contexto para entender completamente la situación.
+
+
+Ejercicio 3
+Práctica
+1. Lee las frases de abajo. En los fragmentos destacados, ¿cuáles son las palabras más y menos importantes? ¿Cuál es la función de las que lo son menos? ¿Cómo se indica esta relación?
+2. Escribe frases similares utilizando los siguientes sustantivos: llaves, coche, equipo, fiesta, celebración.
+
+
+* En 2016 obtuvo el certificado DELE de nivel B2.
+* No olvidéis entregar los ejercicios sobre los errores de vuestra biografía.
+
+
+Ejercicio 4
+El género de las palabras en español puede ser un poco complejo al principio, especialmente para estudiantes de español como lengua extranjera (ELE), dado que no siempre sigue reglas estrictamente lógicas y puede diferir bastante de otros idiomas. Sin embargo, hay algunas reglas generales que pueden ayudar a los estudiantes a determinar el género de la mayoría de las palabras.
+Reglas generales:
+* Masculino: Las palabras que terminan en -o generalmente son masculinas (el libro, el niño).
+* Femenino: Las palabras que terminan en -a usualmente son femeninas (la mesa, la tecnología).
+* Excepciones a la regla de la -a: Las palabras que terminan en -ma, -pa, y -ta a menudo son masculinas cuando derivan del griego (el problema, el mapa, el cometa).
+* Palabras que terminan en -e o consonante: Pueden ser de cualquier género. Es necesario aprender el género específico de cada palabra (el detalle, masculino; la mente, femenino).
+* Palabras que terminan en -ión: Son casi siempre femeninas (la investigación, la sección).
+* Palabras que cambian de género con el artículo y tienen diferentes significados: el cometa (cuerpo celeste) vs. la cometa (juguete).
+
+
+Práctica
+Escribe el artículo correcto (el/la) para las siguientes palabras, basándote en las reglas generales sobre el género de las palabras en español.
+
+
+1. ___ enlace
+2. ___ análisis
+3. ___ vídeo
+4. ___ capacidad
+5. ___ fin de semana
+6. ___ avería
+7. ___ índole
+8. ___ hora
+9. ___ calor
+10. ___ árbol
+
+
+
+
+Ejercicio 5
+
+
+¿“Tantos”, “muchos”, “tan” o “muy”?
+* Tantos/tan: Se usa generalmente en comparaciones, en estructuras con “como” y para objetos perfectamente identificados.
+* Muchos/muy: Sirve para intensificar sin establecer una comparación.
+Ejemplos
+* ¡Mira a esa chica tan guapa! (Los dos pueden verla.)
+* María es una chica muy guapa. (Es una afirmación que no requiere ninguna identificación previa.)
+* No esperaba que hubiera tantas personas en el concierto. (Comparación implícita.)
+* Hay muchas personas en el concierto. (Afirmación general.)
+* Es una situación tan dura que cualquiera se hundiría. (Comparación.)
+* Es una situación muy dura. Cualquiera se hundiría. (Afirmación general.)
+Práctica
+Lee cada oración y decide si deberías usar “tan” o “muy” para completarla correctamente. Fíjate en que a veces la comparación está implícita.
+
+
+1. Escogí esta agencia porque encontré _____ críticas positivas.
+2. Este café está _____ caliente que no puedo beberlo todavía.
+3. Mi hermano es _____ inteligente; siempre sabe la respuesta a todo.
+4. Hay _____ cosas que no entiendo de este tema.
+5. Esta sopa está _____ salada. Le habrás añadido demasiada sal.
+6. ¡Es que no entiendo cómo esta sopa puede estar _____ salada!
+7. La infancia de un niño de hoy es _____ diferente de la nuestra.
+8. Otro aspecto _____ importante que considerar es la gentrificación.
+9. Es una historia _____ interesante: todos los niños están ensimismados.
+10. ¿Cómo es posible que haya _____ errores en un solo examen?
+
+
+Ejercicio 6
+Práctica
+A continuación, verás algunas frases que contienen anglicismos innecesarios. Tu tarea es reescribir cada frase usando la palabra genuina en español.
+
+
+1. Haz clic en el link.
+➔ ______________________________________________________
+2. Hoy en día, muchas personas prefieren hacer sus compras online por la comodidad y la variedad de productos disponibles.
+➔ ______________________________________________________
+3. Me encanta ir de shopping cuando viajo.
+➔ ______________________________________________________
+4. La investigación será enviada a un proceso de peer review antes de su publicación.
+➔ ______________________________________________________
+5. El aprendizaje se evalúa a través de exámenes y quizzes que miden el progreso de los estudiantes.
+➔ ______________________________________________________
+6. Toda la clase se manifestó en contra del bullying.
+➔ ______________________________________________________
+7. Esta meeting podría haber sido un correo.
+➔ ______________________________________________________
+
+
+
+
+Ejercicio 7
+Práctica
+Para practicar la identificación y corrección de traducciones inadecuadas de palabras en inglés al español que son comúnmente confundidas debido a su similitud, elige en cada caso la opción que utiliza el término correcto en español:
+
+
+   1. A) La investigación fue muy extensiva en cuanto a su alcance.
+B) La investigación fue muy extensa en cuanto a su alcance.
+
+
+   2. A) Las resultas del experimento serán publicadas mañana.
+B) Los resultados del experimento serán publicados mañana.
+
+
+   3. A) Voy a la librería a estudiar para mi examen.
+B) Voy a la biblioteca a estudiar para mi examen.
+
+
+   4. A) Me recibieron sin remordimiento ni simpatía.
+B) Me recibieron sin remordimiento ni compasión.
+
+
+   5. A) Voy a asistir al cliente con su reclamación.
+B) Voy a atender al cliente con su reclamación.
+
+
+   6. A) Necesito una nueva carpeta para el suelo del comedor.
+B) Necesito una nueva alfombra para el suelo del comedor.
+
+
+
+Ejercicio 8
+Práctica
+Lee las siguientes frases y elige si es más adecuado usar "ser" o "significar" en cada caso. Luego, explica el porqué de tu elección.
+
+
+   1. Obtener este título universitario puede __________ una buena oportunidad laboral en el futuro.
+
+      * Justificación: ___________________________
+
+         2. Juan desea __________ médico en el futuro, por lo que está estudiando mucho.
+
+            * Justificación: ___________________________
+
+               3. Para muchos, mudarse a otro país puede __________ un gran cambio en sus vidas.
+
+                  * Justificación: ___________________________
+
+                     4. Evaluar __________ es una herramienta fundamental para medir el progreso y detectar áreas de mejora en el aprendizaje..
+
+                        * Justificación: ___________________________
+
+                           5. El objetivo principal de la empresa es __________ una referencia en el sector de la tecnología.
+
+                              * Justificación: ___________________________
+
+                                 6. Para mi familia, la Navidad suele __________ una época de paz y reunión.
+
+                                    * Justificación: ___________________________
+
+
+Ejercicio 9
+                                    1. Desde... hasta...: Se utiliza cuando queremos enfatizar un inicio y un fin claros en tiempo o espacio. Es común en contextos formales y donde se quiere resaltar la duración o el recorrido.
+
+                                       * Está abierto desde las 8 de la mañana hasta las 10 de la noche.
+                                       * Fui a la escuela desde el año 2003 hasta el 2010.
+
+
+                                       2. De... a...: Se usa en contextos más coloquiales o para marcar intervalos de tiempo o espacio más simples y directos.
+
+                                          * Está abierto de 8 a 10.
+                                          * Fui a la escuela de 2003 a 2010.
+Importante:
+No debemos mezclar estas estructuras ni podemos utilizar la segunda para hablar de abanicos de cosas. Es incorrecto decir:
+                                          * Desde mi nacimiento a los 16 años.
+                                          * Me lo dijeron todo, del número de vuelo a mi número de DNI.
+Práctica
+Completa las oraciones siguientes, asegurándote de no mezclar las estructuras. Puede haber más de una opción correcta.
+                                          1. ___ mi nacimiento ___ los 16 años, fui una chica muy feliz.
+                                          2. Viví en España ___ 2005 ___ 2010.
+                                          3. He trabajado en esa empresa ___ enero ___ marzo de este año.
+                                          4. Estudié música ___ los 8 años ___ los 14 años.
+                                          5. El viaje en tren fue ___ las 6 de la tarde ___ las 9 de la noche.
+                                          6. Caminamos ___ mi casa ___ la escuela.
+                                          7. El museo ofrece una gran variedad de actividades, ___ talleres interactivos ___ visitas guiadas especializadas.
+
+
+Ejercicio 10
+En español, algunos adjetivos de grado extremo ya expresan una cualidad en su máxima intensidad, por lo que no necesitan intensificadores como "muy", "bastante" o "un poco", y muchas veces tampoco admiten comparación. Usar un intensificador con estos adjetivos es incorrecto porque ya implican una evaluación extrema.
+Por ejemplo:
+                                          * "Era muy esencial."
+                                          * "Era esencial."
+                                          * "Era muy necesario." ➔ "esencial" expresa una forma más intensa de “necesario”.
+Práctica
+                                          1. Completa la tabla con los adjetivos de grado extremo “pésimo”, “espantoso”, “monumental”, “excelente”, “hilarante” y “esencial”.
+                                          2. Corrige las oraciones cuando sea necesario.
+
+
+
+
+Adjetivo de intensidad moderada
+	Adjetivo de grado extremo
+	muy feo
+	
+
+	muy malo
+	
+
+	muy grande
+	
+
+	muy bueno
+	
+
+	muy necesario
+	
+
+	muy divertido
+	
+
+	
+
+
+
+                                          * Ese gesto estuvo un poco feo por tu parte.
+                                          * La película fue un poco excelente.
+                                          * El espectáculo fue ligeramente increíble.
+                                          * La comida estuvo muy perfecta.
+                                          * Su interpretación fue bastante sublime.
+                                          * El accidente fue muy espantoso.
+
+
+
+
+Ejercicio 11
+Práctica
+                                          1. Completa la siguiente tabla marcando una X en las casillas que representen combinaciones correctas entre los verbos y las preposiciones dadas. Puede haber más de una opción válida por verbo.
+                                          2. Escribe una oración para cada verbo.
+
+
+Verbo / Prep.
+	a
+	de
+	en
+	con
+	por
+	ø
+	sobre
+	integrarse
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	dudar
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	soñar
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	participar
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	contribuir
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	enseñar
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	depender
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	insistir
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	intentar
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	necesitar
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	Ejercicio 12
+Práctica
+Lee cada oración y decide si el sustantivo subrayado es correcto o, por el contrario, se trata de la primera persona del singular del presente de subjuntivo. En este último caso, sustitúyelo por el sustantivo adecuado.
+
+
+                                          1. Su principal objetivo es el goce de los beneficios de la empresa.
+                                          2. Es innegable el gran papel de recopile y organice de cantidades masivas de datos que tiene la IA en nuestra sociedad.
+                                          3. El contrato especifica que el firme de este documento es responsabilidad del gesto.
+                                          4. Es importante fomentar el disfrute de la naturaleza.
+                                          5. El avance de la tecnología ha cambiado la manera en que vivimos.
+                                          6. El falle del sistema puede deberse a un error de código.
+                                          7. El pase a la final dependerá del esfuerzo de cada jugador.
+                                          8. El sistema garantiza el enfoque en la atención al cliente.
+                                          9. Es fundamental mantener el enlace entre los distintos departamentos de la empresa.
+                                          10. El aborde de los problemas debe hacerse con empatía y precisión.
+
+
+
+
+Ejercicio 13
+Práctica
+A continuación, encontrarás pares de oraciones con usos correctos e incorrectos del adverbio “normalmente”. Tu tarea es comparar las oraciones de cada par y discutir por qué a veces este adverbio funciona y otras no.
+
+
+                                          1. A. "El vuelo despegó normalmente, a las 10 de la mañana."
+B. "El vuelo despegó como estaba previsto, a las 10 de la mañana."
+Reflexión: ¿Por qué es incorrecta la primera oración? ¿Qué implica el adverbio “normalmente”?
+
+
+                                          2. A. "Como está previsto, el tráfico es intenso en esta calle a las horas pico."
+B. "Normalmente, el tráfico es intenso en esta calle a las horas pico."
+Reflexión: ¿Por qué en este caso la opción con “normalmente” es la preferible? ¿Cómo difiere este caso del anterior?
+
+
+                                          3. A. "El evento se desarrolló normalmente, sin cambios en la programación."
+B. "El evento se desarrolló como estaba previsto, sin cambios en la programación."
+Reflexión: ¿Por qué es incorrecta la primera oración con el adverbio? ¿Qué tiene en común con el ejemplo del vuelo?
+ 
+                                          4. A. "El equipo como está previsto opera bajo estas condiciones."
+B. "El equipo normalmente opera bajo estas condiciones."
+Reflexión: ¿Por qué aquí sí funciona el adverbio? ¿Qué nos está intentando comunicar realmente el emisor?
+
+
+
+
+Ejercicio 14
+Práctica
+Para cada grupo, identifica la combinación no idiomática:
+
+
+                                          * Grupo 1: avión estropeado / avión averiado / avión siniestrado / avión estrellado
+
+
+                                          * Grupo 2: llegar a un arreglo / inventar un arreglo / tener arreglo / proponer un arreglo
+
+
+                                          * Grupo 3: estar de intercambio / efectuar un intercambio / fomentar el intercambio / construir un intercambio
+
+                                          * Grupo 4: incumplir una resolución / encontrar una resolución / proponer una solución / encontrar una solución.
+
+
+
+
+Ejercicio 15
+Práctica
+Lee cada oración y elige si es más adecuado utilizar “confiar algo” o “confiar en alguien”. Después, trata de explicar la diferencia de significado entre ambos usos del verbo “confiar”.
+
+
+                                             * (Le confié / Confié en él) profundamente y ahora tengo que vivir con las consecuencias de mi error.
+                                             * Decidió (confiarle / confiar en él) sus documentos mientras viajaba al extranjero.
+                                             * Es difícil para ella (confiar en / confiarles) desconocidos, especialmente cuando se trata de temas personales.
+                                             * Le voy a (confiar / confiar en) la organización del evento a Marta, porque es muy responsable.
+                                             * Necesito a alguien (a / en) quien pueda confiar cuando las cosas se ponen difíciles.
+                                             * María decidió (confiarle / confiar en) sus ahorros a su hermano para que él los gestionara.
+                                             * Es importante (confiarles / confiar en) tus compañeros de trabajo si quieres crear un buen ambiente laboral.
+
+
+
+
+Identificación y corrección de errores similares
+Este fragmento incluye algunos errores similares a los que has cometido en redacciones anteriores, como tu carta de reclamación. ¿Serías capaz de identificarlos y, en caso de ser necesario, corregirlos?
+Hace poco que he empezado mi año de intercambio en España. Estoy muy emocionado, porque, aunque recientemente he obtenido el DELE C1 certificado, considero que el español que aprenda aquí será más esencial que el que aprendí en mi país de origen. Estar aquí e interactuar con hablantes nativos me ayudará un montón a cultivar mi poder de comunicarme con los demás. Por eso, intentaré a absorber los contenidos y resolver los exámenes y quiz lo mejor posible para aprovechar al máximo esta oportunidad y así seguir avanzando en mis destrezas lingüísticas y consolidar mi fluidez en el idioma. En este sentido, tengo que intentar depender menos de la inteligencia artificial, porque, aunque es innegable la utilidad de su papel como recopile y organice de cantidades masivas de datos, emplearlo demasiado puede dar como resulta una disminución de la autonomía en el aprendizaje. Aprender no significa solo la obtención de un buen producto, sino también esforzarse durante el proceso. Sin embargo, mi viaje de llegada aquí no fue un campo de rosas. Debido a que el avión estaba estropeado, no pudimos despegar normalmente, por lo que el despegue se retrasó y tuve que pasar la noche en el aeropuerto. Me inquietó un poco la situación, ya que no se trataba de un vuelo directo y me preocupaba no llegar a tiempo para efectuar la enlace. En efecto, esto fue lo que acabó ocurriendo y, a pesar de haber proporcionado todos los datos relacionados del incidente, del número de vuelo a la fecha de compra de los billetes, pasando por los tan privados como el número de tarjeta que utilicé para efectuar el pago, la aerolínea no quiso hacerse responsable. Me sentí traicionado, porque le había confiado a la compañía y después me acusaron a mí de haber querido ahorrar dinero al no comprar un vuelo directo.
+
+
+Valoración de los ejercicios
+                                             1. Valora, del 1 al 4 (donde 1 es “nada útil” y 4 es “muy útil”), la utilidad de cada uno de los 15 ejercicios que has resuelto para la posterior identificación y corrección de errores similares a los que has cometido en redacciones anteriores, como tu carta de reclamación.
+                                             2. Justifica brevemente (con una o dos frases) el porqué de cada puntuación.

@@ -1,0 +1,17 @@
+Práctica
+Lee cada frase y decide si hay que corregir la concordancia entre los conectores y los sustantivos. Asegúrate de que “debidos a” y “dados” concuerden en género y número con los sustantivos a los que se refieren siempre y cuando sea necesario.
+Ejemplos
+1. Es difícil encontrar solución a los problemas debido debidos a la sequía (Los problemas han sido producidos por la sequía.)
+2. Es difícil encontrar solución a los problemas debido a la sequía (La sequía impide encontrar solución a los problemas.)
+
+
+* Debidos a los problemas técnicos, el vuelo se retrasó.
+* Dados los problemas técnicos, el vuelo se retrasó.
+* Los cambios en el horario son debidos a la nueva normativa.
+* Los cambios en el horario, debidos a la nueva normativa, nos han fastidiado las vacaciones.
+* Tuvimos que replantearnos la situación dado las circunstancias.
+* La aseguradora no se quiso hacer cargo de los daños debidos al incendio.
+
+
+
+

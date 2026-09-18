@@ -1,0 +1,30 @@
+Práctica
+Lee cada oración y selecciona la palabra que mejor se ajuste al contexto de entre las opciones dadas.
+
+
+         1. ¡El ayuntamiento no puede seguir ignorando este/a __________ y eludiendo toda responsabilidad!
+         * a) desarrollo
+         * b) fenómeno
+         * c) circunstancia
+
+            2. La pandemia global fue un __________ inesperado que cambió el estilo de vida de millones de personas.
+            * a) acontecimiento
+            * b) fenómeno
+            * c) desarrollo
+
+               3. Este nuevo proyecto en el sector de la tecnología representa un/a importante __________ tecnológico/a que transformará la industria en los próximos años.
+               * a) desarrollo
+               * b) circunstancia
+               * c) situación
+
+                  4. Debido al/a la complicado/a __________ económico/a, muchos negocios están enfrentando dificultades.
+                  * a) fenómeno
+                  * b) circunstancia
+                  * c) situación
+
+                     5. Su equipo de atención al cliente se desentendió por completo de nuestro/a __________.
+                     * a) situación
+                     * b) circunstancia
+                     * c) problema
+
+

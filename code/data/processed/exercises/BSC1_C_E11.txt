@@ -1,0 +1,29 @@
+Práctica
+Este ejercicio se centra en la práctica de traducciones literales inglés-español que son inadecuadas debido a las diferencias estructurales entre ambos idiomas. Lee las frases que se presentan a continuación. Tu tarea es corregir la traducción incorrecta al español para que resulte más idiomática.
+Ejemplo
+Inglés: “She put the blame on him for the project delay”.
+Traducción incorrecta: “Ella puso la culpa en él por el retraso en el proyecto”.
+Corrección: “Ella le echó la culpa a él por el retraso en el proyecto”.
+
+
+      * Inglés: "I had the best time of my life at the concert last night; it was unforgettable!."
+      * Traducción incorrecta: "Tuve el mejor tiempo en mi vida en el concierto de anoche; ¡fue inolvidable!"
+      * Corrección: _______________________
+      * Inglés: "He told me to keep an eye on his dog while he was away."
+      * Traducción incorrecta: "Me dijo que mantuviera un ojo en su perro mientras estaba fuera."
+      * Corrección: _______________________
+      * Inglés: "The plan was to call it a day and go home early."
+      * Traducción incorrecta: "El plan era llamarlo un día e irnos a casa temprano."
+      * Corrección: _______________________
+      * Inglés: "Let me know if you change your mind."
+      * Traducción incorrecta: "Déjame saber si cambias tu mente."
+      * Corrección: _______________________
+      * Inglés: "She made up her mind to quit her job."
+      * Traducción incorrecta: "Ella hizo su mente para dejar su trabajo."
+      * Corrección: _______________________
+      * Inglés: "The movie kept me on the edge of my seat."
+      * Traducción incorrecta: "La película me mantuvo en el borde de mi asiento."
+      * Corrección: _______________________
+
+
+

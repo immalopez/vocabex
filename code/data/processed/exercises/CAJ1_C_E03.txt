@@ -1,0 +1,16 @@
+Práctica
+Decide si la palabra entre paréntesis debe ser un adjetivo, un adverbio en su forma “-mente”, o si el adjetivo puede usarse también como adverbio sin cambios. Luego, elige la opción u opciones correcta(s) para completar la oración.
+
+
+      * Este tipo de cosas se tienen que comprar más (frecuente / frecuentemente).
+      * El mensajero entregó el paquete (directo / directamente) a mi puerta.
+      * El corredor terminó la carrera (rápido / rápidamente) y sin mostrar cansancio.
+      * Ella habla (claro / claramente) sobre sus intenciones, sin dejar lugar a dudas.
+      * La respuesta estaba (directo / directamente) relacionada con la pregunta inicial.
+      * Este tren va (directo / directamente) a Madrid, sin paradas intermedias.
+      * (Solo / solamente) los libros de no ficción me gustan.
+      * Miró (fijo / fijamente) a los ojos de su oponente durante el debate.
+      * La película empieza (exacto / exactamente) a las ocho de la noche.
+
+
+

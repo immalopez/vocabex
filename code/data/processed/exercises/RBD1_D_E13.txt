@@ -1,0 +1,32 @@
+Práctica
+Une las columnas de la parrilla para formar frases correctas. Elige un elemento de cada columna de izquierda a derecha y conéctalos para llegar a una oración completa.
+
+
+tipo de
+	engaño
+	Hay muchos tipos de engaño.
+	tipos de
+	animales
+	
+
+	clase de
+	amigos
+	
+
+	clases de
+	frases
+	
+
+	variedad de
+	plantas
+	
+
+	variedades de
+	cosas
+	
+
+	
+
+                     * Ahora, fíjate en cómo funcionan el plural y el singular en este tipo de construcciones y trata de formular una regla que lo explique:
+
+

@@ -1,0 +1,13 @@
+Práctica
+Lee el texto y completa los huecos con los conectores adecuados de la lista proporcionada. Ten en cuenta que no pueden repetirse los conectores.
+
+
+antes que nada ✴ por lo tanto ✴ para mi sorpresa ✴ así pues ✴
+aun así ✴ sin embargo ✴ debido a ✴ además ✴ con respecto a
+
+
+________, quiero expresar mi opinión sobre el servicio que recibí en mi último vuelo. Tengo sentimientos encontrados ________ mi experiencia con la aerolínea. El proceso de facturación fue extremadamente rápido; ________, el personal en la puerta de embarque fue muy atento. ________, cuando llegué a mi asiento, ________, este ya estaba ocupado por otro pasajero. ________, tuve que esperar casi una hora para que me asignaran un nuevo asiento. Finalmente el avión despegó, pero con retraso; ________, pasé todo el viaje angustiada pensando en que no llegaría a tiempo al concierto por el que viajaba. ________ todo esto, considero que la aerolínea debería mejorar sus servicios. ________, quiero agradecer al personal de cabina por su amabilidad, pero hay muchos aspectos que necesitan atención.
+
+
+
+

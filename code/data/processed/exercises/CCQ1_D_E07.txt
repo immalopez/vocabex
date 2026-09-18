@@ -1,0 +1,56 @@
+Práctica
+Selecciona un elemento de cada columna para formar una frase completa. Asegúrate de que el uso de “ser” o “estar” sea el adecuado según el contexto de la frase que formes. Escribe una oración por fila. 
+Ejemplos
+Juan siempre es agradable.
+La habitación con vistas al mar estaba sucia y desordenada.
+
+
+
+
+Columna 1
+	Columna 2
+	Columna 3
+	Columna 4
+	Juan
+	el clima
+	es
+	agradable
+	la fiesta
+	en la playa
+	está
+	aburrida
+	el concierto
+	Ana
+	es
+	emocionante
+	este libro
+	mi casa
+	está
+	interesante
+	el coche
+	María
+	estaba
+	en el centro
+	mi abuelo
+	la sopa
+	está
+	antiguo
+	el pastel
+	con vistas al mar
+	es
+	delicioso
+	la película
+	muy
+	es
+	larga
+	actualmente
+	siempre
+	está
+	sucia y desordenada
+	la habitación
+	como todos
+	he sido
+	horrible
+	
+
+

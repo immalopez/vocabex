@@ -1,0 +1,55 @@
+Práctica
+Selecciona un elemento de cada columna para formar una frase completa (puedes añadir elementos propios para que la oración funcione). Asegúrate de que el uso de “ser” o “estar” sea el adecuado según el contexto de la frase que formes. Escribe una oración por fila. 
+Ejemplos
+Tener esos pensamientos no era fácil para mí.
+En la misa privada, estoy solo yo.
+
+
+
+
+Columna 1
+	Columna 2
+	Columna 3
+	Columna 4
+	Juan
+	el clima
+	es
+	agradable
+	la fiesta
+	esos pensamientos
+	está
+	fácil
+	el concierto
+	privada
+	estoy
+	emocionante
+	este libro
+	mi casa
+	no era
+	solo
+	el coche
+	María
+	había sido
+	en el centro
+	tener
+	la sopa
+	está
+	antiguo
+	el pastel
+	estudiar
+	es
+	delicioso
+	la película
+	muy
+	es
+	larga
+	actualmente
+	siempre
+	está
+	fácil para mí
+	la misa
+	como todos
+	he sido
+	horrible
+	
+

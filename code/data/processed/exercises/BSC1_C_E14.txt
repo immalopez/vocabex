@@ -1,0 +1,42 @@
+Práctica
+A continuación, tienes una tabla en la que debes reemplazar el circunloquio de la columna del medio con el adjetivo más preciso en la última columna.
+
+
+Sustantivo
+	Circunloquio
+	Adjetivo preciso
+	etiquetas
+	para identificación
+	identificativas
+	zonas
+	que tienen actividad sísmica
+	
+
+	comentarios
+	que ofenden
+	
+
+	alimentos
+	que aportan nutrientes
+	
+
+	productos
+	que se usan para la higiene
+	
+
+	países
+	que comparten frontera
+	
+
+	normas
+	que rigen la conducta
+	
+
+	eventos
+	que causan un trauma
+	
+
+	
+
+
+

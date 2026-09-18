@@ -1,0 +1,6 @@
+Práctica
+Lee la regla ortográfica siguiente y completa los ejemplos correctamente:
+
+      * En  español, no existe la combinación "cq". Para los sonidos similares a "c" o "qu", usamos "c" o "qu" dependiendo de las vocales que siguen. La "qu" se usa antes de las vocales "e" o "i" para representar el sonido /k/. En cambio, la "c" se utiliza antes de las vocales "a", "o", "u" para el mismo sonido.
+
+ a__í; fre__uentemente; __antidad; __uisiera; __uando; __uince; __uestión; en__uesta; __uiste; __uatro; re__uisitio; __uími__a; ex__isito; __izás.

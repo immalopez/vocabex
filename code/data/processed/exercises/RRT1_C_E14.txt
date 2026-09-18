@@ -1,0 +1,19 @@
+Práctica
+Abajo tienes los fragmentos de una historia desordenados. Cada fragmento necesita un marcador temporal adecuado para indicar el momento en que ocurre. Tu tarea es ordenar los fragmentos correctamente y elegir el marcador temporal más apropiado para cada uno de ellos.
+
+
+en un primer momento ✴ con el tiempo ✴ a corto plazo ✴ a largo plazo ✴
+después de un tiempo ✴ mientras tanto ✴ finalmente
+
+
+* __________, las ventas aumentaron de forma constante y el negocio empezó a generar beneficios.
+* __________, el propietario contrató a más empleados para mejorar la atención al cliente.
+* __________, la situación empezó a mejorar: más clientes comenzaron a llegar, y las reseñas positivas ayudaron a atraer más personas.
+* __________, el propietario comenzó a planificar la expansión de su negocio a otras ciudades.
+* __________, el dueño decidió lanzar una campaña de publicidad en redes sociales, y esperaba que eso diese resultados rápidamente.
+* __________, las ventas de la nueva tienda eran bastante bajas, y parecía que el negocio no iba a prosperar.
+* __________, el negocio se consolidó y se convirtió en uno de los más exitosos de la ciudad.
+
+
+
+
